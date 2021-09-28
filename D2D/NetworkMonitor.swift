@@ -20,6 +20,7 @@ final class NetworkMonitor {
         case cellular
         case ethernet
         case unknown
+        case notknown
     }
 //
     private init() {
