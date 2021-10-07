@@ -99,12 +99,11 @@
 		306AD23326FF3374000A58B9 /* D2D */ = {
 			isa = PBXGroup;
 			children = (
-				306AD23426FF3374000A58B9 /* AppDelegate.swift */,
-				306AD23626FF3374000A58B9 /* SceneDelegate.swift */,
-				306AD23826FF3374000A58B9 /* ViewController.swift */,
-				306AD23A26FF3374000A58B9 /* Main.storyboard */,
-				306AD23D26FF3378000A58B9 /* Assets.xcassets */,
-				306AD23F26FF3378000A58B9 /* LaunchScreen.storyboard */,
+				30B18EFC270F52440058905C /* Resources */,
+				309A7A57270F7F640047C9CB /* ViewModels */,
+				309A7A5A270F81050047C9CB /* Models */,
+				309A7A5B270F82E90047C9CB /* Views */,
+				309A7A58270F805F0047C9CB /* Controllers */,
 				306AD24226FF3378000A58B9 /* Info.plist */,
 			);
 			path = D2D;
@@ -125,6 +124,55 @@
 				306AD25726FF3379000A58B9 /* D2DUITestsLaunchTests.swift */,
 			);
 			path = D2DUITests;
+			sourceTree = "<group>";
+		};
+		309A7A57270F7F640047C9CB /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		309A7A58270F805F0047C9CB /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				306AD23826FF3374000A58B9 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		309A7A5A270F81050047C9CB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		309A7A5B270F82E90047C9CB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				309A7A5C270F839F0047C9CB /* Storyboards */,
+				306AD23D26FF3378000A58B9 /* Assets.xcassets */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		309A7A5C270F839F0047C9CB /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				306AD23A26FF3374000A58B9 /* Main.storyboard */,
+				306AD23F26FF3378000A58B9 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		30B18EFC270F52440058905C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				306AD23426FF3374000A58B9 /* AppDelegate.swift */,
+				306AD23626FF3374000A58B9 /* SceneDelegate.swift */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
