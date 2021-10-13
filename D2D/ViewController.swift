@@ -1,10 +1,3 @@
-//
-//  ViewController.swift
-//  D2D
-//
-//  Created by Ahmed Eldably on 25.09.21.
-//
-
 import UIKit
 
 class ViewController: UIViewController {
@@ -16,4 +9,3 @@ class ViewController: UIViewController {
 
 
 }
-

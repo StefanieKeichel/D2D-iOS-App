@@ -17,6 +17,7 @@
 		306AD25626FF3379000A58B9 /* D2DUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306AD25526FF3379000A58B9 /* D2DUITests.swift */; };
 		306AD25826FF3379000A58B9 /* D2DUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306AD25726FF3379000A58B9 /* D2DUITestsLaunchTests.swift */; };
 		CB3F9A7D270103BB003300EB /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3F9A7C270103BB003300EB /* NetworkMonitor.swift */; };
+		CB47905C270E3217006526AD /* ConnectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB47905B270E3217006526AD /* ConnectionManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		306AD25526FF3379000A58B9 /* D2DUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = D2DUITests.swift; sourceTree = "<group>"; };
 		306AD25726FF3379000A58B9 /* D2DUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = D2DUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		CB3F9A7C270103BB003300EB /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
+		CB47905B270E3217006526AD /* ConnectionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				306AD23F26FF3378000A58B9 /* LaunchScreen.storyboard */,
 				306AD24226FF3378000A58B9 /* Info.plist */,
 				CB3F9A7C270103BB003300EB /* NetworkMonitor.swift */,
+				CB47905B270E3217006526AD /* ConnectionManager.swift */,
 			);
 			path = D2D;
 			sourceTree = "<group>";
@@ -261,6 +264,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB47905C270E3217006526AD /* ConnectionManager.swift in Sources */,
 				306AD23926FF3374000A58B9 /* ViewController.swift in Sources */,
 				CB3F9A7D270103BB003300EB /* NetworkMonitor.swift in Sources */,
 				306AD23526FF3374000A58B9 /* AppDelegate.swift in Sources */,
