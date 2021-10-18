@@ -17,7 +17,7 @@ class WelcomeViewController: UIViewController {
         
         // Initalize empty text
         titleLabel.text = ""
-        let titleText = "D2D Communication"
+        let titleText = Constants.appName
         var charIndex = 0.0
         
         // loop on every letter in the text and show every letter every 0.1 seconds

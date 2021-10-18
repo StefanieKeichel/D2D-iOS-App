@@ -18,6 +18,8 @@
 		30F30507271D7316004B0074 /* D2DUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F30506271D7316004B0074 /* D2DUITests.swift */; };
 		30F30509271D7316004B0074 /* D2DUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F30508271D7316004B0074 /* D2DUITestsLaunchTests.swift */; };
 		30F3051A271D75C5004B0074 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F30519271D75C5004B0074 /* ChatViewController.swift */; };
+		30F3051C271DB067004B0074 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F3051B271DB067004B0074 /* Constants.swift */; };
+		30F3051E271DB284004B0074 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F3051D271DB284004B0074 /* Message.swift */; };
 		3298EF7A3D4BBED05F345B1A /* Pods_D2D.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91E6048B2720906C558AA289 /* Pods_D2D.framework */; };
 		7291A778B4F2EE7412A40591 /* Pods_D2D_D2DUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B86C63546A27E7967E318CB /* Pods_D2D_D2DUITests.framework */; };
 /* End PBXBuildFile section */
@@ -54,6 +56,8 @@
 		30F30506271D7316004B0074 /* D2DUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = D2DUITests.swift; sourceTree = "<group>"; };
 		30F30508271D7316004B0074 /* D2DUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = D2DUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		30F30519271D75C5004B0074 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		30F3051B271DB067004B0074 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		30F3051D271DB284004B0074 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = SOURCE_ROOT; };
 		341CE57F8309EAA64CAAB6B7 /* Pods-D2DTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-D2DTests.release.xcconfig"; path = "Target Support Files/Pods-D2DTests/Pods-D2DTests.release.xcconfig"; sourceTree = "<group>"; };
 		4E42B513D514130D6A99AA73 /* Pods-D2D-D2DUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-D2D-D2DUITests.debug.xcconfig"; path = "Target Support Files/Pods-D2D-D2DUITests/Pods-D2D-D2DUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		519FCEE142297529511225F4 /* Pods-D2D.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-D2D.debug.xcconfig"; path = "Target Support Files/Pods-D2D/Pods-D2D.debug.xcconfig"; sourceTree = "<group>"; };
@@ -123,6 +127,7 @@
 				30F30516271D7351004B0074 /* Views */,
 				30F30517271D7357004B0074 /* Controllers */,
 				30F304F3271D7315004B0074 /* Info.plist */,
+				30F3051B271DB067004B0074 /* Constants.swift */,
 			);
 			path = D2D;
 			sourceTree = "<group>";
@@ -147,6 +152,7 @@
 		30F30515271D7347004B0074 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				30F3051D271DB284004B0074 /* Message.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -189,7 +195,6 @@
 				CABDA1465C27ECF1F2508328 /* Pods-D2DTests.debug.xcconfig */,
 				341CE57F8309EAA64CAAB6B7 /* Pods-D2DTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -406,8 +411,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30F3051C271DB067004B0074 /* Constants.swift in Sources */,
 				30F304EA271D7312004B0074 /* WelcomeViewController.swift in Sources */,
 				30F304E6271D7312004B0074 /* AppDelegate.swift in Sources */,
+				30F3051E271DB284004B0074 /* Message.swift in Sources */,
 				30F3051A271D75C5004B0074 /* ChatViewController.swift in Sources */,
 				30F304E8271D7312004B0074 /* SceneDelegate.swift in Sources */,
 			);
