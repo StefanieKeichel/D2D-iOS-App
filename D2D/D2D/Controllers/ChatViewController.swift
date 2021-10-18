@@ -10,6 +10,8 @@ import UIKit
 class ChatViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var textView: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
