@@ -6,7 +6,6 @@ target 'D2D' do
   use_frameworks!
 
   # Pods for D2D
-  pod 'CLTypingLabel' 
 
 
   target 'D2DTests' do
