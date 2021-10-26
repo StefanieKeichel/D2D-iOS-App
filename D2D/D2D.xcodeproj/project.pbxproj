@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0BB810158D8C3087C7E0B08A /* Pods_D2DTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8CCAD24754898405BCCFD98 /* Pods_D2DTests.framework */; };
+		3052F525272802DC00AD6146 /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3052F523272802DC00AD6146 /* MessageCell.swift */; };
+		3052F526272802DC00AD6146 /* MessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3052F524272802DC00AD6146 /* MessageCell.xib */; };
 		30F304E6271D7312004B0074 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F304E5271D7312004B0074 /* AppDelegate.swift */; };
 		30F304E8271D7312004B0074 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F304E7271D7312004B0074 /* SceneDelegate.swift */; };
 		30F304EA271D7312004B0074 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F304E9271D7312004B0074 /* WelcomeViewController.swift */; };
@@ -42,6 +44,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3052F523272802DC00AD6146 /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
+		3052F524272802DC00AD6146 /* MessageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageCell.xib; sourceTree = "<group>"; };
 		30F304E2271D7312004B0074 /* D2D.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = D2D.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		30F304E5271D7312004B0074 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		30F304E7271D7312004B0074 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -163,6 +167,8 @@
 				30F304EB271D7312004B0074 /* Main.storyboard */,
 				30F304F0271D7315004B0074 /* LaunchScreen.storyboard */,
 				30F304EE271D7315004B0074 /* Assets.xcassets */,
+				3052F523272802DC00AD6146 /* MessageCell.swift */,
+				3052F524272802DC00AD6146 /* MessageCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -316,6 +322,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				30F304F2271D7315004B0074 /* LaunchScreen.storyboard in Resources */,
+				3052F526272802DC00AD6146 /* MessageCell.xib in Resources */,
 				30F304EF271D7315004B0074 /* Assets.xcassets in Resources */,
 				30F304ED271D7312004B0074 /* Main.storyboard in Resources */,
 			);
@@ -417,6 +424,7 @@
 				30F3051E271DB284004B0074 /* Message.swift in Sources */,
 				30F3051A271D75C5004B0074 /* ChatViewController.swift in Sources */,
 				30F304E8271D7312004B0074 /* SceneDelegate.swift in Sources */,
+				3052F525272802DC00AD6146 /* MessageCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

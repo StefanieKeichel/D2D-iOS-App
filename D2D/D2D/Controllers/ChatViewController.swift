@@ -21,7 +21,7 @@ class ChatViewController: UIViewController {
         tableView.dataSource = self
         title = Constants.appName
         super.viewDidLoad()
-
+        tableView.register(UINib(nibName: Constants.cellNibName, bundle: nil), forCellReuseIdentifier: Constants.cellIdentifier)
     }
 }
 
@@ -37,9 +37,10 @@ extension ChatViewController: UITableViewDataSource {
         
 //        returns a resuable table-view cell for the specified reuse identifier and adds it to the table.
         let cell = tableView.dequeueReusableCell(withIdentifier: Constants.cellIdentifier, for: indexPath)
+            as! MessageCell
         
         // The text of the messaged is assigned for every value in the in the messages text in order.
-        cell.textLabel?.text = messages[indexPath.row].body
+        cell.messageLabel.text = messages[indexPath.row].body
         
         return cell
     }
