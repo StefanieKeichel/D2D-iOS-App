@@ -8,19 +8,19 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller login or signup-->
+        <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="UIViewController_login_or_signup" customModule="D2D" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="fhK-DH-gNW">
-                                <rect key="frame" x="77" y="323" width="260" height="250"/>
+                                <rect key="frame" x="77" y="268" width="260" height="360"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="eJX-gK-Plx">
-                                        <rect key="frame" x="0.0" y="0.0" width="260" height="250"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="90" translatesAutoresizingMaskIntoConstraints="NO" id="eJX-gK-Plx">
+                                        <rect key="frame" x="0.0" y="0.0" width="260" height="360"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Driver2Driver" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VpU-lW-jdZ">
                                                 <rect key="frame" x="0.0" y="0.0" width="260" height="60"/>
@@ -34,23 +34,22 @@
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dNo-bn-vCb">
-                                                <rect key="frame" x="0.0" y="95" width="260" height="60"/>
-                                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jRV-nF-mYI">
+                                                <rect key="frame" x="0.0" y="150" width="260" height="60"/>
+                                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="260" id="5DF-nI-SeT"/>
-                                                    <constraint firstAttribute="height" constant="60" id="VWi-M7-26p"/>
+                                                    <constraint firstAttribute="height" constant="60" id="EF8-dc-l2V"/>
+                                                    <constraint firstAttribute="width" constant="260" id="KfG-Tg-73F"/>
                                                 </constraints>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="LOGIN"/>
                                                 <connections>
-                                                    <action selector="LOGINButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LI1-1f-PWe"/>
-                                                    <segue destination="xUt-GF-YyD" kind="show" id="kFZ-we-k0C"/>
+                                                    <segue destination="xUt-GF-YyD" kind="show" id="i7a-Bq-GvL"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xoy-EG-MoA">
-                                                <rect key="frame" x="0.0" y="190" width="260" height="60"/>
+                                                <rect key="frame" x="0.0" y="300" width="260" height="60"/>
                                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="60" id="Hjm-q9-S1N"/>
@@ -60,7 +59,6 @@
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="SIGN UP"/>
                                                 <connections>
-                                                    <action selector="SIGNUPButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1Bo-WY-aHZ"/>
                                                     <segue destination="9fV-3F-OjZ" kind="show" id="nQX-gd-Q2v"/>
                                                 </connections>
                                             </button>
@@ -68,10 +66,6 @@
                                     </stackView>
                                 </subviews>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="260" id="jPa-L0-cP6"/>
-                                    <constraint firstAttribute="height" constant="60" id="td7-8G-c5F"/>
-                                </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -82,18 +76,15 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Qxg-5m-iA4"/>
-                    <connections>
-                        <outlet property="Driver2DriverButton" destination="VpU-lW-jdZ" id="u7N-1x-gVf"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1118.840579710145" y="171.42857142857142"/>
         </scene>
-        <!--View Controller login-->
+        <!--View Controller-->
         <scene sceneID="qN1-JJ-Jtm">
             <objects>
-                <viewController id="xUt-GF-YyD" customClass="UIViewController_login" customModule="D2D" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="xUt-GF-YyD" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="25K-6j-mOJ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -135,25 +126,9 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="8JS-LV-kCz"/>
-                                    <constraint firstAttribute="width" constant="260" id="dhM-n2-NZI"/>
-                                </constraints>
                             </stackView>
-                            <textField contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="line" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="W4u-xE-gjw">
-                                <rect key="frame" x="169" y="653" width="76" height="60"/>
-                                <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="E2C-56-NlK"/>
-                                    <constraint firstAttribute="width" constant="60" id="ED5-DV-xiC"/>
-                                </constraints>
-                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <imageReference key="background" image="chevron.right.circle.fill" catalog="system" symbolScale="small"/>
-                            </textField>
-                            <textField contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="line" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WQw-zX-mCN">
-                                <rect key="frame" x="169" y="653" width="76" height="60"/>
+                            <textField contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="line" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WQw-zX-mCN">
+                                <rect key="frame" x="177" y="633" width="60" height="60"/>
                                 <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="bGT-Ua-1MU"/>
@@ -163,9 +138,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <imageReference key="background" image="chevron.right.circle.fill" catalog="system" symbolScale="small"/>
-                                <connections>
-                                    <segue destination="pD4-Yr-Db7" kind="presentation" id="olU-zV-fJL"/>
-                                </connections>
                             </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Diu-QC-aSm"/>
@@ -173,6 +145,8 @@
                         <constraints>
                             <constraint firstItem="OiB-CT-tFC" firstAttribute="centerX" secondItem="25K-6j-mOJ" secondAttribute="centerX" id="2jX-Vq-L3w"/>
                             <constraint firstItem="OiB-CT-tFC" firstAttribute="centerY" secondItem="25K-6j-mOJ" secondAttribute="centerY" id="EIQ-F1-f5R"/>
+                            <constraint firstItem="WQw-zX-mCN" firstAttribute="top" secondItem="uIr-iW-XjO" secondAttribute="bottom" constant="60" id="V4B-8A-pJj"/>
+                            <constraint firstItem="WQw-zX-mCN" firstAttribute="centerX" secondItem="25K-6j-mOJ" secondAttribute="centerX" id="cK3-JV-1YH"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Hbe-fB-aah"/>
@@ -181,20 +155,10 @@
             </objects>
             <point key="canvasLocation" x="2025" y="-216"/>
         </scene>
-        <!--PostLogin-->
-        <scene sceneID="enA-o2-YPM">
-            <objects>
-                <viewControllerPlaceholder storyboardName="PostLogin" id="pD4-Yr-Db7" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="yt0-HG-ZBM"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="yxb-v1-oi4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3282" y="62"/>
-        </scene>
-        <!--View Controller signup-->
+        <!--View Controller-->
         <scene sceneID="Hfk-fL-jvU">
             <objects>
-                <viewController id="9fV-3F-OjZ" customClass="UIViewController_signup" customModule="D2D" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="9fV-3F-OjZ" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Czu-Nb-955">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -270,8 +234,8 @@
                                     </textField>
                                 </subviews>
                             </stackView>
-                            <textField contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="line" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wS7-Xr-FfA">
-                                <rect key="frame" x="169" y="774" width="76" height="60"/>
+                            <textField contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="line" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wS7-Xr-FfA">
+                                <rect key="frame" x="177" y="775.5" width="60" height="60"/>
                                 <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="60" id="rhy-ko-JZV"/>
@@ -281,14 +245,13 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <imageReference key="background" image="chevron.right.circle.fill" catalog="system" symbolScale="small"/>
-                                <connections>
-                                    <segue destination="pD4-Yr-Db7" kind="presentation" id="btI-dy-p60"/>
-                                </connections>
                             </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="3jS-hy-ODL"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="wS7-Xr-FfA" firstAttribute="centerX" secondItem="Czu-Nb-955" secondAttribute="centerX" id="Nsx-l5-PRf"/>
+                            <constraint firstItem="wS7-Xr-FfA" firstAttribute="top" secondItem="iDv-oh-Hzy" secondAttribute="bottom" constant="60" id="Ws1-Pz-2M6"/>
                             <constraint firstItem="U7X-Rh-sqx" firstAttribute="centerX" secondItem="Czu-Nb-955" secondAttribute="centerX" id="cCG-Sc-tXt"/>
                             <constraint firstItem="U7X-Rh-sqx" firstAttribute="centerY" secondItem="Czu-Nb-955" secondAttribute="centerY" id="moW-Gg-v3x"/>
                         </constraints>
@@ -318,9 +281,6 @@
             <point key="canvasLocation" x="208.69565217391306" y="171.42857142857142"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="btI-dy-p60"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <image name="chevron.right.circle.fill" catalog="system" width="128" height="121"/>
     </resources>
