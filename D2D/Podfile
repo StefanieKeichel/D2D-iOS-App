@@ -6,6 +6,8 @@ target 'D2D' do
   use_frameworks!
 
   # Pods for D2D
+  pod 'Firebase/Auth'
+  pod 'Firebase/Firestore'
 
 
   target 'D2DTests' do

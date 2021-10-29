@@ -10,6 +10,7 @@
 		0BB810158D8C3087C7E0B08A /* Pods_D2DTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8CCAD24754898405BCCFD98 /* Pods_D2DTests.framework */; };
 		3052F525272802DC00AD6146 /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3052F523272802DC00AD6146 /* MessageCell.swift */; };
 		3052F526272802DC00AD6146 /* MessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3052F524272802DC00AD6146 /* MessageCell.xib */; };
+		30C3ECA1272AA46200083261 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 30C3ECA0272AA46200083261 /* GoogleService-Info.plist */; };
 		30F304E6271D7312004B0074 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F304E5271D7312004B0074 /* AppDelegate.swift */; };
 		30F304E8271D7312004B0074 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F304E7271D7312004B0074 /* SceneDelegate.swift */; };
 		30F304EA271D7312004B0074 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F304E9271D7312004B0074 /* WelcomeViewController.swift */; };
@@ -46,6 +47,7 @@
 /* Begin PBXFileReference section */
 		3052F523272802DC00AD6146 /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
 		3052F524272802DC00AD6146 /* MessageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageCell.xib; sourceTree = "<group>"; };
+		30C3ECA0272AA46200083261 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		30F304E2271D7312004B0074 /* D2D.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = D2D.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		30F304E5271D7312004B0074 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		30F304E7271D7312004B0074 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -131,6 +133,7 @@
 				30F30516271D7351004B0074 /* Views */,
 				30F30517271D7357004B0074 /* Controllers */,
 				30F304F3271D7315004B0074 /* Info.plist */,
+				30C3ECA0272AA46200083261 /* GoogleService-Info.plist */,
 				30F3051B271DB067004B0074 /* Constants.swift */,
 			);
 			path = D2D;
@@ -225,6 +228,7 @@
 				30F304DE271D7312004B0074 /* Sources */,
 				30F304DF271D7312004B0074 /* Frameworks */,
 				30F304E0271D7312004B0074 /* Resources */,
+				DEC6B213C221A4FD66121AB0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -262,6 +266,7 @@
 				30F304FE271D7316004B0074 /* Sources */,
 				30F304FF271D7316004B0074 /* Frameworks */,
 				30F30500271D7316004B0074 /* Resources */,
+				A15FC3299A272FCA3AD7C9FD /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -323,6 +328,7 @@
 			files = (
 				30F304F2271D7315004B0074 /* LaunchScreen.storyboard in Resources */,
 				3052F526272802DC00AD6146 /* MessageCell.xib in Resources */,
+				30C3ECA1272AA46200083261 /* GoogleService-Info.plist in Resources */,
 				30F304EF271D7315004B0074 /* Assets.xcassets in Resources */,
 				30F304ED271D7312004B0074 /* Main.storyboard in Resources */,
 			);
@@ -367,6 +373,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		A15FC3299A272FCA3AD7C9FD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-D2D-D2DUITests/Pods-D2D-D2DUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-D2D-D2DUITests/Pods-D2D-D2DUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-D2D-D2DUITests/Pods-D2D-D2DUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		C053931FBD00FACD490E4230 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -409,6 +432,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DEC6B213C221A4FD66121AB0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-D2D/Pods-D2D-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-D2D/Pods-D2D-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-D2D/Pods-D2D-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -617,7 +657,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = Eldably.D2D;
+				PRODUCT_BUNDLE_IDENTIFIER = co.code.D2D;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -646,7 +686,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = Eldably.D2D;
+				PRODUCT_BUNDLE_IDENTIFIER = co.code.D2D;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

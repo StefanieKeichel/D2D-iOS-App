@@ -17,14 +17,14 @@
                 <rect key="frame" x="0.0" y="0.0" width="331" height="61"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="DBJ-Yk-KCD">
-                        <rect key="frame" x="10" y="10" width="311" height="40"/>
+                    <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="DBJ-Yk-KCD">
+                        <rect key="frame" x="10" y="10" width="311" height="41"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BS6-UT-TK6">
-                                <rect key="frame" x="0.0" y="0.0" width="251" height="40"/>
+                                <rect key="frame" x="0.0" y="0.0" width="251" height="41"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9WC-Kz-8AL">
-                                        <rect key="frame" x="10" y="10" width="231" height="20"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="abc adefdsf fds sfdfsd sdfdfsfds fsdf fdsf sdfg fgd j fdhj kcb,mmbnvc d" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9WC-Kz-8AL">
+                                        <rect key="frame" x="10" y="10" width="231" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" systemColor="systemGray6Color"/>
                                         <nil key="highlightedColor"/>
@@ -68,7 +68,7 @@
                 <outlet property="messageLabel" destination="9WC-Kz-8AL" id="oeI-5F-Df4"/>
                 <outlet property="rightImageView" destination="stc-G9-TBF" id="pIx-Ur-anN"/>
             </connections>
-            <point key="canvasLocation" x="88" y="134"/>
+            <point key="canvasLocation" x="87.681159420289859" y="133.59375"/>
         </tableViewCell>
     </objects>
     <resources>
