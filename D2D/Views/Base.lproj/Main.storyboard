@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--View Controller Login Sign Up-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController_Login_SignUp" customModule="D2D" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -45,6 +45,7 @@
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="LOGIN"/>
                                                 <connections>
+                                                    <action selector="Button_Login:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Kcj-EE-BIs"/>
                                                     <segue destination="xUt-GF-YyD" kind="show" id="i7a-Bq-GvL"/>
                                                 </connections>
                                             </button>
@@ -59,6 +60,7 @@
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="SIGN UP"/>
                                                 <connections>
+                                                    <action selector="Button_SignUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pTd-8q-DZx"/>
                                                     <segue destination="9fV-3F-OjZ" kind="show" id="nQX-gd-Q2v"/>
                                                 </connections>
                                             </button>
@@ -118,6 +120,9 @@
                                                 <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="Button_Login_EMail:" destination="xUt-GF-YyD" eventType="touchUpInside" id="YyK-qE-yO5"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uIr-iW-XjO">
                                         <rect key="frame" x="0.0" y="190" width="260" height="60"/>
@@ -134,6 +139,9 @@
                                                 <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="Button_Login_Password:" destination="xUt-GF-YyD" eventType="touchUpInside" id="49H-Nl-GLa"/>
+                                        </connections>
                                     </textField>
                                 </subviews>
                             </stackView>
@@ -169,10 +177,10 @@
             </objects>
             <point key="canvasLocation" x="2024.6376811594205" y="-216.29464285714286"/>
         </scene>
-        <!--View Controller-->
+        <!--View Controller Sign Up-->
         <scene sceneID="Hfk-fL-jvU">
             <objects>
-                <viewController id="9fV-3F-OjZ" sceneMemberID="viewController">
+                <viewController id="9fV-3F-OjZ" customClass="ViewController_SignUp" customModule="D2D" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Czu-Nb-955">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -206,6 +214,10 @@
                                                 <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="Button_Cartype:" destination="9fV-3F-OjZ" eventType="touchUpInside" id="Szq-GB-Ys4"/>
+                                            <action selector="Button_SignUp_Cartype:" destination="9fV-3F-OjZ" eventType="touchUpInside" id="tfo-re-qj2"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IbB-yZ-RJ6">
                                         <rect key="frame" x="0.0" y="190" width="260" height="60"/>
@@ -222,6 +234,9 @@
                                                 <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="Button_SignUp_Name:" destination="9fV-3F-OjZ" eventType="touchUpInside" id="s3x-ta-s4L"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="EMail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sHO-YS-30x">
                                         <rect key="frame" x="0.0" y="285" width="260" height="60"/>
@@ -238,6 +253,9 @@
                                                 <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="Button_SignUp_EMail:" destination="9fV-3F-OjZ" eventType="touchUpInside" id="xnq-jn-EF4"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0fu-7w-8uv">
                                         <rect key="frame" x="0.0" y="380" width="260" height="60"/>
@@ -254,6 +272,9 @@
                                                 <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="Button_SignUp_Password:" destination="9fV-3F-OjZ" eventType="touchUpInside" id="uNz-wg-bmm"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter password again " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iDv-oh-Hzy">
                                         <rect key="frame" x="0.0" y="475" width="260" height="60"/>
@@ -270,6 +291,9 @@
                                                 <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="Button_SignUp_Password_repeat:" destination="9fV-3F-OjZ" eventType="touchUpInside" id="b0S-Ne-TMP"/>
+                                        </connections>
                                     </textField>
                                 </subviews>
                             </stackView>

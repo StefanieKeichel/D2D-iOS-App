@@ -1,10 +1,3 @@
-//
-//  ViewController_Login.swift
-//  D2D
-//
-//  Created by Stefanie Keichel on 01.11.21.
-//
-
 import UIKit
 
 class ViewController_Login: UIViewController {
@@ -15,4 +8,11 @@ class ViewController_Login: UIViewController {
         // Do any additional setup after loading the view.
     }
 
+    @IBAction func Button_Login_EMail(_ sender: UITextField) {
+    }
+    
+    
+    @IBAction func Button_Login_Password(_ sender: UITextField) {
+    }
+    
 }
