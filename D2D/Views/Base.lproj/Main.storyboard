@@ -81,10 +81,10 @@
             </objects>
             <point key="canvasLocation" x="1118.840579710145" y="171.42857142857142"/>
         </scene>
-        <!--View Controller-->
+        <!--View Controller Login-->
         <scene sceneID="qN1-JJ-Jtm">
             <objects>
-                <viewController id="xUt-GF-YyD" sceneMemberID="viewController">
+                <viewController id="xUt-GF-YyD" customClass="ViewController_Login" customModule="D2D" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="25K-6j-mOJ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -332,7 +332,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="vQH-gl-Tnb"/>
+        <segue reference="9m2-04-Qgg"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="chevron.forward.circle.fill" catalog="system" width="128" height="121"/>
