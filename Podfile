@@ -8,6 +8,7 @@ target 'D2D' do
   # Pods for D2D
   pod 'Firebase/Auth'
   pod 'Firebase/Firestore'
+  pod 'IQKeyboardManagerSwift' 
 
 
   target 'D2DTests' do

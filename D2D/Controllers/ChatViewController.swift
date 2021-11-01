@@ -16,23 +16,53 @@ class ChatViewController: UIViewController {
     
     let db = Firestore.firestore()
     
-    var messages: [Message] = [
-        Message(sender: "Karim", body: "Hey Ahmed, Habeeby"),
-        Message(sender: "Ahmed", body: "Hey Karim, Habeeby")
-    ]
+    var messages: [Message] = []
     
     override func viewDidLoad() {
         tableView.dataSource = self
         title = Constants.appName
         super.viewDidLoad()
         tableView.register(UINib(nibName: Constants.cellNibName, bundle: nil), forCellReuseIdentifier: Constants.cellIdentifier)
+        loadMessages()
+    }
+    
+    func loadMessages() {
+    
+        db.collection(Constants.FStore.collectionName)
+            .order(by: Constants.FStore.dateField)
+            .addSnapshotListener { (QuerySnapshot, error) in
+                
+            self.messages = []
+            
+            if let e = error {
+                print("There's an issue retrieving data from firestore. \(e)")
+            } else {
+                if let snapshopDocuments =  QuerySnapshot?.documents {
+                    for doc in snapshopDocuments {
+                        let data = doc.data()
+                        if let messageSender = data[Constants.FStore.senderField] as? String,
+                           let messageBody = data[Constants.FStore.bodyField] as? String{
+                            let newMessage = Message(sender: messageSender, body: messageBody)
+                            self.messages.append(newMessage)
+                            
+                            DispatchQueue.main.async {
+                                self.tableView.reloadData()
+                            }
+                        }
+                        
+                    }
+                }
+            }
+        }
     }
     
     @IBAction func sendPressed(_ sender: UIButton) {
         if let messageBody = messageTextField.text{
-            db.collection(Constants.FStore.collectionName).addDocument(data: [Constants.FStore.senderField:"x",Constants.FStore.bodyField:messageBody]) { (error) in
+            db.collection(Constants.FStore.collectionName).addDocument(data: [Constants.FStore.senderField:"x",
+                                                                              Constants.FStore.bodyField:messageBody,
+                                                                              Constants.FStore.dateField: Date().timeIntervalSince1970]) { (error) in
                 if let e = error{
-                    print("Something wrong is here, \(e)")
+                    print("Something wrong happened, \(e)")
                 } else{
                     print("Data was saved successfully.")
                 }
