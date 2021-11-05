@@ -10,6 +10,7 @@
 		0BB810158D8C3087C7E0B08A /* Pods_D2DTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8CCAD24754898405BCCFD98 /* Pods_D2DTests.framework */; };
 		3052F525272802DC00AD6146 /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3052F523272802DC00AD6146 /* MessageCell.swift */; };
 		3052F526272802DC00AD6146 /* MessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3052F524272802DC00AD6146 /* MessageCell.xib */; };
+		30B5C0EE273550D500187DED /* ColorMultipeerSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B5C0ED273550D500187DED /* ColorMultipeerSession.swift */; };
 		30C3ECA1272AA46200083261 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 30C3ECA0272AA46200083261 /* GoogleService-Info.plist */; };
 		30F304E6271D7312004B0074 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F304E5271D7312004B0074 /* AppDelegate.swift */; };
 		30F304E8271D7312004B0074 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F304E7271D7312004B0074 /* SceneDelegate.swift */; };
@@ -47,6 +48,7 @@
 /* Begin PBXFileReference section */
 		3052F523272802DC00AD6146 /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
 		3052F524272802DC00AD6146 /* MessageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageCell.xib; sourceTree = "<group>"; };
+		30B5C0ED273550D500187DED /* ColorMultipeerSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorMultipeerSession.swift; sourceTree = "<group>"; };
 		30C3ECA0272AA46200083261 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		30F304E2271D7312004B0074 /* D2D.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = D2D.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		30F304E5271D7312004B0074 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -160,6 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				30F3051D271DB284004B0074 /* Message.swift */,
+				30B5C0ED273550D500187DED /* ColorMultipeerSession.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -458,6 +461,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30B5C0EE273550D500187DED /* ColorMultipeerSession.swift in Sources */,
 				30F3051C271DB067004B0074 /* Constants.swift in Sources */,
 				30F304EA271D7312004B0074 /* WelcomeViewController.swift in Sources */,
 				30F304E6271D7312004B0074 /* AppDelegate.swift in Sources */,
