@@ -14,9 +14,9 @@ final class MapViewModel: NSObject, ObservableObject,CLLocationManagerDelegate {
     func checkifLocationServiceIsEnabled() {
         if CLLocationManager.locationServicesEnabled() {
             locationManager = CLLocationManager()
-//            ! means forcing it
             locationManager!.delegate = self
             locationManager?.activityType = CLActivityType.automotiveNavigation
+//            3m accuracy
             locationManager?.desiredAccuracy = kCLLocationAccuracyBestForNavigation
         } else{
             print("Show an alert letting them know this is off and to go turn it on.")
