@@ -12,15 +12,21 @@
 		300F49D50675943377F89F9D /* Pods_D2D.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17589D88A6B8FA71531F04A2 /* Pods_D2D.framework */; };
 		306AD23526FF3374000A58B9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306AD23426FF3374000A58B9 /* AppDelegate.swift */; };
 		306AD23726FF3374000A58B9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306AD23626FF3374000A58B9 /* SceneDelegate.swift */; };
-		306AD23926FF3374000A58B9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306AD23826FF3374000A58B9 /* ViewController.swift */; };
+		306AD23926FF3374000A58B9 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306AD23826FF3374000A58B9 /* WelcomeViewController.swift */; };
 		306AD23C26FF3374000A58B9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 306AD23A26FF3374000A58B9 /* Main.storyboard */; };
 		306AD23E26FF3378000A58B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 306AD23D26FF3378000A58B9 /* Assets.xcassets */; };
 		306AD24126FF3378000A58B9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 306AD23F26FF3378000A58B9 /* LaunchScreen.storyboard */; };
 		306AD24C26FF3379000A58B9 /* D2DTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306AD24B26FF3379000A58B9 /* D2DTests.swift */; };
 		306AD25626FF3379000A58B9 /* D2DUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306AD25526FF3379000A58B9 /* D2DUITests.swift */; };
 		306AD25826FF3379000A58B9 /* D2DUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306AD25726FF3379000A58B9 /* D2DUITestsLaunchTests.swift */; };
+		CB7E46482738771B005CD92E /* TestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7E46472738771B005CD92E /* TestVC.swift */; };
 		CBA52A0A27298FB600E72140 /* Chat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBA52A0927298FB600E72140 /* Chat.storyboard */; };
 		CBA52A0C272993FE00E72140 /* PostLogin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBA52A0B272993FE00E72140 /* PostLogin.storyboard */; };
+		CBC10E1527301F7300144557 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC10E1427301F7300144557 /* LoginViewController.swift */; };
+		CBC10E172730215700144557 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC10E162730215700144557 /* SignupViewController.swift */; };
+		CBC10E192730217C00144557 /* LoginSignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC10E182730217C00144557 /* LoginSignupViewController.swift */; };
+		CBC10E1B273021A400144557 /* PostLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC10E1A273021A400144557 /* PostLoginViewController.swift */; };
+		CBC10E1D273021B600144557 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC10E1C273021B600144557 /* ChatViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,7 +54,7 @@
 		306AD23126FF3374000A58B9 /* D2D.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = D2D.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		306AD23426FF3374000A58B9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		306AD23626FF3374000A58B9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		306AD23826FF3374000A58B9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		306AD23826FF3374000A58B9 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		306AD23B26FF3374000A58B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		306AD23D26FF3378000A58B9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		306AD24026FF3378000A58B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -62,8 +68,14 @@
 		B105381A98DA877215163CD8 /* Pods-D2DTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-D2DTests.debug.xcconfig"; path = "Target Support Files/Pods-D2DTests/Pods-D2DTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B92DEE06BEF2A5F08D10F6F6 /* Pods-D2D-D2DUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-D2D-D2DUITests.release.xcconfig"; path = "Target Support Files/Pods-D2D-D2DUITests/Pods-D2D-D2DUITests.release.xcconfig"; sourceTree = "<group>"; };
 		C5C78D35B55871A7E0DC9A7F /* Pods-D2DTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-D2DTests.release.xcconfig"; path = "Target Support Files/Pods-D2DTests/Pods-D2DTests.release.xcconfig"; sourceTree = "<group>"; };
+		CB7E46472738771B005CD92E /* TestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestVC.swift; sourceTree = "<group>"; };
 		CBA52A0927298FB600E72140 /* Chat.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Chat.storyboard; sourceTree = "<group>"; };
 		CBA52A0B272993FE00E72140 /* PostLogin.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PostLogin.storyboard; sourceTree = "<group>"; };
+		CBC10E1427301F7300144557 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		CBC10E162730215700144557 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		CBC10E182730217C00144557 /* LoginSignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSignupViewController.swift; sourceTree = "<group>"; };
+		CBC10E1A273021A400144557 /* PostLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostLoginViewController.swift; sourceTree = "<group>"; };
+		CBC10E1C273021B600144557 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		FFA6B408F8EBAB6FCE2B6F17 /* Pods-D2D.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-D2D.debug.xcconfig"; path = "Target Support Files/Pods-D2D/Pods-D2D.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -187,7 +199,13 @@
 		CB04BA9A2728036000FBD3BF /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				306AD23826FF3374000A58B9 /* ViewController.swift */,
+				306AD23826FF3374000A58B9 /* WelcomeViewController.swift */,
+				CBC10E1427301F7300144557 /* LoginViewController.swift */,
+				CBC10E162730215700144557 /* SignupViewController.swift */,
+				CBC10E182730217C00144557 /* LoginSignupViewController.swift */,
+				CBC10E1A273021A400144557 /* PostLoginViewController.swift */,
+				CBC10E1C273021B600144557 /* ChatViewController.swift */,
+				CB7E46472738771B005CD92E /* TestVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -446,8 +464,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				306AD23926FF3374000A58B9 /* ViewController.swift in Sources */,
+				CBC10E1527301F7300144557 /* LoginViewController.swift in Sources */,
+				306AD23926FF3374000A58B9 /* WelcomeViewController.swift in Sources */,
+				CBC10E1D273021B600144557 /* ChatViewController.swift in Sources */,
+				CBC10E192730217C00144557 /* LoginSignupViewController.swift in Sources */,
 				306AD23526FF3374000A58B9 /* AppDelegate.swift in Sources */,
+				CBC10E1B273021A400144557 /* PostLoginViewController.swift in Sources */,
+				CBC10E172730215700144557 /* SignupViewController.swift in Sources */,
+				CB7E46482738771B005CD92E /* TestVC.swift in Sources */,
 				306AD23726FF3374000A58B9 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -631,6 +655,7 @@
 				DEVELOPMENT_TEAM = SW8Q2CUK26;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = D2D/Info.plist;
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "Users needs to use phone's data to discover devices nearby";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -641,7 +666,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = Eldably.D2D;
+				PRODUCT_BUNDLE_IDENTIFIER = co.CODE.D2D;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -660,6 +685,7 @@
 				DEVELOPMENT_TEAM = SW8Q2CUK26;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = D2D/Info.plist;
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "Users needs to use phone's data to discover devices nearby";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -670,7 +696,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = Eldably.D2D;
+				PRODUCT_BUNDLE_IDENTIFIER = co.CODE.D2D;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
