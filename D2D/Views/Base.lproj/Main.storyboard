@@ -213,10 +213,6 @@
                                                 <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="Button_Cartype:" destination="9fV-3F-OjZ" eventType="touchUpInside" id="Szq-GB-Ys4"/>
-                                            <action selector="Button_SignUp_Cartype:" destination="9fV-3F-OjZ" eventType="touchUpInside" id="tfo-re-qj2"/>
-                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IbB-yZ-RJ6">
                                         <rect key="frame" x="0.0" y="190" width="260" height="60"/>
@@ -233,9 +229,6 @@
                                                 <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="Button_SignUp_Name:" destination="9fV-3F-OjZ" eventType="touchUpInside" id="s3x-ta-s4L"/>
-                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="EMail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sHO-YS-30x">
                                         <rect key="frame" x="0.0" y="285" width="260" height="60"/>
@@ -252,9 +245,6 @@
                                                 <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="Button_SignUp_EMail:" destination="9fV-3F-OjZ" eventType="touchUpInside" id="xnq-jn-EF4"/>
-                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password " textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="0fu-7w-8uv">
                                         <rect key="frame" x="0.0" y="380" width="260" height="60"/>
@@ -271,9 +261,6 @@
                                                 <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="Button_SignUp_Password:" destination="9fV-3F-OjZ" eventType="touchUpInside" id="uNz-wg-bmm"/>
-                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter password again " textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="iDv-oh-Hzy">
                                         <rect key="frame" x="0.0" y="475" width="260" height="60"/>
@@ -290,9 +277,6 @@
                                                 <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="Button_SignUp_Password_repeat:" destination="9fV-3F-OjZ" eventType="touchUpInside" id="b0S-Ne-TMP"/>
-                                        </connections>
                                     </textField>
                                 </subviews>
                             </stackView>
@@ -308,6 +292,7 @@
                                     <imageReference key="image" image="chevron.forward.circle.fill" catalog="system" symbolScale="large"/>
                                 </state>
                                 <connections>
+                                    <action selector="GoTo_PostLogin:" destination="9fV-3F-OjZ" eventType="touchUpInside" id="7UN-nG-wT9"/>
                                     <segue destination="Nv7-B6-F07" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="coverVertical" id="vQH-gl-Tnb"/>
                                 </connections>
                             </button>
@@ -322,6 +307,13 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="MJu-z4-1Zw"/>
+                    <connections>
+                        <outlet property="SignUp_Cartype_TextField" destination="7Hy-kK-761" id="Tay-qD-O5X"/>
+                        <outlet property="SignUp_Email_TextField" destination="sHO-YS-30x" id="bgB-EW-Edp"/>
+                        <outlet property="SignUp_Name_TextField" destination="IbB-yZ-RJ6" id="J4o-1V-Z95"/>
+                        <outlet property="SignUp_Password_TextField" destination="0fu-7w-8uv" id="HjC-ro-nEH"/>
+                        <outlet property="SignUp_Password_again_TextField" destination="iDv-oh-Hzy" id="ZQh-IE-icL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="njn-GT-pQl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -355,7 +347,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="9m2-04-Qgg"/>
+        <segue reference="vQH-gl-Tnb"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="chevron.forward.circle.fill" catalog="system" width="128" height="121"/>

@@ -6,7 +6,8 @@ class ViewController_Login: UIViewController {
     @IBOutlet weak var Login_Password_TextField: UITextField!
     
     var Login_Email = ""
-//    var Login_Password = ""
+    var Login_Password = ""
+    var login_option = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -14,15 +15,17 @@ class ViewController_Login: UIViewController {
     
     @IBAction func GoTo_PostLogin(_ sender: Any) {
         self.Login_Email = Login_Email_TextField.text!
-//        self.Login_Password = Login_Password_TextField.text!
-//        performSegue(withIdentifier: "Send_Login_Data", sender: self)
+        self.Login_Password = Login_Password_TextField.text!
+        
+        login_option = "Login"
     }
 
 //    pass data between view controllers with passSegue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 //        destination viewcontroller
         let destVC = segue.destination as! ViewController_PostLogin
-        destVC.Display_Name_Login = self.Login_Email
+        destVC.Display_Login_Name = self.Login_Email
+        destVC.login_option = self.login_option
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
