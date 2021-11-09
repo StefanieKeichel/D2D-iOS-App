@@ -36,8 +36,8 @@ class ViewController_SignUp: UIViewController {
         }
         
         
-        if SignUp_Email_TextField.text!.isEmpty {
-                print("please enter email address")
+        if SignUp_Email_TextField.text!.isEmpty || SignUp_Cartype_TextField.text!.isEmpty {
+                return
         }
         if SignUp_Cartype_TextField.text!.isEmpty {
             print("please enter your cartype")
