@@ -1,10 +1,3 @@
-//
-//  SceneDelegate.swift
-//  D2D
-//
-//  Created by Ahmed Eldably on 25.09.21.
-//
-
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {

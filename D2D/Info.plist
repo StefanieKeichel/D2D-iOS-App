@@ -11,12 +11,16 @@
 			<key>UIWindowSceneSessionRoleApplication</key>
 			<array>
 				<dict>
+					<key>Key</key>
+					<string></string>
 					<key>UISceneConfigurationName</key>
 					<string>Default Configuration</string>
 					<key>UISceneDelegateClassName</key>
 					<string>$(PRODUCT_MODULE_NAME).SceneDelegate</string>
 					<key>UISceneStoryboardFile</key>
 					<string>Main</string>
+					<key>Value</key>
+					<string></string>
 				</dict>
 			</array>
 		</dict>
