@@ -19,6 +19,9 @@
 		306AD25826FF3379000A58B9 /* D2DUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306AD25726FF3379000A58B9 /* D2DUITestsLaunchTests.swift */; };
 		30DA040C273C196900B06912 /* Messaage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30DA040B273C196900B06912 /* Messaage.swift */; };
 		30DA040E273C1C3800B06912 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30DA040D273C1C3800B06912 /* Constants.swift */; };
+		30DA0410273C1FE200B06912 /* MessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30DA040F273C1FE200B06912 /* MessageCell.xib */; };
+		30DA0412273C20CB00B06912 /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30DA0411273C20CB00B06912 /* MessageCell.swift */; };
+		30DA0414273C21AC00B06912 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 30DA0413273C21AC00B06912 /* GoogleService-Info.plist */; };
 		CB7E464C273B25AA005CD92E /* MapViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB7E464B273B25AA005CD92E /* MapViewController.storyboard */; };
 		CB7E464E273B369A005CD92E /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB7E464D273B369A005CD92E /* Login.storyboard */; };
 		CB7E4650273B370A005CD92E /* SignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB7E464F273B370A005CD92E /* SignUp.storyboard */; };
@@ -69,6 +72,9 @@
 		306AD25726FF3379000A58B9 /* D2DUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = D2DUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		30DA040B273C196900B06912 /* Messaage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Messaage.swift; path = Models/Messaage.swift; sourceTree = "<group>"; };
 		30DA040D273C1C3800B06912 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		30DA040F273C1FE200B06912 /* MessageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageCell.xib; sourceTree = "<group>"; };
+		30DA0411273C20CB00B06912 /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
+		30DA0413273C21AC00B06912 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		90469C58D6D02F0B11C064BF /* Pods-D2D-D2DUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-D2D-D2DUITests.debug.xcconfig"; path = "Target Support Files/Pods-D2D-D2DUITests/Pods-D2D-D2DUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		B105381A98DA877215163CD8 /* Pods-D2DTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-D2DTests.debug.xcconfig"; path = "Target Support Files/Pods-D2DTests/Pods-D2DTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B92DEE06BEF2A5F08D10F6F6 /* Pods-D2D-D2DUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-D2D-D2DUITests.release.xcconfig"; path = "Target Support Files/Pods-D2D-D2DUITests/Pods-D2D-D2DUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -147,6 +153,7 @@
 				CB04BA9A2728036000FBD3BF /* Controllers */,
 				CB04BA982728035000FBD3BF /* Views */,
 				306AD24226FF3378000A58B9 /* Info.plist */,
+				30DA0413273C21AC00B06912 /* GoogleService-Info.plist */,
 				30DA040D273C1C3800B06912 /* Constants.swift */,
 			);
 			path = D2D;
@@ -206,6 +213,8 @@
 				CBA52A0927298FB600E72140 /* Chat.storyboard */,
 				CB7E464B273B25AA005CD92E /* MapViewController.storyboard */,
 				306AD23F26FF3378000A58B9 /* LaunchScreen.storyboard */,
+				30DA040F273C1FE200B06912 /* MessageCell.xib */,
+				30DA0411273C20CB00B06912 /* MessageCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -349,9 +358,11 @@
 			files = (
 				CB7E4652273C0559005CD92E /* Main.storyboard in Resources */,
 				306AD24126FF3378000A58B9 /* LaunchScreen.storyboard in Resources */,
+				30DA0414273C21AC00B06912 /* GoogleService-Info.plist in Resources */,
 				CB7E464E273B369A005CD92E /* Login.storyboard in Resources */,
 				CB7E4650273B370A005CD92E /* SignUp.storyboard in Resources */,
 				CB7E464C273B25AA005CD92E /* MapViewController.storyboard in Resources */,
+				30DA0410273C1FE200B06912 /* MessageCell.xib in Resources */,
 				CBA52A0A27298FB600E72140 /* Chat.storyboard in Resources */,
 				CBA52A0C272993FE00E72140 /* PostLogin.storyboard in Resources */,
 			);
@@ -494,6 +505,7 @@
 				CBC10E172730215700144557 /* SignupViewController.swift in Sources */,
 				CBC10E232730752100144557 /* MapView.swift in Sources */,
 				306AD23726FF3374000A58B9 /* SceneDelegate.swift in Sources */,
+				30DA0412273C20CB00B06912 /* MessageCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

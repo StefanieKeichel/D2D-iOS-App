@@ -42,8 +42,7 @@
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="LOGIN"/>
                                                 <connections>
-                                                    <action selector="Button_Login:" destination="Syz-zm-vDF" eventType="touchUpInside" id="UKp-xX-S4W"/>
-                                                    <segue destination="xdG-1N-R3d" kind="show" id="pYa-9J-4ON"/>
+                                                    <segue destination="xdG-1N-R3d" kind="show" id="Phe-Ne-Vib"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="clf-Aa-F2k">
@@ -56,7 +55,7 @@
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="SIGN UP"/>
                                                 <connections>
-                                                    <segue destination="TkQ-SP-5zZ" kind="show" id="mgD-g0-HJ5"/>
+                                                    <segue destination="TkQ-SP-5zZ" kind="show" id="MKI-wK-x9D"/>
                                                 </connections>
                                             </button>
                                         </subviews>

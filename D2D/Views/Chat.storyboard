@@ -37,6 +37,9 @@
                                         <state key="normal" title="Send">
                                             <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="sendPressed:" destination="CIR-IH-511" eventType="touchUpInside" id="Enq-tr-mvd"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -64,6 +67,10 @@
                             <constraint firstItem="EG7-gD-4Ms" firstAttribute="trailing" secondItem="utq-1X-K1f" secondAttribute="trailing" id="pPn-Yo-0KS"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="messageTextField" destination="Dce-rm-D4R" id="XlE-lB-S8G"/>
+                        <outlet property="tableView" destination="fjR-Bq-8dO" id="1MC-Pz-ZEh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="43b-UV-9DO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
