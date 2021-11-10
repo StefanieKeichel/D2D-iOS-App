@@ -19,6 +19,8 @@
 		306AD24C26FF3379000A58B9 /* D2DTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306AD24B26FF3379000A58B9 /* D2DTests.swift */; };
 		306AD25626FF3379000A58B9 /* D2DUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306AD25526FF3379000A58B9 /* D2DUITests.swift */; };
 		306AD25826FF3379000A58B9 /* D2DUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306AD25726FF3379000A58B9 /* D2DUITestsLaunchTests.swift */; };
+		CB7E464E273B369A005CD92E /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB7E464D273B369A005CD92E /* Login.storyboard */; };
+		CB7E4650273B370A005CD92E /* SignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB7E464F273B370A005CD92E /* SignUp.storyboard */; };
 		CBA52A0A27298FB600E72140 /* Chat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBA52A0927298FB600E72140 /* Chat.storyboard */; };
 		CBA52A0C272993FE00E72140 /* PostLogin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBA52A0B272993FE00E72140 /* PostLogin.storyboard */; };
 		CBC10E1527301F7300144557 /* ViewController_Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC10E1427301F7300144557 /* ViewController_Login.swift */; };
@@ -67,6 +69,8 @@
 		B105381A98DA877215163CD8 /* Pods-D2DTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-D2DTests.debug.xcconfig"; path = "Target Support Files/Pods-D2DTests/Pods-D2DTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B92DEE06BEF2A5F08D10F6F6 /* Pods-D2D-D2DUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-D2D-D2DUITests.release.xcconfig"; path = "Target Support Files/Pods-D2D-D2DUITests/Pods-D2D-D2DUITests.release.xcconfig"; sourceTree = "<group>"; };
 		C5C78D35B55871A7E0DC9A7F /* Pods-D2DTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-D2DTests.release.xcconfig"; path = "Target Support Files/Pods-D2DTests/Pods-D2DTests.release.xcconfig"; sourceTree = "<group>"; };
+		CB7E464D273B369A005CD92E /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		CB7E464F273B370A005CD92E /* SignUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignUp.storyboard; sourceTree = "<group>"; };
 		CBA52A0927298FB600E72140 /* Chat.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Chat.storyboard; sourceTree = "<group>"; };
 		CBA52A0B272993FE00E72140 /* PostLogin.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PostLogin.storyboard; sourceTree = "<group>"; };
 		CBC10E1427301F7300144557 /* ViewController_Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController_Login.swift; sourceTree = "<group>"; };
@@ -178,6 +182,8 @@
 			children = (
 				306AD23D26FF3378000A58B9 /* Assets.xcassets */,
 				306AD23A26FF3374000A58B9 /* Main.storyboard */,
+				CB7E464F273B370A005CD92E /* SignUp.storyboard */,
+				CB7E464D273B369A005CD92E /* Login.storyboard */,
 				306AD23F26FF3378000A58B9 /* LaunchScreen.storyboard */,
 				CBA52A0927298FB600E72140 /* Chat.storyboard */,
 				CBA52A0B272993FE00E72140 /* PostLogin.storyboard */,
@@ -331,6 +337,8 @@
 			files = (
 				306AD24126FF3378000A58B9 /* LaunchScreen.storyboard in Resources */,
 				306AD23E26FF3378000A58B9 /* Assets.xcassets in Resources */,
+				CB7E464E273B369A005CD92E /* Login.storyboard in Resources */,
+				CB7E4650273B370A005CD92E /* SignUp.storyboard in Resources */,
 				CBA52A0A27298FB600E72140 /* Chat.storyboard in Resources */,
 				CBA52A0C272993FE00E72140 /* PostLogin.storyboard in Resources */,
 				306AD23C26FF3374000A58B9 /* Main.storyboard in Resources */,
