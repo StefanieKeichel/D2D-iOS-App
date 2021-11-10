@@ -14,11 +14,15 @@
 		306AD23726FF3374000A58B9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306AD23626FF3374000A58B9 /* SceneDelegate.swift */; };
 		306AD23926FF3374000A58B9 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306AD23826FF3374000A58B9 /* WelcomeViewController.swift */; };
 		306AD23C26FF3374000A58B9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 306AD23A26FF3374000A58B9 /* Main.storyboard */; };
+		306AD23E26FF3378000A58B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 306AD23D26FF3378000A58B9 /* Assets.xcassets */; };
 		306AD24126FF3378000A58B9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 306AD23F26FF3378000A58B9 /* LaunchScreen.storyboard */; };
 		306AD24C26FF3379000A58B9 /* D2DTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306AD24B26FF3379000A58B9 /* D2DTests.swift */; };
 		306AD25626FF3379000A58B9 /* D2DUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306AD25526FF3379000A58B9 /* D2DUITests.swift */; };
 		306AD25826FF3379000A58B9 /* D2DUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306AD25726FF3379000A58B9 /* D2DUITestsLaunchTests.swift */; };
-		CB7E464C273B25AA005CD92E /* MapViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB7E464B273B25AA005CD92E /* MapViewController.storyboard */; };
+<<<<<<< HEAD
+		CBC10E232730752100144557 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC10E222730752100144557 /* MapView.swift */; };
+		CBC10E252730855000144557 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC10E242730855000144557 /* MapViewModel.swift */; };
+=======
 		CBA52A0A27298FB600E72140 /* Chat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBA52A0927298FB600E72140 /* Chat.storyboard */; };
 		CBA52A0C272993FE00E72140 /* PostLogin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBA52A0B272993FE00E72140 /* PostLogin.storyboard */; };
 		CBC10E1527301F7300144557 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC10E1427301F7300144557 /* LoginViewController.swift */; };
@@ -26,8 +30,7 @@
 		CBC10E192730217C00144557 /* LoginSignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC10E182730217C00144557 /* LoginSignupViewController.swift */; };
 		CBC10E1B273021A400144557 /* PostLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC10E1A273021A400144557 /* PostLoginViewController.swift */; };
 		CBC10E1D273021B600144557 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC10E1C273021B600144557 /* ChatViewController.swift */; };
-		CBC10E232730752100144557 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC10E222730752100144557 /* MapView.swift */; };
-		CBC10E252730855000144557 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC10E242730855000144557 /* MapViewModel.swift */; };
+>>>>>>> 700cf1cba95269049e91e90060f6e62b99e59316
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +60,7 @@
 		306AD23626FF3374000A58B9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		306AD23826FF3374000A58B9 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		306AD23B26FF3374000A58B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		306AD23D26FF3378000A58B9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		306AD24026FF3378000A58B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		306AD24226FF3378000A58B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		306AD24726FF3378000A58B9 /* D2DTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = D2DTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -64,11 +68,14 @@
 		306AD25126FF3379000A58B9 /* D2DUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = D2DUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		306AD25526FF3379000A58B9 /* D2DUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = D2DUITests.swift; sourceTree = "<group>"; };
 		306AD25726FF3379000A58B9 /* D2DUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = D2DUITestsLaunchTests.swift; sourceTree = "<group>"; };
+<<<<<<< HEAD
+		CBC10E222730752100144557 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		CBC10E242730855000144557 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
+=======
 		90469C58D6D02F0B11C064BF /* Pods-D2D-D2DUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-D2D-D2DUITests.debug.xcconfig"; path = "Target Support Files/Pods-D2D-D2DUITests/Pods-D2D-D2DUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		B105381A98DA877215163CD8 /* Pods-D2DTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-D2DTests.debug.xcconfig"; path = "Target Support Files/Pods-D2DTests/Pods-D2DTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B92DEE06BEF2A5F08D10F6F6 /* Pods-D2D-D2DUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-D2D-D2DUITests.release.xcconfig"; path = "Target Support Files/Pods-D2D-D2DUITests/Pods-D2D-D2DUITests.release.xcconfig"; sourceTree = "<group>"; };
 		C5C78D35B55871A7E0DC9A7F /* Pods-D2DTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-D2DTests.release.xcconfig"; path = "Target Support Files/Pods-D2DTests/Pods-D2DTests.release.xcconfig"; sourceTree = "<group>"; };
-		CB7E464B273B25AA005CD92E /* MapViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MapViewController.storyboard; sourceTree = "<group>"; };
 		CBA52A0927298FB600E72140 /* Chat.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Chat.storyboard; sourceTree = "<group>"; };
 		CBA52A0B272993FE00E72140 /* PostLogin.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PostLogin.storyboard; sourceTree = "<group>"; };
 		CBC10E1427301F7300144557 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -76,9 +83,8 @@
 		CBC10E182730217C00144557 /* LoginSignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSignupViewController.swift; sourceTree = "<group>"; };
 		CBC10E1A273021A400144557 /* PostLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostLoginViewController.swift; sourceTree = "<group>"; };
 		CBC10E1C273021B600144557 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
-		CBC10E222730752100144557 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
-		CBC10E242730855000144557 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
 		FFA6B408F8EBAB6FCE2B6F17 /* Pods-D2D.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-D2D.debug.xcconfig"; path = "Target Support Files/Pods-D2D/Pods-D2D.debug.xcconfig"; sourceTree = "<group>"; };
+>>>>>>> 700cf1cba95269049e91e90060f6e62b99e59316
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,9 +140,18 @@
 		306AD23326FF3374000A58B9 /* D2D */ = {
 			isa = PBXGroup;
 			children = (
+<<<<<<< HEAD
 				30B18EFC270F52440058905C /* Resources */,
+				309A7A57270F7F640047C9CB /* ViewModels */,
+				309A7A5A270F81050047C9CB /* Models */,
+				309A7A5B270F82E90047C9CB /* Views */,
+				309A7A58270F805F0047C9CB /* Controllers */,
+=======
+				CB04BA972728034300FBD3BF /* Models */,
+				CB04BA992728035900FBD3BF /* Ressources */,
 				CB04BA9A2728036000FBD3BF /* Controllers */,
 				CB04BA982728035000FBD3BF /* Views */,
+>>>>>>> 700cf1cba95269049e91e90060f6e62b99e59316
 				306AD24226FF3378000A58B9 /* Info.plist */,
 			);
 			path = D2D;
@@ -159,15 +174,57 @@
 			path = D2DUITests;
 			sourceTree = "<group>";
 		};
+<<<<<<< HEAD
+		309A7A57270F7F640047C9CB /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		309A7A58270F805F0047C9CB /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				306AD23826FF3374000A58B9 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		309A7A5A270F81050047C9CB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		309A7A5B270F82E90047C9CB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				309A7A5C270F839F0047C9CB /* Storyboards */,
+				306AD23D26FF3378000A58B9 /* Assets.xcassets */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		309A7A5C270F839F0047C9CB /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				306AD23A26FF3374000A58B9 /* Main.storyboard */,
+				306AD23F26FF3378000A58B9 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
 		30B18EFC270F52440058905C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
 				306AD23426FF3374000A58B9 /* AppDelegate.swift */,
 				306AD23626FF3374000A58B9 /* SceneDelegate.swift */,
+				CBC10E222730752100144557 /* MapView.swift */,
+				CBC10E242730855000144557 /* MapViewModel.swift */,
 			);
 			path = Resources;
-			sourceTree = "<group>";
-		};
+=======
 		997B31C5BFF3FFDE121EDE86 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -178,23 +235,37 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		CB04BA972728034300FBD3BF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		CB04BA982728035000FBD3BF /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				306AD23D26FF3378000A58B9 /* Assets.xcassets */,
+				306AD23A26FF3374000A58B9 /* Main.storyboard */,
+				306AD23F26FF3378000A58B9 /* LaunchScreen.storyboard */,
 				CBA52A0927298FB600E72140 /* Chat.storyboard */,
 				CBA52A0B272993FE00E72140 /* PostLogin.storyboard */,
-				306AD23A26FF3374000A58B9 /* Main.storyboard */,
-				CB7E464B273B25AA005CD92E /* MapViewController.storyboard */,
-				306AD23F26FF3378000A58B9 /* LaunchScreen.storyboard */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		CB04BA992728035900FBD3BF /* Ressources */ = {
+			isa = PBXGroup;
+			children = (
+				306AD23426FF3374000A58B9 /* AppDelegate.swift */,
+				306AD23626FF3374000A58B9 /* SceneDelegate.swift */,
+			);
+			name = Ressources;
 			sourceTree = "<group>";
 		};
 		CB04BA9A2728036000FBD3BF /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				CBC10E222730752100144557 /* MapView.swift */,
-				CBC10E242730855000144557 /* MapViewModel.swift */,
 				306AD23826FF3374000A58B9 /* WelcomeViewController.swift */,
 				CBC10E1427301F7300144557 /* LoginViewController.swift */,
 				CBC10E162730215700144557 /* SignupViewController.swift */,
@@ -216,6 +287,7 @@
 				C5C78D35B55871A7E0DC9A7F /* Pods-D2DTests.release.xcconfig */,
 			);
 			path = Pods;
+>>>>>>> 700cf1cba95269049e91e90060f6e62b99e59316
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -328,7 +400,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				306AD24126FF3378000A58B9 /* LaunchScreen.storyboard in Resources */,
-				CB7E464C273B25AA005CD92E /* MapViewController.storyboard in Resources */,
+				306AD23E26FF3378000A58B9 /* Assets.xcassets in Resources */,
 				CBA52A0A27298FB600E72140 /* Chat.storyboard in Resources */,
 				CBA52A0C272993FE00E72140 /* PostLogin.storyboard in Resources */,
 				306AD23C26FF3374000A58B9 /* Main.storyboard in Resources */,
@@ -459,16 +531,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+<<<<<<< HEAD
+				306AD23926FF3374000A58B9 /* ViewController.swift in Sources */,
+				CBC10E252730855000144557 /* MapViewModel.swift in Sources */,
+				306AD23526FF3374000A58B9 /* AppDelegate.swift in Sources */,
+				CBC10E232730752100144557 /* MapView.swift in Sources */,
+=======
 				CBC10E1527301F7300144557 /* LoginViewController.swift in Sources */,
 				306AD23926FF3374000A58B9 /* WelcomeViewController.swift in Sources */,
 				CBC10E1D273021B600144557 /* ChatViewController.swift in Sources */,
 				CBC10E192730217C00144557 /* LoginSignupViewController.swift in Sources */,
-				306AD23926FF3374000A58B9 /* WelcomeViewController.swift in Sources */,
-				CBC10E252730855000144557 /* MapViewModel.swift in Sources */,
 				306AD23526FF3374000A58B9 /* AppDelegate.swift in Sources */,
 				CBC10E1B273021A400144557 /* PostLoginViewController.swift in Sources */,
 				CBC10E172730215700144557 /* SignupViewController.swift in Sources */,
-				CBC10E232730752100144557 /* MapView.swift in Sources */,
+>>>>>>> 700cf1cba95269049e91e90060f6e62b99e59316
 				306AD23726FF3374000A58B9 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -652,7 +728,11 @@
 				DEVELOPMENT_TEAM = SW8Q2CUK26;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = D2D/Info.plist;
+<<<<<<< HEAD
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This app needs your location to display your position on the map.";
+=======
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "Users needs to use phone's data to discover devices nearby";
+>>>>>>> 700cf1cba95269049e91e90060f6e62b99e59316
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -682,7 +762,11 @@
 				DEVELOPMENT_TEAM = SW8Q2CUK26;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = D2D/Info.plist;
+<<<<<<< HEAD
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This app needs your location to display your position on the map.";
+=======
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "Users needs to use phone's data to discover devices nearby";
+>>>>>>> 700cf1cba95269049e91e90060f6e62b99e59316
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

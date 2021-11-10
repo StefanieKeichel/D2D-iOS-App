@@ -215,7 +215,6 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="Button_Cartype:" destination="9fV-3F-OjZ" eventType="touchUpInside" id="Szq-GB-Ys4"/>
                                             <action selector="Button_SignUp_Cartype:" destination="9fV-3F-OjZ" eventType="touchUpInside" id="tfo-re-qj2"/>
                                         </connections>
                                     </textField>
@@ -356,7 +355,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="9m2-04-Qgg"/>
+        <segue reference="vQH-gl-Tnb"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="chevron.forward.circle.fill" catalog="system" width="128" height="121"/>
