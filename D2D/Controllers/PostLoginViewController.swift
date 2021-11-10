@@ -2,11 +2,11 @@ import UIKit
 import SwiftUI
 
 class ViewController_PostLogin: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.setHidesBackButton(true, animated: true)
 
-        // Do any additional setup after loading the view.
     }
     
     @IBSegueAction func swiftUIAction(_ coder: NSCoder) -> UIViewController? {
