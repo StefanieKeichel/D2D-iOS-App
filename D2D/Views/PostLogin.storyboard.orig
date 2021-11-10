@@ -25,7 +25,11 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" image="mappin.and.ellipse" catalog="system" title="  GoTo Map"/>
                                 <connections>
+<<<<<<< HEAD
+                                    <segue destination="Gfd-Ri-ajs" kind="presentation" id="M3V-us-3yQ"/>
+=======
                                     <segue destination="fkp-S5-QbB" kind="show" destinationCreationSelector="swiftUIAction:" id="nW3-Pu-suM"/>
+>>>>>>> bd7d1419e743a59200b76bfcb6ca9d64a283a803
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="homekit" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="42b-o3-1tx">
@@ -45,7 +49,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" image="message.fill" catalog="system" title="  GoTo Chat "/>
                                 <connections>
-                                    <segue destination="EgS-7k-wkj" kind="presentation" id="Rou-rJ-7CU"/>
+                                    <segue destination="EgS-7k-wkj" kind="show" id="Rou-rJ-7CU"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -64,7 +68,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="105.79710144927537" y="48.883928571428569"/>
+            <point key="canvasLocation" x="-158" y="51"/>
         </scene>
         <!--MapViewController-->
         <scene sceneID="4pf-dP-obo">
