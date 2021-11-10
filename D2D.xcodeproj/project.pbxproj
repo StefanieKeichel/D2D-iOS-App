@@ -230,8 +230,8 @@
 				306AD23826FF3374000A58B9 /* WelcomeViewController.swift */,
 				CBC10E1427301F7300144557 /* LoginViewController.swift */,
 				CBC10E162730215700144557 /* SignupViewController.swift */,
-				CBC10E182730217C00144557 /* LoginSignupViewController.swift */,
 				CBC10E1A273021A400144557 /* PostLoginViewController.swift */,
+				CBC10E182730217C00144557 /* LoginSignupViewController.swift */,
 				CBC10E1C273021B600144557 /* ChatViewController.swift */,
 			);
 			path = Controllers;

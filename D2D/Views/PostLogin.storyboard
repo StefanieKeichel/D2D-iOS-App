@@ -48,19 +48,31 @@
                                     <segue destination="EgS-7k-wkj" kind="show" id="jry-aY-Gqd"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bE4-yn-vN6">
+                                <rect key="frame" x="70" y="144" width="274" height="0.0"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="bE4-yn-vN6" secondAttribute="trailing" constant="70" id="9Ke-s4-Iae"/>
                             <constraint firstItem="RZk-Qd-seo" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="NCN-SD-HFX"/>
                             <constraint firstItem="3hg-Fp-S63" firstAttribute="leading" secondItem="RZk-Qd-seo" secondAttribute="leading" id="S82-Ir-EfX"/>
                             <constraint firstItem="RZk-Qd-seo" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="acG-Kh-8Q9"/>
+                            <constraint firstItem="bE4-yn-vN6" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="100" id="ale-nQ-aNT"/>
                             <constraint firstItem="42b-o3-1tx" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="87" id="bKH-E5-GBc"/>
                             <constraint firstItem="42b-o3-1tx" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="131" id="lRG-UL-TpJ"/>
                             <constraint firstItem="3hg-Fp-S63" firstAttribute="centerX" secondItem="42b-o3-1tx" secondAttribute="centerX" id="m1Z-gS-0rc"/>
+                            <constraint firstItem="bE4-yn-vN6" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="70" id="tIN-uS-uZA"/>
                             <constraint firstItem="3hg-Fp-S63" firstAttribute="top" secondItem="RZk-Qd-seo" secondAttribute="bottom" constant="73" id="vb6-cH-UO0"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="Display_Name" destination="bE4-yn-vN6" id="8dO-ch-kmJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

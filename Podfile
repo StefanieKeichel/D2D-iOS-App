@@ -5,6 +5,10 @@ target 'D2D' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
+#Pods for Firebase -Stephs Changes on the 07.11
+#pod 'Firebase/Core'
+#pod 'Firebase/Auth' 
+
   # Pods for D2D
   pod 'Firebase/Auth'
   pod 'Firebase/Firestore'
