@@ -38,7 +38,7 @@
                                     <constraint firstItem="PqJ-sV-Cdb" firstAttribute="leading" secondItem="t3Z-Le-HlQ" secondAttribute="leading" constant="10" id="gKK-QK-DBz"/>
                                 </constraints>
                             </view>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IMG_8478" translatesAutoresizingMaskIntoConstraints="NO" id="R8a-AS-14v">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="R8a-AS-14v">
                                 <rect key="frame" x="271" y="0.0" width="40" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="40" id="7vw-Ws-H2z"/>
@@ -72,7 +72,6 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="IMG_8478" width="960" height="960"/>
         <systemColor name="systemGray6Color">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
