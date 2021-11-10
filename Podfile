@@ -10,7 +10,9 @@ target 'D2D' do
 #pod 'Firebase/Auth' 
 
   # Pods for D2D
-pod ‘MessageKit’
+  pod 'Firebase/Auth'
+  pod 'Firebase/Firestore'
+  pod 'IQKeyboardManagerSwift' 
 
   target 'D2DTests' do
     inherit! :search_paths

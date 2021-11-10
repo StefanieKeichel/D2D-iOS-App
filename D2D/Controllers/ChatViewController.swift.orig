@@ -25,6 +25,8 @@ class ChatViewController: UIViewController {
         tableView.register(UINib(nibName: Constants.cellNibName, bundle: nil), forCellReuseIdentifier: Constants.cellIdentifier)
         loadMessages()
     }
+<<<<<<< HEAD
+=======
     
     func loadMessages() {
     
@@ -91,4 +93,5 @@ extension ChatViewController: UITableViewDataSource {
         return cell
     }
     
+>>>>>>> c2a9d04920763d60ce7c1b6ba0415009918b56aa
 }
