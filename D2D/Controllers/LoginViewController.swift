@@ -1,6 +1,7 @@
 import UIKit
+import Firebase
 
-class ViewController_Login: UIViewController {
+class LoginViewController: UIViewController {
     
     @IBOutlet weak var Login_Email_TextField: UITextField!
     @IBOutlet weak var Login_Password_TextField: UITextField!
@@ -13,9 +14,18 @@ class ViewController_Login: UIViewController {
         super.viewDidLoad()
     }
     
-    @IBAction func GoTo_PostLogin(_ sender: Any) {
-        self.Login_Email = Login_Email_TextField.text!
-        self.Login_Password = Login_Password_TextField.text!
+    @IBAction func GoTo_PostLogin(_ sender: UIButton) {
+        if let email = Login_Email_TextField.text, let password = Login_Password_TextField.text {
+            Auth.auth().signIn(withEmail: email, password: password) {  authResult, error in
+                if let e = error {
+                    print(e)
+                } else {
+                    // navigate to the PostLoginViewController
+                    self.performSegue(withIdentifier: "LoginToChat", sender: self)
+                }
+            }
+            
+        }
         
         login_option = "Login"
     }
@@ -23,7 +33,7 @@ class ViewController_Login: UIViewController {
 //    pass data between view controllers with passSegue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 //        destination viewcontroller
-        let destVC = segue.destination as! ViewController_PostLogin
+        let destVC = segue.destination as! PostLoginViewController
         destVC.Display_Login_Name = self.Login_Email
         destVC.login_option = self.login_option
     }

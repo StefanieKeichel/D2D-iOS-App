@@ -1,7 +1,7 @@
 import UIKit
 import SwiftUI
 
-class ViewController_PostLogin: UIViewController {
+class PostLoginViewController: UIViewController {
 
     @IBOutlet weak var Display_Name: UILabel!
     
