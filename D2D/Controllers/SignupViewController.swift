@@ -1,5 +1,5 @@
 import UIKit
-import Firebase
+import FirebaseAuth
 
 class SignupViewController: UIViewController {
 
@@ -23,6 +23,24 @@ class SignupViewController: UIViewController {
     }
     
     @IBAction func GoTo_PostLogin(_ sender: UIButton) {
+        guard let email = SignUp_Email_TextField.text,
+              let password = SignUp_Password_TextField.text,
+              !email.isEmpty, !password.isEmpty,
+              password.count > 6 else {
+                  alertUserLoginError()
+                  return
+              }
+        // Firebse Sign up
+        Auth.auth().createUser(withEmail: email, password: password) {
+            authResult, error in
+            guard let result = authResult, error == nil else {
+                print("Error creating user")
+            }
+            
+        }
+        
+        
+        
         if let email = SignUp_Email_TextField.text, let password = SignUp_Password_TextField.text {
             Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
                 if let e = error {
