@@ -25,9 +25,10 @@ class SignupViewController: UIViewController {
     @IBAction func GoTo_PostLogin(_ sender: UIButton) {
         guard let email = SignUp_Email_TextField.text,
               let password = SignUp_Password_TextField.text,
-              !email.isEmpty, !password.isEmpty,
+              !email.isEmpty,
+              !password.isEmpty,
               password.count > 6 else {
-                  alertUserLoginError()
+                  alertUserSignUpError()
                   return
               }
         // Firebse Sign up
@@ -35,26 +36,19 @@ class SignupViewController: UIViewController {
             authResult, error in
             guard let result = authResult, error == nil else {
                 print("Error creating user")
+                return
             }
+            let user = result.user
+            print("Created User: \(user)")
+            self.performSegue(withIdentifier: "RegisterToChat", sender: self)
             
         }
         
-        
-        
-        if let email = SignUp_Email_TextField.text, let password = SignUp_Password_TextField.text {
-            Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
-                if let e = error {
-                    print(e.localizedDescription)
-                }
-                if self.SignUp_Cartype_TextField.text!.isEmpty{
-                    print("Please enter your cartype")
-                }
-                else {
-                    // Navigate to the chatViewController
-                    print("Success")
-                    self.performSegue(withIdentifier: "RegisterToChat", sender: self)
-                }
-            }
+        func alertUserSignUpError() {
+            let alert = UIAlertController(title: "Woops", message: "Please enter the right information to create a new account", preferredStyle: .alert)
+            
+            alert.addAction(UIAlertAction(title:"Dismiss", style: .cancel, handler: nil))
+            present(alert, animated: true)
             
         }
         
@@ -79,7 +73,7 @@ class SignupViewController: UIViewController {
         }
         
         if SignUp_Email_TextField.text!.isEmpty {
-                print("Please enter your EMail")
+                print("Please enter your Email")
         }
         
         if SignUp_Cartype_TextField.text!.isEmpty {

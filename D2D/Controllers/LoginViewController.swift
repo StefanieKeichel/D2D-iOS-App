@@ -23,20 +23,19 @@ class LoginViewController: UIViewController {
                   alertUserLoginError()
                   return
               }
-        // firebase log in
-       
-        Auth.auth().signIn(withEmail: email, password: password) {  authResult, error in
-            guard let result = authResult, error == nil else{
-                print("Failed to log in user with email: \(email)")
-                return
+        if let email = Login_Email_TextField.text,
+           let password = Login_Password_TextField.text {
+               // firebase log in
+               Auth.auth().signIn(withEmail: email, password: password) {  authResult, error in
+                   if let e = error  {
+                       print("Failed to log in user with email: \(email)")
+                       print(e)
+                   } else {
+                       self.performSegue(withIdentifier: "LoginToChat", sender: self)
+                   }
             }
-            // navigate to the PostLoginViewController
-            let user = result.user
-            print("Logged in user: \(user)")
-            //self.performSegue(withIdentifier: "LoginToChat", sender: self)
-            }
+        }
             
-        login_option = "Login"
     }
     
     func alertUserLoginError() {
