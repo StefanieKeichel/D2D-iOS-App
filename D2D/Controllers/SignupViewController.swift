@@ -1,12 +1,14 @@
 import UIKit
+import FirebaseAuth
 
-class ViewController_SignUp: UIViewController {
+class SignupViewController: UIViewController {
 
     @IBOutlet weak var SignUp_Cartype_TextField: UITextField!
     @IBOutlet weak var SignUp_Name_TextField: UITextField!
     @IBOutlet weak var SignUp_Email_TextField: UITextField!
     @IBOutlet weak var SignUp_Password_TextField: UITextField!
     @IBOutlet weak var SignUp_Password_again_TextField: UITextField!
+
     
     var SignUp_Cartype = ""
     var SignUp_Name = ""
@@ -20,7 +22,36 @@ class ViewController_SignUp: UIViewController {
         super.viewDidLoad()
     }
     
-    @IBAction func GoTo_PostLogin(_ sender: Any) {
+    @IBAction func GoTo_PostLogin(_ sender: UIButton) {
+        guard let email = SignUp_Email_TextField.text,
+              let password = SignUp_Password_TextField.text,
+              !email.isEmpty,
+              !password.isEmpty,
+              password.count > 6 else {
+                  alertUserSignUpError()
+                  return
+              }
+        // Firebse Sign up
+        Auth.auth().createUser(withEmail: email, password: password) {
+            authResult, error in
+            guard let result = authResult, error == nil else {
+                print("Error creating user")
+                return
+            }
+            let user = result.user
+            print("Created User: \(user)")
+            self.performSegue(withIdentifier: "RegisterToChat", sender: self)
+            
+        }
+        
+        func alertUserSignUpError() {
+            let alert = UIAlertController(title: "Woops", message: "Please enter the right information to create a new account", preferredStyle: .alert)
+            
+            alert.addAction(UIAlertAction(title:"Dismiss", style: .cancel, handler: nil))
+            present(alert, animated: true)
+            
+        }
+        
         self.SignUp_Cartype = SignUp_Cartype_TextField.text!
         self.SignUp_Name = SignUp_Name_TextField.text!
         self.SignUp_Email = SignUp_Email_TextField.text!
@@ -42,7 +73,7 @@ class ViewController_SignUp: UIViewController {
         }
         
         if SignUp_Email_TextField.text!.isEmpty {
-                print("Please enter your EMail")
+                print("Please enter your Email")
         }
         
         if SignUp_Cartype_TextField.text!.isEmpty {
@@ -66,7 +97,7 @@ class ViewController_SignUp: UIViewController {
     
 //    Passing variables from one ViewController to the next with this function
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let destVC = segue.destination as! ViewController_PostLogin
+        let destVC = segue.destination as! PostLoginViewController
         destVC.Display_SignUp_Cartype = self.SignUp_Cartype
         destVC.Display_Login_Name = self.SignUp_Name
         destVC.Display_SignUp_EMail = self.SignUp_Email

@@ -36,10 +36,13 @@ final class MapViewModel: NSObject, ObservableObject,CLLocationManagerDelegate {
         case .denied:
             print("You have denied this app location permission. Go into settings to change it.")
         case .authorizedAlways, .authorizedWhenInUse:
+            if locationManager.location?.coordinate != nil {
             region = MKCoordinateRegion(center: locationManager.location!.coordinate,
                                         span: MKCoordinateSpan(latitudeDelta: 0.005, longitudeDelta: 0.005))
 //                                        span: MapDetails.defaultSpan)
 //            break
+                print("Successfull")
+            }
         @unknown default:
             break
         }

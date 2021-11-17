@@ -1,6 +1,6 @@
 import UIKit
 
-class ViewController_Login_SignUp: UIViewController {
+class LoginSignupViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
