@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller Sign Up-->
+        <!--Signup View Controller-->
         <scene sceneID="GKW-UW-spd">
             <objects>
-                <viewController id="vMI-Dv-Jnz" customClass="ViewController_SignUp" customModule="D2D" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vMI-Dv-Jnz" customClass="SignupViewController" customModule="D2D" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Uab-UB-x2U">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -87,12 +87,17 @@
                                         </constraints>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
                                                 <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="password_check:" destination="vMI-Dv-Jnz" eventType="touchUpOutside" id="6bn-Dk-Ijp"/>
+                                            <action selector="password_check:" destination="vMI-Dv-Jnz" eventType="editingDidEnd" id="HOo-m3-NjU"/>
+                                            <action selector="password_check:" destination="vMI-Dv-Jnz" eventType="editingChanged" id="q9s-wx-2ua"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter password again " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5GH-vI-1Ym">
                                         <rect key="frame" x="0.0" y="475" width="260" height="60"/>
@@ -103,12 +108,16 @@
                                         </constraints>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
                                                 <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="password_repetition_check:" destination="vMI-Dv-Jnz" eventType="editingDidEnd" id="6Ar-IO-U3I"/>
+                                            <action selector="password_repetition_check:" destination="vMI-Dv-Jnz" eventType="touchUpOutside" id="OeC-3c-CDU"/>
+                                        </connections>
                                     </textField>
                                 </subviews>
                             </stackView>
@@ -124,8 +133,8 @@
                                     <imageReference key="image" image="chevron.forward.circle.fill" catalog="system" symbolScale="large"/>
                                 </state>
                                 <connections>
-                                    <action selector="GoTo_PostLogin:" destination="vMI-Dv-Jnz" eventType="touchUpInside" id="r4M-PS-rBE"/>
-                                    <segue destination="Zpt-1S-18i" kind="show" id="7qo-RC-3cn"/>
+                                    <action selector="GoTo_PostLogin:" destination="vMI-Dv-Jnz" eventType="touchUpInside" id="yfC-ye-2VV"/>
+                                    <segue destination="Zpt-1S-18i" kind="show" identifier="RegisterToChat" id="TxO-RH-u5l"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -144,7 +153,7 @@
                         <outlet property="SignUp_Email_TextField" destination="g50-8L-Vgq" id="Tv1-Sh-C5S"/>
                         <outlet property="SignUp_Name_TextField" destination="NyZ-8q-Ypm" id="pHs-xf-pY9"/>
                         <outlet property="SignUp_Password_TextField" destination="sZL-39-NR1" id="2kp-gT-oKU"/>
-                        <outlet property="SignUp_Password_again_TextField" destination="5GH-vI-1Ym" id="zOB-0u-e4F"/>
+                        <outlet property="SignUp_Password_repetition_TextField" destination="5GH-vI-1Ym" id="CGi-JM-Qdk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NCz-g7-1j8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
