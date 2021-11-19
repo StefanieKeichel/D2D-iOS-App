@@ -16,19 +16,21 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func GoTo_PostLogin(_ sender: UIButton) {
-        guard let email = Login_Email_TextField.text,
-              let password = Login_Password_TextField.text,
-              !email.isEmpty, !password.isEmpty,
-              password.count > 6 else {
+        guard let Login_Email = Login_Email_TextField.text,
+              let Login_Password = Login_Password_TextField.text,
+              !Login_Email.isEmpty, !Login_Password.isEmpty
+//              Login_Password.count > 6
+        else {
                   alertUserLoginError()
                   return
               }
-        if let email = Login_Email_TextField.text,
-           let password = Login_Password_TextField.text {
+        if
+            let Login_Email = Login_Email_TextField.text,
+            let Login_Password = Login_Password_TextField.text {
                // firebase log in
-               Auth.auth().signIn(withEmail: email, password: password) {  authResult, error in
+               Auth.auth().signIn(withEmail: Login_Email, password: Login_Password) {  authResult, error in
                    if let e = error  {
-                       print("Failed to log in user with email: \(email)")
+                       print("Failed to log in user with email: \(Login_Email)")
                        print(e)
                    } else {
                        self.performSegue(withIdentifier: "LoginToChat", sender: self)
