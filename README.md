@@ -81,7 +81,7 @@ Passing variables from one ViewController to the next using this function:
 ### **Setting up the development environment**
 
 - Install Xcode
-- execute <pod install>
+- execute *pod install*
 
 ### **Credits**
 
