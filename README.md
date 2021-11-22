@@ -27,52 +27,55 @@ All user interfaces are build in the storyboard files. Like building blocks, eve
 
 ### **Features**
 
-Welcome page and the option to Login or Sign Up
+- Welcome page and the option to Login or Sign Up:
 
 <img width="461" alt="Bildschirmfoto 2021-11-22 um 13 22 34" src="https://user-images.githubusercontent.com/58078457/142861156-a6467e88-30dd-42f1-92fa-7e0f1e046153.png">
 
-Login:
+- Login:
 
 <img width="463" alt="Bildschirmfoto 2021-11-22 um 13 22 22" src="https://user-images.githubusercontent.com/58078457/142861171-8c79acbd-e5a5-42de-bdbd-3509cf4794f9.png">
 
-Sign Up:
+- Sign Up:
 
 <img width="461" alt="Bildschirmfoto 2021-11-22 um 13 22 44" src="https://user-images.githubusercontent.com/58078457/142861186-bded8a7e-28d2-4e6c-8987-7de4fb441a8c.png">
 
-Visual feedback if the password meets the requirements:
+- Visual feedback if the password meets the requirements:
 
 <img width="480" alt="Bildschirmfoto 2021-11-22 um 13 24 27" src="https://user-images.githubusercontent.com/58078457/142861413-25fa4d3d-2a4e-48ad-a72b-b82efb8dc4cb.png">
+
+- Visual feedback if one passwords matches:
+
 <img width="480" alt="Bildschirmfoto 2021-11-22 um 13 24 44" src="https://user-images.githubusercontent.com/58078457/142861416-d71ff322-9453-4650-9345-750a55b97f6e.png">
 
-Visual feedback if both passwords match:
+- Visual feedback if both passwords match:
 
 <img width="480" alt="Bildschirmfoto 2021-11-22 um 13 24 49" src="https://user-images.githubusercontent.com/58078457/142861420-d459a1c1-3fc6-44a0-82e4-1a9ab713a3e6.png">
 
-Implementation of Google Maps and location tracking:
+- Implementation of Google Maps and location tracking:
 
 <img width="480" alt="Bildschirmfoto 2021-11-22 um 13 49 39" src="https://user-images.githubusercontent.com/58078457/142864698-665e2a5a-def5-4c6b-a9d8-571967eeb3e5.png">
 
-Chat messaging:
+- Chat messaging:
 
 <img width="480" alt="Bildschirmfoto 2021-11-22 um 13 30 04" src="https://user-images.githubusercontent.com/58078457/142864804-dd23135a-14ff-4828-8694-7031a7796e68.png">
 
 
 ### **Code Examples**
 
-Visual feedback if the password meets the requirements (changing background color of UITextField):
+- Visual feedback if the password meets the requirements (changing background color of UITextField):
 
 <img width="949" alt="Bildschirmfoto 2021-11-22 um 13 56 04" src="https://user-images.githubusercontent.com/58078457/142865689-d2c8c331-a084-4b19-9d22-5b780d15546b.png">
 
-Password strength check:
+- Password strength check:
 
 <img width="578" alt="Bildschirmfoto 2021-11-22 um 14 05 54" src="https://user-images.githubusercontent.com/58078457/142866880-8e82a090-73e8-4d1c-b16f-8dcecf671e8a.png">
 
 
-Implementation of the Location Manager class that retrievs location information in addition to handling all events that get triggered by location changes:
+- Implementation of the Location Manager class that retrievs location information in addition to handling all events that get triggered by location changes:
 
 <img width="582" alt="Bildschirmfoto 2021-11-22 um 14 02 26" src="https://user-images.githubusercontent.com/58078457/142866476-27fe4508-9d74-491e-aa6e-6cd753a7a170.png">
 
-Passing variables from one ViewController to the next using this function:
+- Passing variables from one ViewController to the next using this function:
 
 <img width="559" alt="Bildschirmfoto 2021-11-22 um 14 10 57" src="https://user-images.githubusercontent.com/58078457/142867594-e8e9f873-a665-4849-99d6-2b36dd043e9f.png">
 
@@ -87,18 +90,18 @@ Passing variables from one ViewController to the next using this function:
 
 Ahmed Eldably
 
-Implementation of the chat messaging
-Implementation of dynamic welcome screen
-Connecting to Firebase
-Writing testing routines
+- Implementation of the chat messaging
+- Implementation of dynamic welcome screen
+- Connecting to Firebase
+- Writing testing routines
 
 David Korn
 
-Setting up Firebase
-Connecting to Firebase
+- Setting up Firebase
+- Connecting to Firebase
 
 Stefanie Keichel
 
-Implementation of SignUp-Security (checking password strength, visual feedback, passing variables between view controllers)
-Implementation of Google Maps and ensuring maximum tracking accuracy
-Implementation of all storyboards and setting up the infrastructure of those
+- Implementation of SignUp-Security (checking password strength, visual feedback, passing variables between view controllers)
+- Implementation of Google Maps and ensuring maximum tracking accuracy
+- Implementation of all storyboards and setting up the infrastructure of those
