@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -17,50 +17,83 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RZk-Qd-seo">
                                 <rect key="frame" x="77" y="418" width="260" height="60"/>
+                                <color key="backgroundColor" red="0.45229834320000001" green="0.93410122390000005" blue="0.88235217330000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="86g-oR-ksY"/>
                                     <constraint firstAttribute="width" constant="260" id="sNr-11-Q0k"/>
                                 </constraints>
-                                <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" red="0.95697695019999995" green="0.94456714389999996" blue="0.9725525975" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" image="mappin.and.ellipse" catalog="system" title="  GoTo Map"/>
+                                <buttonConfiguration key="configuration" style="filled" image="mappin.and.ellipse" catalog="system" title=" GoTo map">
+                                    <fontDescription key="titleFontDescription" name="Futura-Medium" family="Futura" pointSize="14"/>
+                                    <color key="baseBackgroundColor" red="0.45229834320000001" green="0.93410122390000005" blue="0.88235217330000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="13"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <segue destination="fkp-S5-QbB" kind="show" destinationCreationSelector="swiftUIAction:" id="nW3-Pu-suM"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="homekit" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="42b-o3-1tx">
                                 <rect key="frame" x="87" y="174" width="240" height="128"/>
-                                <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" red="0.95697695019999995" green="0.94456714389999996" blue="0.9725525975" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="n0e-Mn-kOR"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3hg-Fp-S63">
                                 <rect key="frame" x="77" y="551" width="260" height="60"/>
+                                <color key="backgroundColor" red="0.45229834320000001" green="0.93410122390000005" blue="0.88235217330000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="ILo-eo-6Hu"/>
                                     <constraint firstAttribute="width" constant="260" id="dAD-Ae-ypL"/>
                                 </constraints>
-                                <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" red="0.95697695019999995" green="0.94456714389999996" blue="0.9725525975" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" image="message.fill" catalog="system" title="  GoTo Chat "/>
+                                <buttonConfiguration key="configuration" style="filled" image="message.fill" catalog="system" title="  GoTo chat ">
+                                    <fontDescription key="titleFontDescription" name="Futura-Medium" family="Futura" pointSize="14"/>
+                                    <color key="baseBackgroundColor" red="0.45229834320000001" green="0.93410122390000005" blue="0.88235217330000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="13"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <segue destination="EgS-7k-wkj" kind="show" id="jry-aY-Gqd"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="welcome" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5nk-JK-5Ll">
+                                <rect key="frame" x="57" y="125" width="300" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="TMp-PF-g6S"/>
+                                    <constraint firstAttribute="width" constant="300" id="WUa-XE-PT0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="14"/>
+                                <color key="textColor" red="0.95697695019999995" green="0.94456714389999996" blue="0.9725525975" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.4445248544" green="0.1549414694" blue="0.87848204370000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
+                            <constraint firstItem="42b-o3-1tx" firstAttribute="top" secondItem="5nk-JK-5Ll" secondAttribute="bottom" constant="10" id="03e-ig-UrN"/>
                             <constraint firstItem="RZk-Qd-seo" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="NCN-SD-HFX"/>
                             <constraint firstItem="3hg-Fp-S63" firstAttribute="leading" secondItem="RZk-Qd-seo" secondAttribute="leading" id="S82-Ir-EfX"/>
                             <constraint firstItem="RZk-Qd-seo" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="acG-Kh-8Q9"/>
                             <constraint firstItem="42b-o3-1tx" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="87" id="bKH-E5-GBc"/>
                             <constraint firstItem="42b-o3-1tx" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="131" id="lRG-UL-TpJ"/>
                             <constraint firstItem="3hg-Fp-S63" firstAttribute="centerX" secondItem="42b-o3-1tx" secondAttribute="centerX" id="m1Z-gS-0rc"/>
-                            <constraint firstItem="3hg-Fp-S63" firstAttribute="top" secondItem="RZk-Qd-seo" secondAttribute="bottom" constant="73" id="vb6-cH-UO0"/>
+                            <constraint firstItem="5nk-JK-5Ll" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="mW9-7L-wTY"/>
+                            <constraint firstItem="3hg-Fp-S63" firstAttribute="top" secondItem="RZk-Qd-seo" secondAttribute="bottom" constant="73" id="vb6-cH-UO0" userLabel="GoTo chat .top =  GoTo map.bottom + 73"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="welcome_text" destination="5nk-JK-5Ll" id="nS5-ca-TMX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -76,10 +109,10 @@
             </objects>
             <point key="canvasLocation" x="688" y="55"/>
         </scene>
-        <!--Chat-->
+        <!--VoiceAssistant-->
         <scene sceneID="3jW-2p-hbo">
             <objects>
-                <viewControllerPlaceholder storyboardName="Chat" id="EgS-7k-wkj" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="VoiceAssistant" id="EgS-7k-wkj" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="JQJ-oQ-Zq0"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Et-fn-JCa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -87,6 +120,7 @@
             <point key="canvasLocation" x="624" y="146"/>
         </scene>
     </scenes>
+    <color key="tintColor" red="0.032234039159999998" green="0.1177618429" blue="0.1098039225" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
     <resources>
         <image name="homekit" catalog="system" width="128" height="106"/>
         <image name="mappin.and.ellipse" catalog="system" width="118" height="128"/>

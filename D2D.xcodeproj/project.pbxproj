@@ -23,6 +23,8 @@
 		30DA0410273C1FE200B06912 /* MessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30DA040F273C1FE200B06912 /* MessageCell.xib */; };
 		30DA0412273C20CB00B06912 /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30DA0411273C20CB00B06912 /* MessageCell.swift */; };
 		30DA0414273C21AC00B06912 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 30DA0413273C21AC00B06912 /* GoogleService-Info.plist */; };
+		CB4FFB732761323A00CB7552 /* VoiceAssistantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4FFB722761323A00CB7552 /* VoiceAssistantViewController.swift */; };
+		CB4FFB75276149EF00CB7552 /* VoiceAssistant.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB4FFB74276149EE00CB7552 /* VoiceAssistant.storyboard */; };
 		CB7E464C273B25AA005CD92E /* MapViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB7E464B273B25AA005CD92E /* MapViewController.storyboard */; };
 		CB7E464E273B369A005CD92E /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB7E464D273B369A005CD92E /* Login.storyboard */; };
 		CB7E4650273B370A005CD92E /* SignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB7E464F273B370A005CD92E /* SignUp.storyboard */; };
@@ -81,6 +83,8 @@
 		B105381A98DA877215163CD8 /* Pods-D2DTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-D2DTests.debug.xcconfig"; path = "Target Support Files/Pods-D2DTests/Pods-D2DTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B92DEE06BEF2A5F08D10F6F6 /* Pods-D2D-D2DUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-D2D-D2DUITests.release.xcconfig"; path = "Target Support Files/Pods-D2D-D2DUITests/Pods-D2D-D2DUITests.release.xcconfig"; sourceTree = "<group>"; };
 		C5C78D35B55871A7E0DC9A7F /* Pods-D2DTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-D2DTests.release.xcconfig"; path = "Target Support Files/Pods-D2DTests/Pods-D2DTests.release.xcconfig"; sourceTree = "<group>"; };
+		CB4FFB722761323A00CB7552 /* VoiceAssistantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceAssistantViewController.swift; sourceTree = "<group>"; };
+		CB4FFB74276149EE00CB7552 /* VoiceAssistant.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = VoiceAssistant.storyboard; sourceTree = "<group>"; };
 		CB7E464B273B25AA005CD92E /* MapViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MapViewController.storyboard; sourceTree = "<group>"; };
 		CB7E464D273B369A005CD92E /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		CB7E464F273B370A005CD92E /* SignUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignUp.storyboard; sourceTree = "<group>"; };
@@ -211,6 +215,7 @@
 				CB7E4651273C0559005CD92E /* Main.storyboard */,
 				CB7E464F273B370A005CD92E /* SignUp.storyboard */,
 				CB7E464D273B369A005CD92E /* Login.storyboard */,
+				CB4FFB74276149EE00CB7552 /* VoiceAssistant.storyboard */,
 				CBA52A0B272993FE00E72140 /* PostLogin.storyboard */,
 				CBA52A0927298FB600E72140 /* Chat.storyboard */,
 				CB7E464B273B25AA005CD92E /* MapViewController.storyboard */,
@@ -229,6 +234,7 @@
 				CBC10E242730855000144557 /* MapViewModel.swift */,
 				306AD23826FF3374000A58B9 /* WelcomeViewController.swift */,
 				CBC10E1427301F7300144557 /* LoginViewController.swift */,
+				CB4FFB722761323A00CB7552 /* VoiceAssistantViewController.swift */,
 				CBC10E162730215700144557 /* SignupViewController.swift */,
 				CBC10E182730217C00144557 /* LoginSignupViewController.swift */,
 				CBC10E1A273021A400144557 /* PostLoginViewController.swift */,
@@ -363,6 +369,7 @@
 				CB7E4652273C0559005CD92E /* Main.storyboard in Resources */,
 				306AD24126FF3378000A58B9 /* LaunchScreen.storyboard in Resources */,
 				30DA0414273C21AC00B06912 /* GoogleService-Info.plist in Resources */,
+				CB4FFB75276149EF00CB7552 /* VoiceAssistant.storyboard in Resources */,
 				CB7E464E273B369A005CD92E /* Login.storyboard in Resources */,
 				CB7E4650273B370A005CD92E /* SignUp.storyboard in Resources */,
 				CB7E464C273B25AA005CD92E /* MapViewController.storyboard in Resources */,
@@ -497,6 +504,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CBC10E1527301F7300144557 /* LoginViewController.swift in Sources */,
+				CB4FFB732761323A00CB7552 /* VoiceAssistantViewController.swift in Sources */,
 				306AD23926FF3374000A58B9 /* WelcomeViewController.swift in Sources */,
 				CBC10E1D273021B600144557 /* ChatViewController.swift in Sources */,
 				30DA040C273C196900B06912 /* Messaage.swift in Sources */,

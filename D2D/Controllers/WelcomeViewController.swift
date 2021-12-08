@@ -16,17 +16,17 @@ class WelcomeViewController: UIViewController {
         super.viewDidLoad()
         
         // Initalize empty text
-        titleLabel.text = ""
-        let titleText = Constants.appName
-        var charIndex = 0.0
-        
-        // loop on every letter in the text and show every letter every 0.1 seconds
-        for letter in titleText {
-            Timer.scheduledTimer(withTimeInterval: 0.1 * charIndex, repeats: false) {(timer) in self.titleLabel.text?.append(letter)
-                
-            }
-            charIndex += 1
-        }
+//        titleLabel.text = ""
+//        let titleText = Constants.appName
+//        var charIndex = 0.0
+//
+//        // loop on every letter in the text and show every letter every 0.1 seconds
+//        for letter in titleText {
+//            Timer.scheduledTimer(withTimeInterval: 0.1 * charIndex, repeats: false) {(timer) in self.titleLabel.text?.append(letter)
+//
+//            }
+//            charIndex += 1
+//        }
     }
 
 

@@ -9,6 +9,7 @@ target 'D2D' do
   pod 'Firebase/Auth'
   pod 'Firebase/Firestore'
   pod 'IQKeyboardManagerSwift' 
+  pod 'InstantSearchVoiceOverlay'
 
   target 'D2DTests' do
     inherit! :search_paths
