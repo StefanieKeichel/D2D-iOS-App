@@ -23,6 +23,7 @@ class SignupViewController: UIViewController {
             SignUp_Password_repetition_TextField.backgroundColor = UIColor.green
         }
     }
+    
     @IBAction func password_repetition_check(_ sender: Any) {
         if checkStrength(SignUp_Password_TextField.text ?? "") == true {
             (sender as! UITextField).backgroundColor = UIColor(red: 229/255, green: 255/255, blue: 204/255, alpha: 1)
@@ -122,10 +123,8 @@ class SignupViewController: UIViewController {
     }
     
     func checkStrength(_ password: String) ->Bool {
-        print("Passwort lautet: _")
-        print(password)
         
-        let passwordLenth = password.count
+        let passwordLength = password.count
         var containsSymbol = false
         var containsUppercase = false
         
@@ -136,10 +135,9 @@ class SignupViewController: UIViewController {
             if "!#$%&\'()*+,-.;:^°/".contains(character) {
                 containsSymbol = true
             }
-            
         }
         
-        if containsSymbol == true && containsUppercase == true && passwordLenth > 6 {
+        if containsSymbol == true && containsUppercase == true && passwordLength > 6 {
             return true
         }else {
             return false
