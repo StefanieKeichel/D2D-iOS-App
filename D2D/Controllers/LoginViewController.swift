@@ -6,7 +6,6 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var Login_Email_TextField: UITextField!
     @IBOutlet weak var Login_Password_TextField: UITextField!
 
-    
     var Login_Email = ""
     var Login_Password = ""
     var login_option = ""
@@ -16,10 +15,12 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func GoTo_PostLogin(_ sender: UIButton) {
+        
+        Login_Email = Login_Email_TextField.text ?? ""
+        
         guard let Login_Email = Login_Email_TextField.text,
               let Login_Password = Login_Password_TextField.text,
               !Login_Email.isEmpty, !Login_Password.isEmpty
-//              Login_Password.count > 6
         else {
                   alertUserLoginError()
                   return
@@ -50,7 +51,6 @@ class LoginViewController: UIViewController {
 
 //    pass data between view controllers with passSegue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        destination viewcontroller
         let destVC = segue.destination as! PostLoginViewController
         destVC.Display_Login_Name = self.Login_Email
         destVC.login_option = self.login_option

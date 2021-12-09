@@ -17,11 +17,16 @@ class ChatViewController: UIViewController {
     let db = Firestore.firestore()
     
     var messages: [Message] = []
+    var voicemessage = ""
     
     override func viewDidLoad() {
+        messageTextField.text = "\(voicemessage)"
         tableView.dataSource = self
         title = Constants.appName
         super.viewDidLoad()
+        self.navigationController?.navigationBar.tintColor = UIColor(red: 123/255, green: 32/255, blue: 233/255, alpha: 1.0)
+//        purple
+//        colorpurple
         tableView.register(UINib(nibName: Constants.cellNibName, bundle: nil), forCellReuseIdentifier: Constants.cellIdentifier)
         loadMessages()
     }

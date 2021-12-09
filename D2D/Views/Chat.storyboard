@@ -18,24 +18,29 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fjR-Bq-8dO" userLabel="Table Chat">
                                 <rect key="frame" x="0.0" y="44" width="414" height="778"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" red="0.4445248544" green="0.1549414694" blue="0.87848204370000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" red="0.95697695019999995" green="0.94456714389999996" blue="0.9725525975" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="sectionIndexBackgroundColor" red="0.4445248544" green="0.1549414694" blue="0.87848204370000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EG7-gD-4Ms">
                                 <rect key="frame" x="0.0" y="820" width="414" height="43"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dce-rm-D4R" userLabel="Text Message">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dce-rm-D4R" userLabel="Text Message">
                                         <rect key="frame" x="0.0" y="1" width="344" height="40"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="backgroundColor" red="0.4445248544" green="0.1549414694" blue="0.87848204370000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="textColor" red="0.95697695019999995" green="0.94456714389999996" blue="0.9725525975" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eAE-pY-NJC" userLabel="Send">
-                                        <rect key="frame" x="344" y="1" width="70" height="40"/>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eAE-pY-NJC" userLabel="Send">
+                                        <rect key="frame" x="335" y="1" width="79" height="40"/>
+                                        <color key="backgroundColor" red="0.95697695019999995" green="0.94456714389999996" blue="0.9725525975" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="70" id="hcb-0r-NjY"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                        <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="14"/>
                                         <state key="normal" title="Send">
-                                            <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="titleColor" red="0.4445248544" green="0.1549414694" blue="0.87848204370000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
                                         <connections>
                                             <action selector="sendPressed:" destination="CIR-IH-511" eventType="touchUpInside" id="Enq-tr-mvd"/>
@@ -74,7 +79,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="43b-UV-9DO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1380" y="53"/>
+            <point key="canvasLocation" x="-1364" y="46"/>
         </scene>
     </scenes>
     <color key="tintColor" red="0.4445248544" green="0.1549414694" blue="0.87848204370000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
