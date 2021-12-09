@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Login View Controller-->
+        <!--View Controller Login-->
         <scene sceneID="0ZY-Nd-q8W">
             <objects>
-                <viewController id="1Ey-kz-fkp" customClass="LoginViewController" customModule="D2D" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="1Ey-kz-fkp" customClass="ViewController_Login" customModule="D2D" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fQx-Tv-9r2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -50,6 +50,9 @@
                                                 <integer key="value" value="13"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="Button_Login_EMail:" destination="1Ey-kz-fkp" eventType="touchUpInside" id="Iz1-Pw-wmj"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZRw-pL-NDe">
                                         <rect key="frame" x="0.0" y="190" width="210" height="60"/>
@@ -61,7 +64,7 @@
                                         </constraints>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                        <textInputTraits key="textInputTraits"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
                                                 <color key="value" red="0.95697695019999995" green="0.94456714389999996" blue="0.9725525975" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -70,6 +73,9 @@
                                                 <integer key="value" value="13"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="Button_Login_Password:" destination="1Ey-kz-fkp" eventType="touchUpInside" id="ty3-zD-33l"/>
+                                        </connections>
                                     </textField>
                                 </subviews>
                             </stackView>
@@ -85,8 +91,7 @@
                                     <imageReference key="image" image="chevron.forward.circle.fill" catalog="system" symbolScale="large"/>
                                 </state>
                                 <connections>
-                                    <action selector="GoTo_PostLogin:" destination="1Ey-kz-fkp" eventType="touchUpInside" id="NJC-Bh-mAF"/>
-                                    <segue destination="q5j-XX-uRw" kind="show" identifier="LoginToChat" id="H3u-vX-v6d"/>
+                                    <segue destination="q5j-XX-uRw" kind="show" id="H3u-vX-v6d"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -101,10 +106,6 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="kGS-Fk-fLT"/>
-                    <connections>
-                        <outlet property="Login_Email_TextField" destination="rHh-7y-GZN" id="o7n-Fm-Alf"/>
-                        <outlet property="Login_Password_TextField" destination="ZRw-pL-NDe" id="dc2-To-tbY"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1nn-6u-Gc1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

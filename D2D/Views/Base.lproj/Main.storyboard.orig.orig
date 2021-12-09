@@ -3,7 +3,6 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
-        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -27,7 +26,6 @@
                                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="260" id="i5X-3j-HhR"/>
                                                     <constraint firstAttribute="height" constant="60" id="tav-vz-BeN"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
@@ -39,14 +37,18 @@
                                                 <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="60" id="EF8-dc-l2V"/>
-                                                    <constraint firstAttribute="width" constant="260" id="KfG-Tg-73F"/>
                                                 </constraints>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="LOGIN"/>
                                                 <connections>
+<<<<<<< HEAD:D2D/Views/Base.lproj/Main.storyboard
+                                                    <action selector="Button_Login:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LlE-c4-rdw"/>
+                                                    <segue destination="xUt-GF-YyD" kind="show" id="uzi-Qu-1vw"/>
+=======
                                                     <action selector="Button_Login:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Kcj-EE-BIs"/>
                                                     <segue destination="YnP-iw-x0W" kind="show" id="XGv-Hv-KRG"/>
+>>>>>>> 801f1bc88f7f1906b487e59819ad4a358b8fadb7:D2D/Views/Base.lproj/Main.storyboard.orig
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xoy-EG-MoA">
@@ -54,15 +56,17 @@
                                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="60" id="Hjm-q9-S1N"/>
-                                                    <constraint firstAttribute="width" constant="260" id="Vvc-bs-nxM"/>
                                                 </constraints>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="SIGN UP"/>
                                                 <connections>
+<<<<<<< HEAD:D2D/Views/Base.lproj/Main.storyboard
                                                     <action selector="Button_SignUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6mZ-8K-wVa"/>
                                                     <segue destination="9fV-3F-OjZ" kind="show" id="nqe-ou-dgu"/>
+=======
                                                     <segue destination="QZh-7X-D3Y" kind="show" id="Puu-z3-bku"/>
+>>>>>>> 801f1bc88f7f1906b487e59819ad4a358b8fadb7:D2D/Views/Base.lproj/Main.storyboard.orig
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -88,6 +92,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+<<<<<<< HEAD:D2D/Views/Base.lproj/Main.storyboard
             <point key="canvasLocation" x="1118.840579710145" y="171.42857142857142"/>
         </scene>
         <!--View Controller Login-->
@@ -182,11 +187,9 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LEg-c8-Ske" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2041" y="-457"/>
-        </scene>
-        <!--View Controller Sign Up-->
-        <scene sceneID="Hfk-fL-jvU">
-            <objects>
+=======
             <point key="canvasLocation" x="2105.7971014492755" y="170.75892857142856"/>
+>>>>>>> 801f1bc88f7f1906b487e59819ad4a358b8fadb7:D2D/Views/Base.lproj/Main.storyboard.orig
         </scene>
         <!--Login-->
         <scene sceneID="1Nl-MF-irg">
@@ -231,9 +234,12 @@
                                                 <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+<<<<<<< HEAD:D2D/Views/Base.lproj/Main.storyboard
+=======
                                         <connections>
                                             <action selector="Button_SignUp_Cartype:" destination="9fV-3F-OjZ" eventType="touchUpInside" id="tfo-re-qj2"/>
                                         </connections>
+>>>>>>> 801f1bc88f7f1906b487e59819ad4a358b8fadb7:D2D/Views/Base.lproj/Main.storyboard.orig
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IbB-yZ-RJ6">
                                         <rect key="frame" x="0.0" y="190" width="260" height="60"/>
@@ -250,9 +256,6 @@
                                                 <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="Button_SignUp_Name:" destination="9fV-3F-OjZ" eventType="touchUpInside" id="s3x-ta-s4L"/>
-                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="EMail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sHO-YS-30x">
                                         <rect key="frame" x="0.0" y="285" width="260" height="60"/>
@@ -269,9 +272,6 @@
                                                 <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="Button_SignUp_EMail:" destination="9fV-3F-OjZ" eventType="touchUpInside" id="xnq-jn-EF4"/>
-                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password " textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="0fu-7w-8uv">
                                         <rect key="frame" x="0.0" y="380" width="260" height="60"/>
@@ -288,9 +288,6 @@
                                                 <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="Button_SignUp_Password:" destination="9fV-3F-OjZ" eventType="touchUpInside" id="uNz-wg-bmm"/>
-                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter password again " textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="iDv-oh-Hzy">
                                         <rect key="frame" x="0.0" y="475" width="260" height="60"/>
@@ -307,9 +304,6 @@
                                                 <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="Button_SignUp_Password_repeat:" destination="9fV-3F-OjZ" eventType="touchUpInside" id="b0S-Ne-TMP"/>
-                                        </connections>
                                     </textField>
                                 </subviews>
                             </stackView>
@@ -353,8 +347,6 @@
             </objects>
             <point key="canvasLocation" x="2689.130434782609" y="-33.482142857142854"/>
         </scene>
-        <!--PostLogin-->
-        <scene sceneID="f4B-D2-bNP">
         <!--SignUp-->
         <scene sceneID="dIo-eT-Z1h">
             <objects>
@@ -362,8 +354,6 @@
                     <navigationItem key="navigationItem" id="wAe-Gx-nA7"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cbE-bW-gJy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <viewControllerPlaceholder storyboardName="PostLogin" id="Nv7-B6-F07" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="UBX-PK-KwG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2815.9420289855075" y="351.5625"/>
         </scene>

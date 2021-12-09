@@ -25,13 +25,17 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" image="mappin.and.ellipse" catalog="system" title="  GoTo Map"/>
                                 <connections>
-<<<<<<< HEAD
-                                    <segue destination="Gfd-Ri-ajs" kind="presentation" id="M3V-us-3yQ"/>
-=======
                                     <segue destination="fkp-S5-QbB" kind="show" destinationCreationSelector="swiftUIAction:" id="nW3-Pu-suM"/>
->>>>>>> bd7d1419e743a59200b76bfcb6ca9d64a283a803
                                 </connections>
                             </button>
+<<<<<<< HEAD
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bE4-yn-vN6">
+                                <rect key="frame" x="70" y="144" width="274" height="0.0"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+=======
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="homekit" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="42b-o3-1tx">
                                 <rect key="frame" x="87" y="174" width="240" height="128"/>
                                 <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -49,26 +53,36 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" image="message.fill" catalog="system" title="  GoTo Chat "/>
                                 <connections>
-                                    <segue destination="EgS-7k-wkj" kind="show" id="Rou-rJ-7CU"/>
+                                    <segue destination="EgS-7k-wkj" kind="presentation" id="Rou-rJ-7CU"/>
                                 </connections>
                             </button>
+>>>>>>> 801f1bc88f7f1906b487e59819ad4a358b8fadb7
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="bE4-yn-vN6" secondAttribute="trailing" constant="70" id="9Ke-s4-Iae"/>
                             <constraint firstItem="RZk-Qd-seo" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="NCN-SD-HFX"/>
                             <constraint firstItem="3hg-Fp-S63" firstAttribute="leading" secondItem="RZk-Qd-seo" secondAttribute="leading" id="S82-Ir-EfX"/>
                             <constraint firstItem="RZk-Qd-seo" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="acG-Kh-8Q9"/>
+<<<<<<< HEAD
+                            <constraint firstItem="bE4-yn-vN6" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="100" id="ale-nQ-aNT"/>
+                            <constraint firstItem="bE4-yn-vN6" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="70" id="tIN-uS-uZA"/>
+=======
                             <constraint firstItem="42b-o3-1tx" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="87" id="bKH-E5-GBc"/>
                             <constraint firstItem="42b-o3-1tx" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="131" id="lRG-UL-TpJ"/>
                             <constraint firstItem="3hg-Fp-S63" firstAttribute="centerX" secondItem="42b-o3-1tx" secondAttribute="centerX" id="m1Z-gS-0rc"/>
                             <constraint firstItem="3hg-Fp-S63" firstAttribute="top" secondItem="RZk-Qd-seo" secondAttribute="bottom" constant="73" id="vb6-cH-UO0"/>
+>>>>>>> 801f1bc88f7f1906b487e59819ad4a358b8fadb7
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="Display_Name" destination="bE4-yn-vN6" id="8dO-ch-kmJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-158" y="51"/>
+            <point key="canvasLocation" x="105.79710144927537" y="48.883928571428569"/>
         </scene>
         <!--MapViewController-->
         <scene sceneID="4pf-dP-obo">
@@ -92,8 +106,11 @@
         </scene>
     </scenes>
     <resources>
+<<<<<<< HEAD
+=======
         <image name="homekit" catalog="system" width="128" height="106"/>
         <image name="mappin.and.ellipse" catalog="system" width="118" height="128"/>
+>>>>>>> 801f1bc88f7f1906b487e59819ad4a358b8fadb7
         <image name="message.fill" catalog="system" width="128" height="113"/>
     </resources>
 </document>

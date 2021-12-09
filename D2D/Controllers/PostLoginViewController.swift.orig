@@ -1,10 +1,13 @@
 import UIKit
 import SwiftUI
 
+<<<<<<< HEAD
+class ViewController_PostLogin: UIViewController {
+    //    @IBOutlet weak var titleLabel: UILabel!
+=======
 class PostLoginViewController: UIViewController {
-    
-    
-    @IBOutlet weak var welcome_text: UILabel!
+
+    @IBOutlet weak var Display_Name: UILabel!
     
     var Display_Login_Name = ""
     var Display_Login_Password = ""
@@ -13,22 +16,17 @@ class PostLoginViewController: UIViewController {
     var Display_SignUp_EMail = ""
     var Display_SignUp_Password = ""
     var login_option = ""
+>>>>>>> 6099899a7928879cad82573da561d46b4c3cfb6e
     
+    @IBOutlet weak var welcome_text: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.setHidesBackButton(true, animated: true)
         
+<<<<<<< HEAD
         // Initalize empty text
         welcome_text.text = ""
-        let welcome_text = "welcome to comobi, \(Display_Login_Name)\(Display_SignUp_Name)!"
-        
-        if login_option == "Login" {
-            print("Login \nEMAIL = \(Display_Login_Name); Password = \(Display_Login_Password)")
-        }else if login_option == "SignUp" {
-            print("SignUp \nEMAIL = \(Display_SignUp_Name); Password = \(Display_SignUp_Password)")
-        }else{print("error")}
-    
-    
+        let welcome_text = "comobi"
         var charIndex = 0.0
 
         // loop on every letter in the text and show every letter every 0.1 seconds
@@ -38,10 +36,20 @@ class PostLoginViewController: UIViewController {
             }
             charIndex += 1
         }
+
+=======
+        Display_Name.text = "Welcome \(Display_Login_Name) !"
         
+        if login_option == "Login" {
+            print("Login \nEMAIL = \(Display_Login_Name); Password = \(Display_Login_Password)")
+        }else if login_option == "SignUp" {
+            print("SignUp \nEMAIL = \(Display_SignUp_Name); Password = \(Display_SignUp_Password)")
+        }
+>>>>>>> 6099899a7928879cad82573da561d46b4c3cfb6e
     }
     
     @IBSegueAction func swiftUIAction(_ coder: NSCoder) -> UIViewController? {
         return UIHostingController(coder: coder, rootView: MapView())
     }
+            
 }

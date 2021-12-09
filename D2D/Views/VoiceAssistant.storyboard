@@ -32,7 +32,7 @@
                                     <action selector="recording_button:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="V2o-he-rLp"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uc4-HJ-PGL">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uc4-HJ-PGL">
                                 <rect key="frame" x="194.5" y="707" width="25" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="0Hx-4G-rjs"/>
@@ -66,6 +66,7 @@
                             <constraint firstItem="Uc4-HJ-PGL" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="4Ap-Qj-5Z8"/>
                             <constraint firstItem="VF2-QJ-rzT" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="8KI-hf-jXi"/>
                             <constraint firstItem="T3L-KG-8ug" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="Brx-1L-C4g"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="Uc4-HJ-PGL" secondAttribute="bottom" constant="95" id="MxX-9h-jze"/>
                             <constraint firstItem="VF2-QJ-rzT" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="XdK-9Q-cwg"/>
                             <constraint firstItem="VF2-QJ-rzT" firstAttribute="top" secondItem="T3L-KG-8ug" secondAttribute="bottom" id="qo4-Ed-Jgh"/>
                         </constraints>
