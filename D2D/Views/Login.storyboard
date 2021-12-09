@@ -102,8 +102,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="kGS-Fk-fLT"/>
                     <connections>
-                        <outlet property="Login_Email_TextField" destination="rHh-7y-GZN" id="o7n-Fm-Alf"/>
-                        <outlet property="Login_Password_TextField" destination="ZRw-pL-NDe" id="dc2-To-tbY"/>
+                        <outlet property="Login_Email_TextField" destination="rHh-7y-GZN" id="Mad-lY-9Cf"/>
+                        <outlet property="Login_Password_TextField" destination="ZRw-pL-NDe" id="pd0-xD-dES"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1nn-6u-Gc1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -45,6 +45,7 @@
                                     <imageReference key="image" image="chevron.forward.circle.fill" catalog="system" symbolScale="large"/>
                                 </state>
                                 <connections>
+                                    <action selector="GoTo_Chat:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="BaH-fj-nkx"/>
                                     <segue destination="zse-5w-JCA" kind="show" identifier="showchatstoryboard" id="fXl-rZ-Una"/>
                                 </connections>
                             </button>
