@@ -1,7 +1,7 @@
 import UIKit
 import FirebaseAuth
 
-class SignupViewController: UIViewController {
+class SignupViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var SignUp_Cartype_TextField: UITextField!
     @IBOutlet weak var SignUp_Name_TextField: UITextField!
@@ -9,18 +9,14 @@ class SignupViewController: UIViewController {
     @IBOutlet weak var SignUp_Password_TextField: UITextField!
     @IBOutlet weak var SignUp_Password_repetition_TextField: UITextField!
     
+    
+    
     @IBAction func password_check(_ sender: Any) {
         
         if checkStrength(SignUp_Password_TextField.text ?? "") == true {
             (sender as! UITextField).backgroundColor = UIColor(red: 229/255, green: 255/255, blue: 204/255, alpha: 1)
         }else{
             (sender as! UITextField).backgroundColor = UIColor.red
-//            UIColor(red: 255/255, green: 204/255, blue: 204/255, alpha: 1)
-        }
-        
-        if (SignUp_Password_TextField.text != "" && SignUp_Password_repetition_TextField.text != "" && SignUp_Password_TextField.text == SignUp_Password_repetition_TextField.text && checkStrength(SignUp_Password_TextField.text ?? "") == true) {
-            (sender as! UITextField).backgroundColor = UIColor.green
-            SignUp_Password_repetition_TextField.backgroundColor = UIColor.green
         }
     }
     
@@ -48,10 +44,8 @@ class SignupViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-    
+
     @IBAction func GoTo_PostLogin(_ sender: UIButton) {
-        
-        
         SignUp_Cartype = SignUp_Cartype_TextField.text ?? ""
         SignUp_Name = SignUp_Name_TextField.text ?? ""
         SignUp_Email = SignUp_Email_TextField.text ?? ""
@@ -77,7 +71,6 @@ class SignupViewController: UIViewController {
             }
             login_option = "SignUp"
             return
-            
         }
     
         // Firebse Sign up
@@ -117,11 +110,6 @@ class SignupViewController: UIViewController {
         destVC.login_option = self.login_option
     }
     
-//      dismiss the keyboard
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        SignUp_Cartype_TextField.resignFirstResponder()
-    }
-    
     func checkStrength(_ password: String) ->Bool {
         
         let passwordLength = password.count
@@ -142,7 +130,27 @@ class SignupViewController: UIViewController {
         }else {
             return false
         }
-        
     }
     
+//    jump into the next textfields
+    @IBAction func focus_name_textfield(_ sender: UITextField) {
+        SignUp_Cartype_TextField.resignFirstResponder()
+        SignUp_Name_TextField.becomeFirstResponder()
+    }
+    @IBAction func focus_email_textfield(_ sender: UITextField) {
+        SignUp_Name_TextField.resignFirstResponder()
+        SignUp_Email_TextField.becomeFirstResponder()
+    }
+    @IBAction func focus_password_textfield(_ sender: UITextField) {
+        SignUp_Email_TextField.resignFirstResponder()
+        SignUp_Password_TextField.becomeFirstResponder()
+    }
+    @IBAction func focus_passwordagain_textfield(_ sender: UITextField) {
+        SignUp_Password_TextField.resignFirstResponder()
+        SignUp_Password_repetition_TextField.becomeFirstResponder()
+    }
+    //      dismiss the keyboard
+    @IBAction func dismiss_lasttextfield(_ sender: UITextField) {
+        sender.resignFirstResponder()
+    }
 }

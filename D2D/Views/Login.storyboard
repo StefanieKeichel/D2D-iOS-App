@@ -39,9 +39,9 @@
                                             <constraint firstAttribute="height" constant="60" id="MAe-wq-dSk"/>
                                             <constraint firstAttribute="width" constant="210" id="No8-gX-Jtc"/>
                                         </constraints>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" red="0.95697695019999995" green="0.94456714389999996" blue="0.9725525975" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" textContentType="email"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
                                                 <color key="value" red="0.95697695019999995" green="0.94456714389999996" blue="0.9725525975" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -50,6 +50,10 @@
                                                 <integer key="value" value="13"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="focus_password_textfield:" destination="1Ey-kz-fkp" eventType="primaryActionTriggered" id="KFv-Um-24n"/>
+                                            <outlet property="delegate" destination="1Ey-kz-fkp" id="j5t-gw-s1P"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZRw-pL-NDe">
                                         <rect key="frame" x="0.0" y="190" width="210" height="60"/>
@@ -59,7 +63,7 @@
                                             <constraint firstAttribute="height" constant="60" id="PGK-dH-3w3"/>
                                             <constraint firstAttribute="width" constant="210" id="fAg-VF-hsM"/>
                                         </constraints>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" red="0.95697695019999995" green="0.94456714389999996" blue="0.9725525975" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                         <userDefinedRuntimeAttributes>
@@ -70,6 +74,10 @@
                                                 <integer key="value" value="13"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="dismiss_passowrd_text_field:" destination="1Ey-kz-fkp" eventType="primaryActionTriggered" id="Suj-xl-NaJ"/>
+                                            <outlet property="delegate" destination="1Ey-kz-fkp" id="zuX-pG-eGg"/>
+                                        </connections>
                                     </textField>
                                 </subviews>
                             </stackView>
@@ -104,6 +112,7 @@
                     <connections>
                         <outlet property="Login_Email_TextField" destination="rHh-7y-GZN" id="Mad-lY-9Cf"/>
                         <outlet property="Login_Password_TextField" destination="ZRw-pL-NDe" id="pd0-xD-dES"/>
+                        <outlet property="forward" destination="feS-yZ-7ia" id="WxY-VL-TkK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1nn-6u-Gc1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

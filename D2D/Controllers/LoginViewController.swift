@@ -1,11 +1,12 @@
 import UIKit
 import Firebase
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var Login_Email_TextField: UITextField!
     @IBOutlet weak var Login_Password_TextField: UITextField!
-
+    @IBOutlet weak var forward: UIButton!
+    
     var Login_Email = ""
     var Login_Password = ""
     var login_option = ""
@@ -38,7 +39,6 @@ class LoginViewController: UIViewController {
                    }
             }
         }
-            
     }
     
     func alertUserLoginError() {
@@ -46,7 +46,6 @@ class LoginViewController: UIViewController {
         
         alert.addAction(UIAlertAction(title:"Dismiss", style: .cancel, handler: nil))
         present(alert, animated: true)
-        
     }
 
 //    pass data between view controllers with passSegue
@@ -56,7 +55,13 @@ class LoginViewController: UIViewController {
         destVC.login_option = self.login_option
     }
     
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        Login_Password_TextField.resignFirstResponder()
+    
+    @IBAction func focus_password_textfield(_ sender: UITextField) {
+        Login_Email_TextField.resignFirstResponder()
+        Login_Password_TextField.becomeFirstResponder()
+    }
+    //      dismiss the keyboard
+    @IBAction func dismiss_passowrd_text_field(_ sender: UITextField) {
+        sender.resignFirstResponder()
     }
 }
