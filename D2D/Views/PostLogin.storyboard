@@ -63,7 +63,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="EgS-7k-wkj" kind="show" id="jry-aY-Gqd"/>
+                                    <segue destination="EgS-7k-wkj" kind="show" identifier="GoTo_VoiceAssistance" id="jry-aY-Gqd"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="welcome" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5nk-JK-5Ll">
