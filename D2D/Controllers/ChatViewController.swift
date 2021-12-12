@@ -6,6 +6,7 @@
 //
 import UIKit
 import Firebase
+import AVFoundation
 
 class ChatViewController: UIViewController {
 
@@ -16,6 +17,7 @@ class ChatViewController: UIViewController {
     @IBOutlet weak var send_button: UIButton!
     
     let db = Firestore.firestore()
+    let systemSoundID: SystemSoundID = 1322
     
     var messages: [Message] = []
     var voicemessage = ""
@@ -23,24 +25,15 @@ class ChatViewController: UIViewController {
     override func viewDidLoad() {
         messageTextField.text = "\(voicemessage)"
         tableView.dataSource = self
-//        title = "comobi chat"
-//        title.color = UIColor(red: 251/255, green: 247/255, blue: 255/255, alpha: 1.0)
-        super.viewDidLoad()
         self.navigationController?.navigationBar.tintColor = UIColor(red: 123/255, green: 32/255, blue: 233/255, alpha: 1.0)
+        super.viewDidLoad()
         tableView.register(UINib(nibName: Constants.cellNibName, bundle: nil), forCellReuseIdentifier: Constants.cellIdentifier)
-        loadMessages()
         if messageTextField.text != "" {
-            delayWithSeconds(3) {
-            }
             send_button.sendActions(for: .touchUpInside)
             messageTextField.text = ""
         }
-    }
-    
-    func delayWithSeconds(_ seconds: Double, completion: @escaping () -> ()) {
-        DispatchQueue.main.asyncAfter(deadline: .now() + seconds) {
-            completion()
-        }
+        loadMessages()
+        AudioServicesPlaySystemSound(systemSoundID)
     }
     
     func loadMessages() {

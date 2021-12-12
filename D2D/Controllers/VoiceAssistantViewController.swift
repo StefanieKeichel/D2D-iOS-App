@@ -19,6 +19,9 @@ class VoiceAssistant: UIViewController {
             if final {
                 print("\(text)")
                 user_message = "\(text)"
+//                predefined message for demo day
+                user_message = user_message.replacingOccurrences(of: "Send message to the blue VW ", with: "",
+                    options: NSString.CompareOptions.literal, range:nil)
                 self.performSegue(withIdentifier: "showchatstoryboard", sender: self)
             }
             else {
