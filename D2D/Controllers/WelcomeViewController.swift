@@ -5,7 +5,6 @@
 //  Created by Ahmed Eldably on 18.10.21.
 //
 import UIKit
-import AVFoundation
 
 class WelcomeViewController: UIViewController {
     
@@ -16,13 +15,7 @@ class WelcomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        sleep(1)
-        let utterance = AVSpeechUtterance(string: "Welcome to Comobi")
-        utterance.voice = AVSpeechSynthesisVoice(language: "en-USA")
-        utterance.rate = 0.5
-        let synthesizer = AVSpeechSynthesizer()
-        synthesizer.speak(utterance)
-        
+
         // Initalize empty text
 //        titleLabel.text = ""
 //        let titleText = Constants.appName

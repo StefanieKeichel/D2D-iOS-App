@@ -63,6 +63,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
+                                    <action selector="GoTo_Chat:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="6Hb-3O-i1n"/>
                                     <segue destination="EgS-7k-wkj" kind="show" identifier="GoTo_VoiceAssistance" id="jry-aY-Gqd"/>
                                 </connections>
                             </button>

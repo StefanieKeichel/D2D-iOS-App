@@ -23,17 +23,20 @@ class ChatViewController: UIViewController {
     var voicemessage = ""
     
     override func viewDidLoad() {
+        super.viewDidLoad()
+        AudioServicesPlaySystemSound(systemSoundID)
+        
+        self.navigationController?.navigationBar.topItem?.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        self.navigationController?.navigationBar.tintColor = UIColor(red: 123/255, green: 32/255, blue: 233/255, alpha: 1.0)
         messageTextField.text = "\(voicemessage)"
         tableView.dataSource = self
-        self.navigationController?.navigationBar.tintColor = UIColor(red: 123/255, green: 32/255, blue: 233/255, alpha: 1.0)
-        super.viewDidLoad()
+        
         tableView.register(UINib(nibName: Constants.cellNibName, bundle: nil), forCellReuseIdentifier: Constants.cellIdentifier)
         if messageTextField.text != "" {
             send_button.sendActions(for: .touchUpInside)
             messageTextField.text = ""
         }
         loadMessages()
-        AudioServicesPlaySystemSound(systemSoundID)
     }
     
     func loadMessages() {

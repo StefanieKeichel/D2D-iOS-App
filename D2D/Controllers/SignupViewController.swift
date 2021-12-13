@@ -8,9 +8,7 @@ class SignupViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var SignUp_Email_TextField: UITextField!
     @IBOutlet weak var SignUp_Password_TextField: UITextField!
     @IBOutlet weak var SignUp_Password_repetition_TextField: UITextField!
-    
-    
-    
+
     @IBAction func password_check(_ sender: Any) {
         
         if checkStrength(SignUp_Password_TextField.text ?? "") == true {
