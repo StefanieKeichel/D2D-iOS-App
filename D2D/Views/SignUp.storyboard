@@ -50,6 +50,9 @@
                                                 <integer key="value" value="13"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="cartype_change:" destination="vMI-Dv-Jnz" eventType="editingDidEnd" id="tTO-hh-C2O"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NyZ-8q-Ypm">
                                         <rect key="frame" x="0.0" y="190" width="210" height="60"/>
@@ -70,6 +73,9 @@
                                                 <integer key="value" value="13"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="name_finished_editing:" destination="vMI-Dv-Jnz" eventType="editingDidEnd" id="bKh-Mx-gxK"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="g50-8L-Vgq">
                                         <rect key="frame" x="0.0" y="285" width="210" height="60"/>
@@ -90,6 +96,9 @@
                                                 <integer key="value" value="13"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="email_finished_editing:" destination="vMI-Dv-Jnz" eventType="editingDidEnd" id="Xpm-m5-C3Y"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sZL-39-NR1">
                                         <rect key="frame" x="0.0" y="380" width="210" height="60"/>
@@ -114,7 +123,7 @@
                                             <action selector="finished_password:" destination="vMI-Dv-Jnz" eventType="primaryActionTriggered" id="aKc-TT-x3A"/>
                                             <action selector="password_check:" destination="vMI-Dv-Jnz" eventType="touchUpOutside" id="6bn-Dk-Ijp"/>
                                             <action selector="password_check:" destination="vMI-Dv-Jnz" eventType="editingChanged" id="q9s-wx-2ua"/>
-                                            <action selector="password_entry_finished:" destination="vMI-Dv-Jnz" eventType="editingDidEnd" id="YDT-vi-gXH"/>
+                                            <action selector="password_finished_editing:" destination="vMI-Dv-Jnz" eventType="editingDidEnd" id="acv-8D-Nqh"/>
                                         </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="enter password again " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5GH-vI-1Ym">
