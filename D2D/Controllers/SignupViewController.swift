@@ -1,5 +1,6 @@
 import UIKit
 import FirebaseAuth
+import BCrypt
 
 class SignupViewController: UIViewController {
 
@@ -9,8 +10,37 @@ class SignupViewController: UIViewController {
     @IBOutlet weak var SignUp_Password_TextField: UITextField!
     @IBOutlet weak var SignUp_Password_repetition_TextField: UITextField!
     
-    @IBAction func password_check(_ sender: Any) {
+    @IBAction func password_entry_finished(_ sender: UITextField) {
+        //        import rainbow table
+        if let filepath = Bundle.main.path(forResource: "hackedpasswords", ofType: "txt") {
+            do {
+                let contents = try String(contentsOfFile: filepath)
+                let lines = contents.split(separator:"\n")
+                var myCounter: Int = 0
+                myCounter = lines.count
+                myCounter += myCounter + 1
+                var str1 = String(myCounter)
+                if contents.contains(SignUp_Password_TextField.text ?? "")  {
+                    print("ist enthalten")
+                    alertUserSignUpError(a: 4)
+                }else {
+                    print("nicht enthalten")
+                }
+                
+                print(contents)
+//                print(lines)
+                
+            } catch {
+                print("contents could not be loaded")
+            }
+        } else {
+                print("hackedpasswords.txt not found!")
+        }
         
+        
+    }
+    
+    @IBAction func password_check(_ sender: Any) {
         if checkStrength(SignUp_Password_TextField.text ?? "") == true {
             (sender as! UITextField).backgroundColor = UIColor(red: 229/255, green: 255/255, blue: 204/255, alpha: 1)
         }else{
@@ -22,6 +52,7 @@ class SignupViewController: UIViewController {
             (sender as! UITextField).backgroundColor = UIColor.green
             SignUp_Password_repetition_TextField.backgroundColor = UIColor.green
         }
+        
     }
     
     @IBAction func password_repetition_check(_ sender: Any) {
@@ -77,11 +108,23 @@ class SignupViewController: UIViewController {
             }
             login_option = "SignUp"
             return
-            
         }
-    
+        
+//       will hash the password phrase using the salt
+        var hashed = ""
+        do {
+            let salt = try BCrypt.Salt()
+            hashed = try BCrypt.Hash(SignUp_Password_TextField.text ?? "", salt: salt)
+        }
+        catch {
+            print("An error occured")
+//            emergency procedure
+        }
+        
         // Firebse Sign up
-        Auth.auth().createUser(withEmail: SignUp_Email, password: SignUp_Password) {
+//        store email along with hashed password
+        Auth.auth().createUser(withEmail: SignUp_Email, password: hashed) {
+//            SignUp_Password
             authResult, error in
             guard let result = authResult, error == nil else {
                 print("Error creating user")
@@ -91,22 +134,24 @@ class SignupViewController: UIViewController {
             print("Created User: \(user)")
             self.performSegue(withIdentifier: "RegisterToChat", sender: self)
         }
-        
-        func alertUserSignUpError(a: Int) {
-            print(a)
-            var alert = UIAlertController(title: "Security alert", message: "", preferredStyle: .alert)
-            if a == 1 {
-                alert = UIAlertController(title: "Security alert", message: "Fields cannot be left blank.", preferredStyle: .alert)
-            }else if a == 2 {
-                alert = UIAlertController(title: "Security alert", message: "Password must be at least 6 chacters.", preferredStyle: .alert)
-            }else if a == 3 {
-                alert = UIAlertController(title: "Security alert", message: "Passwords must match.", preferredStyle: .alert)
-            }
-            
-            alert.addAction(UIAlertAction(title:"Okay", style: .cancel, handler: nil))
-            present(alert, animated: true)
-        }
 }
+    func alertUserSignUpError(a: Int) {
+        print(a)
+        var alert = UIAlertController(title: "Security alert", message: "", preferredStyle: .alert)
+        if a == 1 {
+            alert = UIAlertController(title: "Security alert", message: "Fields cannot be left blank.", preferredStyle: .alert)
+        }else if a == 2 {
+            alert = UIAlertController(title: "Security alert", message: "Password must be at least 6 chacters.", preferredStyle: .alert)
+        }else if a == 3 {
+            alert = UIAlertController(title: "Security alert", message: "Passwords must match.", preferredStyle: .alert)
+        }else if a == 4 {
+            alert = UIAlertController(title: "Security alert", message: "The entered password has been compromised! \n Please enter a new password.", preferredStyle: .alert)
+        }
+        
+        alert.addAction(UIAlertAction(title:"Okay", style: .cancel, handler: nil))
+        present(alert, animated: true)
+    }
+    
 //    Passing variables from one ViewController to the next with this function
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let destVC = segue.destination as! PostLoginViewController
@@ -145,4 +190,6 @@ class SignupViewController: UIViewController {
         
     }
     
+    
 }
+

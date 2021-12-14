@@ -3,7 +3,6 @@ import SwiftUI
 
 class PostLoginViewController: UIViewController {
     
-    
     @IBOutlet weak var welcome_text: UILabel!
     
     var Display_Login_Name = ""
@@ -38,7 +37,6 @@ class PostLoginViewController: UIViewController {
             }
             charIndex += 1
         }
-        
     }
     
     @IBSegueAction func swiftUIAction(_ coder: NSCoder) -> UIViewController? {

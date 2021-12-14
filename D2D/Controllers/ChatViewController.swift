@@ -25,8 +25,6 @@ class ChatViewController: UIViewController {
         title = Constants.appName
         super.viewDidLoad()
         self.navigationController?.navigationBar.tintColor = UIColor(red: 123/255, green: 32/255, blue: 233/255, alpha: 1.0)
-//        purple
-//        colorpurple
         tableView.register(UINib(nibName: Constants.cellNibName, bundle: nil), forCellReuseIdentifier: Constants.cellIdentifier)
         loadMessages()
     }
@@ -49,12 +47,10 @@ class ChatViewController: UIViewController {
                            let messageBody = data[Constants.FStore.bodyField] as? String{
                             let newMessage = Message(sender: messageSender, body: messageBody)
                             self.messages.append(newMessage)
-                            
                             DispatchQueue.main.async {
                                 self.tableView.reloadData()
                             }
                         }
-                        
                     }
                 }
             }

@@ -111,9 +111,10 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
+                                            <action selector="finished_password:" destination="vMI-Dv-Jnz" eventType="primaryActionTriggered" id="aKc-TT-x3A"/>
                                             <action selector="password_check:" destination="vMI-Dv-Jnz" eventType="touchUpOutside" id="6bn-Dk-Ijp"/>
-                                            <action selector="password_check:" destination="vMI-Dv-Jnz" eventType="editingDidEnd" id="HOo-m3-NjU"/>
                                             <action selector="password_check:" destination="vMI-Dv-Jnz" eventType="editingChanged" id="q9s-wx-2ua"/>
+                                            <action selector="password_entry_finished:" destination="vMI-Dv-Jnz" eventType="editingDidEnd" id="YDT-vi-gXH"/>
                                         </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="enter password again " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5GH-vI-1Ym">

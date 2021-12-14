@@ -38,6 +38,7 @@
 		CBC10E1D273021B600144557 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC10E1C273021B600144557 /* ChatViewController.swift */; };
 		CBC10E232730752100144557 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC10E222730752100144557 /* MapView.swift */; };
 		CBC10E252730855000144557 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC10E242730855000144557 /* MapViewModel.swift */; };
+		CBF341592767EFA9002E5B62 /* hackedpasswords.txt in Resources */ = {isa = PBXBuildFile; fileRef = CBF341582767EFA9002E5B62 /* hackedpasswords.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +99,7 @@
 		CBC10E1C273021B600144557 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		CBC10E222730752100144557 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		CBC10E242730855000144557 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
+		CBF341582767EFA9002E5B62 /* hackedpasswords.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = hackedpasswords.txt; sourceTree = "<group>"; };
 		EFD46F14DCE84899FB5D709A /* Pods-D2D.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-D2D.release.xcconfig"; path = "Target Support Files/Pods-D2D/Pods-D2D.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -236,6 +238,7 @@
 				CBC10E1427301F7300144557 /* LoginViewController.swift */,
 				CB4FFB722761323A00CB7552 /* VoiceAssistantViewController.swift */,
 				CBC10E162730215700144557 /* SignupViewController.swift */,
+				CBF341582767EFA9002E5B62 /* hackedpasswords.txt */,
 				CBC10E1A273021A400144557 /* PostLoginViewController.swift */,
 				CBC10E182730217C00144557 /* LoginSignupViewController.swift */,
 				CBC10E1C273021B600144557 /* ChatViewController.swift */,
@@ -372,6 +375,7 @@
 				CB4FFB75276149EF00CB7552 /* VoiceAssistant.storyboard in Resources */,
 				CB7E464E273B369A005CD92E /* Login.storyboard in Resources */,
 				CB7E4650273B370A005CD92E /* SignUp.storyboard in Resources */,
+				CBF341592767EFA9002E5B62 /* hackedpasswords.txt in Resources */,
 				CB7E464C273B25AA005CD92E /* MapViewController.storyboard in Resources */,
 				30DA0410273C1FE200B06912 /* MessageCell.xib in Resources */,
 				CBA52A0A27298FB600E72140 /* Chat.storyboard in Resources */,
@@ -689,7 +693,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = SW8Q2CUK26;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = D2D/Info.plist;
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This app needs your location to display your position on the map.";
@@ -719,7 +723,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = SW8Q2CUK26;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = D2D/Info.plist;
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This app needs your location to display your position on the map.";
