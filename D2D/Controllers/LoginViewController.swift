@@ -28,7 +28,8 @@ class LoginViewController: UIViewController {
         if
             let Login_Email = Login_Email_TextField.text,
             let Login_Password = Login_Password_TextField.text {
-               // firebase log in
+               
+            // firebase log in
                Auth.auth().signIn(withEmail: Login_Email, password: Login_Password) {  authResult, error in
                    if let e = error  {
                        print("Failed to log in user with email: \(Login_Email)")

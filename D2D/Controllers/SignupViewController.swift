@@ -156,6 +156,7 @@ class SignupViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         
         // Firebse Sign up
 //        store email along with hashed password
+        
         Auth.auth().createUser(withEmail: SignUp_Email, password: hashed) {
 //            SignUp_Password
             authResult, error in
@@ -264,8 +265,6 @@ class SignupViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         alert.addAction(UIAlertAction(title:"Okay", style: .cancel, handler: nil))
         present(alert, animated: true)
     }
-    
-    
 }
 
 
