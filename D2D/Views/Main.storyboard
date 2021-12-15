@@ -74,7 +74,7 @@
                                 </subviews>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </stackView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Comobi_Logo_purple" translatesAutoresizingMaskIntoConstraints="NO" id="m4M-la-nYf">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo-just-white" translatesAutoresizingMaskIntoConstraints="NO" id="m4M-la-nYf">
                                 <rect key="frame" x="107" y="133" width="200" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="ZZ2-da-IVA"/>
@@ -139,6 +139,6 @@
     </scenes>
     <color key="tintColor" red="0.45229834320000001" green="0.93410122390000005" blue="0.88235217330000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
     <resources>
-        <image name="Comobi_Logo_purple" width="1530" height="1530"/>
+        <image name="logo-just-white" width="710" height="170"/>
     </resources>
 </document>
