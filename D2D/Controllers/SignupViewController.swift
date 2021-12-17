@@ -2,13 +2,16 @@ import UIKit
 import FirebaseAuth
 import BCrypt
 
-class SignupViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+
+class SignupViewController: UIViewController, UITextFieldDelegate, UIPickerViewDelegate, UIPickerViewDataSource {
+
 
     @IBOutlet weak var SignUp_Cartype_TextField: UITextField!
     @IBOutlet weak var SignUp_Name_TextField: UITextField!
     @IBOutlet weak var SignUp_Email_TextField: UITextField!
     @IBOutlet weak var SignUp_Password_TextField: UITextField!
     @IBOutlet weak var SignUp_Password_repetition_TextField: UITextField!
+    @IBOutlet weak var GoTo_PostLogin_Button: UIButton!
     
     var SignUp_Cartype = ""
     var SignUp_Name = ""
@@ -37,23 +40,6 @@ class SignupViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     
     
 //    IBACTIONS ////////////////////////////////////////////////////////////
-    @IBAction func password_entry_finished(_ sender: UITextField) {
-//        import text file of compromised passwords
-//        as soon as the Password was entered by the user
-        if let filepath = Bundle.main.path(forResource: "hackedpasswords", ofType: "txt") {
-            do {
-                let contents = try String(contentsOfFile: filepath)
-                if contents.contains(SignUp_Password_TextField.text ?? "")  {
-                    alertUserSignUpError(a: 4)
-                }
-            } catch {
-                print("contents could not be loaded")
-            }
-        } else {
-                print("hackedpasswords.txt not found!")
-        }
-    }
-    
     @IBAction func cartype_change(_ sender: Any) {
         if cartype_suggestions.contains(SignUp_Cartype_TextField.text ?? "") == false {
             self.view.endEditing(true)
@@ -66,12 +52,6 @@ class SignupViewController: UIViewController, UIPickerViewDelegate, UIPickerView
             (sender as! UITextField).backgroundColor = UIColor(red: 229/255, green: 255/255, blue: 204/255, alpha: 1)
         }else{
             (sender as! UITextField).backgroundColor = UIColor.red
-//            UIColor(red: 255/255, green: 204/255, blue: 204/255, alpha: 1)
-        }
-        
-        if (SignUp_Password_TextField.text != "" && SignUp_Password_repetition_TextField.text != "" && SignUp_Password_TextField.text == SignUp_Password_repetition_TextField.text && checkStrength(SignUp_Password_TextField.text ?? "") == true) {
-            (sender as! UITextField).backgroundColor = UIColor.green
-            SignUp_Password_repetition_TextField.backgroundColor = UIColor.green
         }
         
     }
@@ -94,6 +74,8 @@ class SignupViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         SignUp_Name = SignUp_Name_TextField.text ?? ""
         if checkForIllegalCharacters(string: SignUp_Name) == true {
             alertUserSignUpError(a: 5)
+            self.view.endEditing(true)
+            SignUp_Name_TextField.text = ""
         }
     }
     
@@ -101,6 +83,8 @@ class SignupViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         SignUp_Email = SignUp_Email_TextField.text ?? ""
         if checkForIllegalCharacters(string: SignUp_Email) == true {
             alertUserSignUpError(a: 5)
+            self.view.endEditing(true)
+            SignUp_Email_TextField.text = ""
         }
     }
     
@@ -109,18 +93,57 @@ class SignupViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         SignUp_Password = SignUp_Password_TextField.text ?? ""
         if checkForIllegalCharacters_in_password(string: SignUp_Password) == true {
             alertUserSignUpError(a: 5)
+            self.view.endEditing(true)
+            SignUp_Password_TextField.text = ""
+        }
+        
+//        import text file of compromised passwords
+//        as soon as the Password was entered by the user
+        if let filepath = Bundle.main.path(forResource: "hackedpasswords", ofType: "txt") {
+            do {
+                let contents = try String(contentsOfFile: filepath)
+                if contents.contains(SignUp_Password_TextField.text ?? "")  {
+                    alertUserSignUpError(a: 4)
+                    self.view.endEditing(true)
+                    SignUp_Password_TextField.text = ""
+                }
+            } catch {
+                print("contents could not be loaded")
+            }
+        } else {
+                print("hackedpasswords.txt not found!")
         }
     }
     
+    @IBAction func password_again_finished_editing(_ sender: UITextField) {
+        SignUp_Password_repetition = SignUp_Password_repetition_TextField.text ?? ""
+        if checkForIllegalCharacters_in_password(string: SignUp_Password_repetition) == true {
+            alertUserSignUpError(a: 5)
+            self.view.endEditing(true)
+            SignUp_Password_repetition_TextField.text = ""
+        }
+        
+    }
+    
+
     
     @IBAction func GoTo_PostLogin(_ sender: UIButton) {
+        
         SignUp_Cartype = SignUp_Cartype_TextField.text ?? ""
         SignUp_Name = SignUp_Name_TextField.text ?? ""
         SignUp_Email = SignUp_Email_TextField.text ?? ""
         SignUp_Password = SignUp_Password_TextField.text ?? ""
         SignUp_Password_repetition = SignUp_Password_repetition_TextField.text ?? ""
-        
-        
+  
+//        check if email is already used
+//        Auth.reference().child(SignUp_Email).child(self.SignUp_Email_TextField.text!).observeSingleEvent(of: .value, with: {(usernameSnap) in
+//                if usernameSnap.exists(){
+//                print("This username already exists")
+//                }else{
+//                }
+//            })
+
+       //////////////////
         guard
             !SignUp_Cartype.isEmpty,
             !SignUp_Name.isEmpty,
@@ -142,7 +165,7 @@ class SignupViewController: UIViewController, UIPickerViewDelegate, UIPickerView
             return
         }
         
-        
+       //////////////////
 //       will hash the password phrase using the salt
         var hashed = ""
         do {
@@ -156,7 +179,6 @@ class SignupViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         
         // Firebse Sign up
 //        store email along with hashed password
-        
         Auth.auth().createUser(withEmail: SignUp_Email, password: hashed) {
 //            SignUp_Password
             authResult, error in
@@ -166,18 +188,47 @@ class SignupViewController: UIViewController, UIPickerViewDelegate, UIPickerView
             }
             let user = result.user
             print("Created User: \(user)")
-            self.performSegue(withIdentifier: "RegisterToChat", sender: self)
+//            self.performSegue(withIdentifier: "RegisterToChat", sender: self)
         }
 }
+    
+//    jump into the next textfields
+    @IBAction func focus_name_textfield(_ sender: UITextField) {
+        SignUp_Cartype_TextField.resignFirstResponder()
+        SignUp_Name_TextField.becomeFirstResponder()
+    }
+    @IBAction func focus_email_textfield(_ sender: UITextField) {
+        SignUp_Name_TextField.resignFirstResponder()
+        SignUp_Email_TextField.becomeFirstResponder()
+    }
+        
+    @IBAction func focus_password_textfield(_ sender: UITextField) {
+        SignUp_Email_TextField.resignFirstResponder()
+        SignUp_Password_TextField.becomeFirstResponder()
+    }
+    
+    @IBAction func focus_passwordagain_textfield(_ sender: UITextField) {
+        SignUp_Password_TextField.resignFirstResponder()
+        SignUp_Password_repetition_TextField.becomeFirstResponder()
+    }
+    //      dismiss the keyboard
+    @IBAction func dismiss_lasttextfield(_ sender: UITextField) {
+        SignUp_Password_repetition_TextField.resignFirstResponder()
+        GoTo_PostLogin_Button.becomeFirstResponder()
+    }
+    
+    
     
     //  override FUNCTIONS //////////////////////////////////////////////////////////
     override func viewDidLoad() {
         super.viewDidLoad()
-        pickerView.delegate = self
-        pickerView.dataSource = self
-        SignUp_Cartype_TextField.inputView = pickerView
-        SignUp_Cartype_TextField.inputView = pickerView
-    }
+            pickerView.delegate = self
+            pickerView.dataSource = self
+            SignUp_Cartype_TextField.inputView = pickerView
+            
+        }
+        
+    
     
 //    Passing variables from one ViewController to the next with this function
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -188,14 +239,9 @@ class SignupViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         destVC.Display_SignUp_Password = self.SignUp_Password
         destVC.login_option = self.login_option
     }
-    
-//      dismiss the keyboard
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        SignUp_Cartype_TextField.resignFirstResponder()
-    }
-    
-    
+
     //    FUNCTIONS //////////////////////////////////////////////////////////
+    
     func checkStrength(_ password: String) ->Bool {
         
         let passwordLength = password.count
@@ -216,9 +262,8 @@ class SignupViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         }else {
             return false
         }
-        
     }
-    
+ 
     func checkForIllegalCharacters(string: String) -> Bool {
         let allowedCharacters = CharacterSet(charactersIn: " abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ@.")
         .union(.newlines)
@@ -265,6 +310,8 @@ class SignupViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         alert.addAction(UIAlertAction(title:"Okay", style: .cancel, handler: nil))
         present(alert, animated: true)
     }
+    
+    
 }
 
 

@@ -1,5 +1,6 @@
 import UIKit
 import SwiftUI
+import AVFoundation
 
 class PostLoginViewController: UIViewController {
     
@@ -21,6 +22,15 @@ class PostLoginViewController: UIViewController {
         welcome_text.text = ""
         let welcome_text = "welcome to comobi, \(Display_Login_Name)\(Display_SignUp_Name)!"
         
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) { [self] in
+            let utterance = AVSpeechUtterance(string: "Welcome to comobi, \(self.Display_Login_Name)\(self.Display_SignUp_Name).")
+            utterance.voice = AVSpeechSynthesisVoice(language: "en-USA")
+            utterance.rate = 0.43
+            let synthesizer = AVSpeechSynthesizer()
+            synthesizer.speak(utterance)
+        }
+        
+        
         if login_option == "Login" {
             print("Login \nEMAIL = \(Display_Login_Name); Password = \(Display_Login_Password)")
         }else if login_option == "SignUp" {
@@ -32,13 +42,16 @@ class PostLoginViewController: UIViewController {
 
         // loop on every letter in the text and show every letter every 0.1 seconds
         for letter in welcome_text {
-            Timer.scheduledTimer(withTimeInterval: 0.17 * charIndex, repeats: false) {(timer) in self.welcome_text.text?.append(letter)
+            Timer.scheduledTimer(withTimeInterval: 0.12 * charIndex, repeats: false) {(timer) in self.welcome_text.text?.append(letter)
 
             }
             charIndex += 1
         }
     }
     
+    @IBAction func GoTo_Chat(_ sender: UIButton) {
+        
+    }
     @IBSegueAction func swiftUIAction(_ coder: NSCoder) -> UIViewController? {
         return UIHostingController(coder: coder, rootView: MapView())
     }

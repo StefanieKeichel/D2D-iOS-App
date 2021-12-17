@@ -15,6 +15,7 @@ class WelcomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+
         // Initalize empty text
 //        titleLabel.text = ""
 //        let titleText = Constants.appName

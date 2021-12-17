@@ -41,7 +41,7 @@
                                         </constraints>
                                         <color key="textColor" red="0.95697695019999995" green="0.94456714389999996" blue="0.9725525975" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" spellCheckingType="yes"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
                                                 <color key="value" red="0.95697695019999995" green="0.94456714389999996" blue="0.9725525975" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -51,7 +51,9 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="cartype_change:" destination="vMI-Dv-Jnz" eventType="editingDidEnd" id="tTO-hh-C2O"/>
+                                            <action selector="cartype_change:" destination="vMI-Dv-Jnz" eventType="editingChanged" id="Zgz-xg-oVg"/>
+                                            <action selector="focus_name_textfield:" destination="vMI-Dv-Jnz" eventType="primaryActionTriggered" id="LWP-I0-BuN"/>
+                                            <outlet property="delegate" destination="vMI-Dv-Jnz" id="f9z-ZO-5wL"/>
                                         </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NyZ-8q-Ypm">
@@ -64,7 +66,7 @@
                                         </constraints>
                                         <color key="textColor" red="0.95697695019999995" green="0.94456714389999996" blue="0.9725525975" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" textContentType="name"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
                                                 <color key="value" red="0.95697695019999995" green="0.94456714389999996" blue="0.9725525975" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -74,7 +76,9 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="name_finished_editing:" destination="vMI-Dv-Jnz" eventType="editingDidEnd" id="bKh-Mx-gxK"/>
+                                            <action selector="focus_email_textfield:" destination="vMI-Dv-Jnz" eventType="primaryActionTriggered" id="vMO-1b-Eaa"/>
+                                            <action selector="name_finished_editing:" destination="vMI-Dv-Jnz" eventType="editingDidEnd" id="r25-9Y-Qgq"/>
+                                            <outlet property="delegate" destination="vMI-Dv-Jnz" id="wTt-3z-dsK"/>
                                         </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="g50-8L-Vgq">
@@ -87,7 +91,7 @@
                                         </constraints>
                                         <color key="textColor" red="0.95697695019999995" green="0.94456714389999996" blue="0.9725525975" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" textContentType="email"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
                                                 <color key="value" red="0.95697695019999995" green="0.94456714389999996" blue="0.9725525975" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -97,7 +101,9 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="email_finished_editing:" destination="vMI-Dv-Jnz" eventType="editingDidEnd" id="Xpm-m5-C3Y"/>
+                                            <action selector="email_finished_editing:" destination="vMI-Dv-Jnz" eventType="editingDidEnd" id="f1n-ur-qiC"/>
+                                            <action selector="focus_password_textfield:" destination="vMI-Dv-Jnz" eventType="primaryActionTriggered" id="dOl-3P-N32"/>
+                                            <outlet property="delegate" destination="vMI-Dv-Jnz" id="kaU-vn-8Jt"/>
                                         </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sZL-39-NR1">
@@ -120,10 +126,10 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="finished_password:" destination="vMI-Dv-Jnz" eventType="primaryActionTriggered" id="aKc-TT-x3A"/>
-                                            <action selector="password_check:" destination="vMI-Dv-Jnz" eventType="touchUpOutside" id="6bn-Dk-Ijp"/>
-                                            <action selector="password_check:" destination="vMI-Dv-Jnz" eventType="editingChanged" id="q9s-wx-2ua"/>
-                                            <action selector="password_finished_editing:" destination="vMI-Dv-Jnz" eventType="editingDidEnd" id="acv-8D-Nqh"/>
+                                            <action selector="focus_passwordagain_textfield:" destination="vMI-Dv-Jnz" eventType="primaryActionTriggered" id="p8j-59-0Ve"/>
+                                            <action selector="password_check:" destination="vMI-Dv-Jnz" eventType="editingChanged" id="bFc-Ii-Qdb"/>
+                                            <action selector="password_finished_editing:" destination="vMI-Dv-Jnz" eventType="editingDidEnd" id="uaK-4H-WCF"/>
+                                            <outlet property="delegate" destination="vMI-Dv-Jnz" id="rE0-Sb-hFM"/>
                                         </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="enter password again " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5GH-vI-1Ym">
@@ -146,8 +152,14 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="password_repetition_check:" destination="vMI-Dv-Jnz" eventType="editingDidEnd" id="6Ar-IO-U3I"/>
-                                            <action selector="password_repetition_check:" destination="vMI-Dv-Jnz" eventType="touchUpOutside" id="OeC-3c-CDU"/>
+                                            <action selector="dismiss_lasttextfield:" destination="vMI-Dv-Jnz" eventType="touchDragEnter" id="2FS-mM-WgK"/>
+                                            <action selector="dismiss_lasttextfield:" destination="vMI-Dv-Jnz" eventType="touchDragExit" id="Fxh-GS-497"/>
+                                            <action selector="dismiss_lasttextfield:" destination="vMI-Dv-Jnz" eventType="primaryActionTriggered" id="PcH-0E-5Nn"/>
+                                            <action selector="dismiss_lasttextfield:" destination="vMI-Dv-Jnz" eventType="editingDidEndOnExit" id="SJe-xv-6DH"/>
+                                            <action selector="dismiss_lasttextfield:" destination="vMI-Dv-Jnz" eventType="touchDown" id="xSp-in-7kl"/>
+                                            <action selector="password_again_finished_editing:" destination="vMI-Dv-Jnz" eventType="editingDidEnd" id="fQc-rq-HsJ"/>
+                                            <action selector="password_repetition_check:" destination="vMI-Dv-Jnz" eventType="editingChanged" id="zVe-e9-3Ve"/>
+                                            <outlet property="delegate" destination="vMI-Dv-Jnz" id="GMg-MO-yPP"/>
                                         </connections>
                                     </textField>
                                 </subviews>
@@ -164,7 +176,7 @@
                                     <imageReference key="image" image="chevron.forward.circle.fill" catalog="system" symbolScale="large"/>
                                 </state>
                                 <connections>
-                                    <action selector="GoTo_PostLogin:" destination="vMI-Dv-Jnz" eventType="touchUpInside" id="yfC-ye-2VV"/>
+                                    <action selector="GoTo_PostLogin:" destination="vMI-Dv-Jnz" eventType="touchUpInside" id="83z-Cf-8R8"/>
                                     <segue destination="Zpt-1S-18i" kind="show" identifier="RegisterToChat" id="TxO-RH-u5l"/>
                                 </connections>
                             </button>
@@ -180,6 +192,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="LCJ-2w-KdX"/>
                     <connections>
+                        <outlet property="GoTo_PostLogin_Button" destination="bHW-RW-nE9" id="6JG-9d-TCR"/>
                         <outlet property="SignUp_Cartype_TextField" destination="stx-Ta-iMb" id="alD-PM-J6h"/>
                         <outlet property="SignUp_Email_TextField" destination="g50-8L-Vgq" id="Tv1-Sh-C5S"/>
                         <outlet property="SignUp_Name_TextField" destination="NyZ-8q-Ypm" id="pHs-xf-pY9"/>

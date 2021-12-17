@@ -28,11 +28,12 @@ class ChatViewController: UIViewController {
         
         self.navigationController?.navigationBar.topItem?.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         self.navigationController?.navigationBar.tintColor = UIColor(red: 123/255, green: 32/255, blue: 233/255, alpha: 1.0)
-
+<<<<<<< HEAD
+=======
         messageTextField.text = "\(voicemessage)"
         tableView.dataSource = self
         
-
+>>>>>>> 718cb24d02f4047c9af9f3f97a4d34ea33d58bf5
         tableView.register(UINib(nibName: Constants.cellNibName, bundle: nil), forCellReuseIdentifier: Constants.cellIdentifier)
         if messageTextField.text != "" {
             send_button.sendActions(for: .touchUpInside)
