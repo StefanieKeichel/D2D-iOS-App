@@ -8,29 +8,33 @@ class SignupViewController: UIViewController {
     @IBOutlet weak var SignUp_Email_TextField: UITextField!
     @IBOutlet weak var SignUp_Password_TextField: UITextField!
     @IBOutlet weak var SignUp_Password_again_TextField: UITextField!
-
-    
-    var SignUp_Cartype = ""
-    var SignUp_Name = ""
-    var SignUp_Email = ""
-    var SignUp_Password = ""
-    var SignUp_Password_again = ""
-    var loginAttempted = false
-    var login_option = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
     @IBAction func GoTo_PostLogin(_ sender: UIButton) {
+        
         guard let email = SignUp_Email_TextField.text,
               let password = SignUp_Password_TextField.text,
               !email.isEmpty,
               !password.isEmpty,
-              password.count > 6 else {
+              !password.isEmpty else {
                   alertUserSignUpError()
                   return
               }
+        // Check if the email given is valid
+        if !isValidEmail(email){
+            alertUserSignUpError(message: "The given email is invalid. Pleace check once again.")
+            return
+        }
+        // check the password given is valid
+        if !isValidPassword(password: password) {
+            alertUserSignUpError(message: "Please type the passowrd with at least one capital letter, one number, and one special character.")
+            return
+            
+        }
+        
         // Firebse Sign up
         Auth.auth().createUser(withEmail: email, password: password) {
             authResult, error in
@@ -38,75 +42,40 @@ class SignupViewController: UIViewController {
                 print("Error creating user")
                 return
             }
-            let user = result.user
-            print("Created User: \(user)")
             self.performSegue(withIdentifier: "RegisterToChat", sender: self)
             
         }
         
-        func alertUserSignUpError() {
-            let alert = UIAlertController(title: "Woops", message: "Please enter the right information to create a new account", preferredStyle: .alert)
+        func alertUserSignUpError(message: String = "Please enter your information to create a new account") {
+            let alert = UIAlertController(title: "Woops", message: message, preferredStyle: .alert)
             
             alert.addAction(UIAlertAction(title:"Dismiss", style: .cancel, handler: nil))
             present(alert, animated: true)
-            
         }
         
-        self.SignUp_Cartype = SignUp_Cartype_TextField.text!
-        self.SignUp_Name = SignUp_Name_TextField.text!
-        self.SignUp_Email = SignUp_Email_TextField.text!
-        self.SignUp_Password = SignUp_Password_TextField.text!
-        self.SignUp_Password_again = SignUp_Password_again_TextField.text!
-        
-//        check if Passwords are matching
-        if SignUp_Password_TextField.text == SignUp_Password_again_TextField.text! {
-            print("correct")
-            loginAttempted = true
-        }else{
-            print("false")
+        // is the email valid
+        func isValidEmail(_ email: String) -> Bool {
+            let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
+
+            let emailPred = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
+            return emailPred.evaluate(with: email)
         }
-        
-        
-//        another Option would be  ||
-        if SignUp_Cartype_TextField.text!.isEmpty {
-            print("Please enter your cartype")
+        // is the paassword valid
+        func isValidPassword(password : String) -> Bool{
+
+            let capitalLetter  = ".*[A-Z]+.*"
+            let passwordTest = NSPredicate(format:"SELF MATCHES %@", capitalLetter)
+            let ifCapital = passwordTest.evaluate(with: password)
+
+            let numberRegEx  = ".*[0-9]+.*"
+            let passwordTest1 = NSPredicate(format:"SELF MATCHES %@", numberRegEx)
+            let ifNumber = passwordTest1.evaluate(with: password)
+
+            let specialCharacterRegEx  = ".*[!&^%$#@()/]+.*"
+            let passwordTest2 = NSPredicate(format:"SELF MATCHES %@", specialCharacterRegEx)
+            let ifSpecial = passwordTest2.evaluate(with: password)
+
+            return ifCapital && ifNumber && ifSpecial
         }
-        
-        if SignUp_Email_TextField.text!.isEmpty {
-                print("Please enter your Email")
-        }
-        
-        if SignUp_Cartype_TextField.text!.isEmpty {
-            print("please enter your cartype")
-        }
-        
-        if SignUp_Name_TextField.text!.isEmpty {
-            print("please enter your name")
-        }
-        
-        if SignUp_Password_TextField.text!.isEmpty {
-            print("please enter a password")
-        }
-        
-        if SignUp_Password_again_TextField.text!.isEmpty {
-            print("please reenter your password")
-        }
-        
-        login_option = "SignUp"
-    }
-    
-//    Passing variables from one ViewController to the next with this function
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let destVC = segue.destination as! PostLoginViewController
-        destVC.Display_SignUp_Cartype = self.SignUp_Cartype
-        destVC.Display_Login_Name = self.SignUp_Name
-        destVC.Display_SignUp_EMail = self.SignUp_Email
-        destVC.Display_SignUp_Password = self.SignUp_Password
-        destVC.login_option = self.login_option
-    }
-    
-//      dismiss the keyboard
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        SignUp_Cartype_TextField.resignFirstResponder()
     }
 }

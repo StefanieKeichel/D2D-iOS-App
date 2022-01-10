@@ -18,6 +18,7 @@
 		306AD25626FF3379000A58B9 /* D2DUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306AD25526FF3379000A58B9 /* D2DUITests.swift */; };
 		306AD25826FF3379000A58B9 /* D2DUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306AD25726FF3379000A58B9 /* D2DUITestsLaunchTests.swift */; };
 		30892DD5273C2B5600CD26AD /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30892DD4273C2B5500CD26AD /* Media.xcassets */; };
+		30B1B3C1278CA77D002F1E6B /* MyLogs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B1B3C0278CA77D002F1E6B /* MyLogs.swift */; };
 		30DA040C273C196900B06912 /* Messaage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30DA040B273C196900B06912 /* Messaage.swift */; };
 		30DA040E273C1C3800B06912 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30DA040D273C1C3800B06912 /* Constants.swift */; };
 		30DA0410273C1FE200B06912 /* MessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30DA040F273C1FE200B06912 /* MessageCell.xib */; };
@@ -72,6 +73,7 @@
 		306AD25526FF3379000A58B9 /* D2DUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = D2DUITests.swift; sourceTree = "<group>"; };
 		306AD25726FF3379000A58B9 /* D2DUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = D2DUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		30892DD4273C2B5500CD26AD /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
+		30B1B3C0278CA77D002F1E6B /* MyLogs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MyLogs.swift; path = Models/MyLogs.swift; sourceTree = "<group>"; };
 		30DA040B273C196900B06912 /* Messaage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Messaage.swift; path = Models/Messaage.swift; sourceTree = "<group>"; };
 		30DA040D273C1C3800B06912 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		30DA040F273C1FE200B06912 /* MessageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageCell.xib; sourceTree = "<group>"; };
@@ -201,6 +203,7 @@
 			isa = PBXGroup;
 			children = (
 				30DA040B273C196900B06912 /* Messaage.swift */,
+				30B1B3C0278CA77D002F1E6B /* MyLogs.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -508,6 +511,7 @@
 				CBC10E1B273021A400144557 /* PostLoginViewController.swift in Sources */,
 				CBC10E172730215700144557 /* SignupViewController.swift in Sources */,
 				CBC10E232730752100144557 /* MapView.swift in Sources */,
+				30B1B3C1278CA77D002F1E6B /* MyLogs.swift in Sources */,
 				306AD23726FF3374000A58B9 /* SceneDelegate.swift in Sources */,
 				30DA0412273C20CB00B06912 /* MessageCell.swift in Sources */,
 			);
