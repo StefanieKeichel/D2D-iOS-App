@@ -37,6 +37,10 @@ class LoginViewController: UIViewController {
         }
         
     }
+    @IBAction func forgetPasswordPressed(_ sender: UIButton) {
+        self.performSegue(withIdentifier: Constants.phoneAuthScreen, sender: self)
+    }
+    
     
     func alertUserLoginError(message: String = "Authentication failed. Please fill in the missing information.") {
         let alert = UIAlertController(title: "Woops", message: message, preferredStyle: .alert)

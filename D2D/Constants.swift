@@ -11,6 +11,9 @@ struct Constants {
     static let cellNibName = "MessageCell"
     static let appName = "D2D Communication"
     static let cellIdentifier = "ReusableCell"
+    static let postLogIn = "PostLoginViewController"
+    static let SMSScreen = "SMSViewController"
+    static let phoneAuthScreen = "GoToPhoneAuth"
     
     
     struct FStore {

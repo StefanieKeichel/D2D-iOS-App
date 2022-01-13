@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		18E1F09E1051E6DE1E166647 /* Pods_D2DTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2177F02650D6D7C80EC60E69 /* Pods_D2DTests.framework */; };
 		20B947E293766FBF71B2D237 /* Pods_D2D_D2DUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12FFD203F7BCF4B2C3A88E40 /* Pods_D2D_D2DUITests.framework */; };
+		300BB23D278F44F0001C919A /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300BB23C278F44F0001C919A /* AuthManager.swift */; };
 		300F49D50675943377F89F9D /* Pods_D2D.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17589D88A6B8FA71531F04A2 /* Pods_D2D.framework */; };
 		306AD23526FF3374000A58B9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306AD23426FF3374000A58B9 /* AppDelegate.swift */; };
 		306AD23726FF3374000A58B9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306AD23626FF3374000A58B9 /* SceneDelegate.swift */; };
@@ -18,6 +19,10 @@
 		306AD25626FF3379000A58B9 /* D2DUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306AD25526FF3379000A58B9 /* D2DUITests.swift */; };
 		306AD25826FF3379000A58B9 /* D2DUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306AD25726FF3379000A58B9 /* D2DUITestsLaunchTests.swift */; };
 		30892DD5273C2B5600CD26AD /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30892DD4273C2B5500CD26AD /* Media.xcassets */; };
+		3092790A27904828001CB919 /* PhoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3092790927904828001CB919 /* PhoneViewController.swift */; };
+		3092790C27904858001CB919 /* SMSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3092790B27904858001CB919 /* SMSViewController.swift */; };
+		3092791027904A72001CB919 /* PhoneAuth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3092790F27904A72001CB919 /* PhoneAuth.storyboard */; };
+		30927912279052F8001CB919 /* SMSVerify.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30927911279052F8001CB919 /* SMSVerify.storyboard */; };
 		30B1B3C1278CA77D002F1E6B /* MyLogs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B1B3C0278CA77D002F1E6B /* MyLogs.swift */; };
 		30DA040C273C196900B06912 /* Messaage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30DA040B273C196900B06912 /* Messaage.swift */; };
 		30DA040E273C1C3800B06912 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30DA040D273C1C3800B06912 /* Constants.swift */; };
@@ -61,6 +66,7 @@
 		17589D88A6B8FA71531F04A2 /* Pods_D2D.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_D2D.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F58A9AEB6DED3697C4B6890 /* Pods-D2D.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-D2D.release.xcconfig"; path = "Target Support Files/Pods-D2D/Pods-D2D.release.xcconfig"; sourceTree = "<group>"; };
 		2177F02650D6D7C80EC60E69 /* Pods_D2DTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_D2DTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		300BB23C278F44F0001C919A /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		306AD23126FF3374000A58B9 /* D2D.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = D2D.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		306AD23426FF3374000A58B9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		306AD23626FF3374000A58B9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -73,6 +79,10 @@
 		306AD25526FF3379000A58B9 /* D2DUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = D2DUITests.swift; sourceTree = "<group>"; };
 		306AD25726FF3379000A58B9 /* D2DUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = D2DUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		30892DD4273C2B5500CD26AD /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
+		3092790927904828001CB919 /* PhoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneViewController.swift; sourceTree = "<group>"; };
+		3092790B27904858001CB919 /* SMSViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMSViewController.swift; sourceTree = "<group>"; };
+		3092790F27904A72001CB919 /* PhoneAuth.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PhoneAuth.storyboard; sourceTree = "<group>"; };
+		30927911279052F8001CB919 /* SMSVerify.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SMSVerify.storyboard; sourceTree = "<group>"; };
 		30B1B3C0278CA77D002F1E6B /* MyLogs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MyLogs.swift; path = Models/MyLogs.swift; sourceTree = "<group>"; };
 		30DA040B273C196900B06912 /* Messaage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Messaage.swift; path = Models/Messaage.swift; sourceTree = "<group>"; };
 		30DA040D273C1C3800B06912 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -204,6 +214,7 @@
 			children = (
 				30DA040B273C196900B06912 /* Messaage.swift */,
 				30B1B3C0278CA77D002F1E6B /* MyLogs.swift */,
+				300BB23C278F44F0001C919A /* AuthManager.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -214,6 +225,8 @@
 				CB7E4651273C0559005CD92E /* Main.storyboard */,
 				CB7E464F273B370A005CD92E /* SignUp.storyboard */,
 				CB7E464D273B369A005CD92E /* Login.storyboard */,
+				3092790F27904A72001CB919 /* PhoneAuth.storyboard */,
+				30927911279052F8001CB919 /* SMSVerify.storyboard */,
 				CBA52A0B272993FE00E72140 /* PostLogin.storyboard */,
 				CBA52A0927298FB600E72140 /* Chat.storyboard */,
 				CB7E464B273B25AA005CD92E /* MapViewController.storyboard */,
@@ -236,6 +249,8 @@
 				CBC10E1A273021A400144557 /* PostLoginViewController.swift */,
 				CBC10E182730217C00144557 /* LoginSignupViewController.swift */,
 				CBC10E1C273021B600144557 /* ChatViewController.swift */,
+				3092790927904828001CB919 /* PhoneViewController.swift */,
+				3092790B27904858001CB919 /* SMSViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -367,7 +382,9 @@
 				306AD24126FF3378000A58B9 /* LaunchScreen.storyboard in Resources */,
 				30DA0414273C21AC00B06912 /* GoogleService-Info.plist in Resources */,
 				CB7E464E273B369A005CD92E /* Login.storyboard in Resources */,
+				3092791027904A72001CB919 /* PhoneAuth.storyboard in Resources */,
 				CB7E4650273B370A005CD92E /* SignUp.storyboard in Resources */,
+				30927912279052F8001CB919 /* SMSVerify.storyboard in Resources */,
 				CB7E464C273B25AA005CD92E /* MapViewController.storyboard in Resources */,
 				30DA0410273C1FE200B06912 /* MessageCell.xib in Resources */,
 				CBA52A0A27298FB600E72140 /* Chat.storyboard in Resources */,
@@ -508,9 +525,12 @@
 				CBC10E252730855000144557 /* MapViewModel.swift in Sources */,
 				30DA040E273C1C3800B06912 /* Constants.swift in Sources */,
 				306AD23526FF3374000A58B9 /* AppDelegate.swift in Sources */,
+				3092790A27904828001CB919 /* PhoneViewController.swift in Sources */,
+				300BB23D278F44F0001C919A /* AuthManager.swift in Sources */,
 				CBC10E1B273021A400144557 /* PostLoginViewController.swift in Sources */,
 				CBC10E172730215700144557 /* SignupViewController.swift in Sources */,
 				CBC10E232730752100144557 /* MapView.swift in Sources */,
+				3092790C27904858001CB919 /* SMSViewController.swift in Sources */,
 				30B1B3C1278CA77D002F1E6B /* MyLogs.swift in Sources */,
 				306AD23726FF3374000A58B9 /* SceneDelegate.swift in Sources */,
 				30DA0412273C20CB00B06912 /* MessageCell.swift in Sources */,
