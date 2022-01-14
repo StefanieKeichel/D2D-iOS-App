@@ -42,7 +42,7 @@
                                 </state>
                                 <connections>
                                     <action selector="signInPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="DkH-Xc-AUT"/>
-                                    <segue destination="anE-s0-m28" kind="show" id="c1q-dc-xDU"/>
+                                    <segue destination="anE-s0-m28" kind="show" identifier="GoToSMSVerify" id="Ti1-PI-fhP"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -65,7 +65,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cF0-yw-agU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="754" y="139"/>
+            <point key="canvasLocation" x="876" y="139"/>
         </scene>
     </scenes>
     <resources>

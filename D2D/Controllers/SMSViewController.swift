@@ -25,7 +25,9 @@ class SMSViewController: UIViewController {
                 }
         //
         AuthManager.shared.verifyCode(smsCode: verificationCode) { [weak self] success in
-            guard success else { return }
+            guard success else {
+                return
+            }
         }
         self.performSegue(withIdentifier: Constants.postLogIn, sender: self)
         
@@ -35,7 +37,7 @@ class SMSViewController: UIViewController {
     
     
     
-    func alertUserLoginError(message: String = "Authentication failed. Please fill in the missing information.") {
+    func alertUserLoginError(message: String = "Authentication failed.") {
         let alert = UIAlertController(title: "Woops", message: message, preferredStyle: .alert)
         
     }

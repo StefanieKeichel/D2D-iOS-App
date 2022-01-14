@@ -85,7 +85,6 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Forget Password"/>
                                 <connections>
-                                    <action selector="forgetPasswordPressed:" destination="1Ey-kz-fkp" eventType="touchUpInside" id="x9a-ZX-pam"/>
                                     <segue destination="GfV-Rj-B5b" kind="show" identifier="GoToPhoneAuth" id="l7d-vy-PwS"/>
                                 </connections>
                             </button>

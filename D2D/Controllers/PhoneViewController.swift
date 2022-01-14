@@ -17,8 +17,8 @@ class PhoneViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
+    
     @IBAction func signInPressed(_ sender: UIButton) {
         guard let phoneNumber = phoneNumberField.text,
                 !phoneNumber.isEmpty else{
@@ -31,17 +31,13 @@ class PhoneViewController: UIViewController {
             guard success else {return}
         }
         self.performSegue(withIdentifier: Constants.SMSScreen, sender: self)
-
         
     }
       
-        
-        
-    
-    
-    
-    func alertUserLoginError(message: String = "Authentication failed. Please fill in the missing information.") {
+    func alertUserLoginError(message: String = "Authentication failed. Please type your phone number.") {
         let alert = UIAlertController(title: "Woops", message: message, preferredStyle: .alert)
         
+        alert.addAction(UIAlertAction(title:"Dismiss", style: .cancel, handler: nil))
+        present(alert, animated: true)
     }
 }

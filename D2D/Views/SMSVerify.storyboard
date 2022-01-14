@@ -33,7 +33,7 @@
                                 </state>
                                 <connections>
                                     <action selector="signInPressed:" destination="6XM-zp-PEw" eventType="touchUpInside" id="ZOe-xm-4CO"/>
-                                    <segue destination="ou4-t8-xKP" kind="show" id="7GN-Dx-75Q"/>
+                                    <segue destination="ou4-t8-xKP" kind="show" identifier="LoginToChat" id="7GN-Dx-75Q"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Please enter the verification code sent to your phone." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fbg-cw-cyk">

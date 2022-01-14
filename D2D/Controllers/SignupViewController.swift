@@ -42,6 +42,7 @@ class SignupViewController: UIViewController {
                 print("Error creating user")
                 return
             }
+            
             self.performSegue(withIdentifier: "RegisterToChat", sender: self)
             
         }
@@ -52,7 +53,7 @@ class SignupViewController: UIViewController {
             alert.addAction(UIAlertAction(title:"Dismiss", style: .cancel, handler: nil))
             present(alert, animated: true)
         }
-        
+
         // is the email valid
         func isValidEmail(_ email: String) -> Bool {
             let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
@@ -60,6 +61,7 @@ class SignupViewController: UIViewController {
             let emailPred = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
             return emailPred.evaluate(with: email)
         }
+        
         // is the paassword valid
         func isValidPassword(password : String) -> Bool{
 
