@@ -158,6 +158,7 @@ PODS:
     - abseil/base/base_internal
     - abseil/base/config
     - abseil/meta/type_traits
+  - BCryptSwift (1.1)
   - BoringSSL-GRPC (0.0.3):
     - BoringSSL-GRPC/Implementation (= 0.0.3)
     - BoringSSL-GRPC/Interface (= 0.0.3)
@@ -248,6 +249,7 @@ PODS:
   - nanopb/encode (0.3.9011)
 
 DEPENDENCIES:
+  - BCryptSwift
   - Firebase/Auth
   - Firebase/Firestore
   - IQKeyboardManagerSwift
@@ -255,6 +257,7 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - abseil
+    - BCryptSwift
     - BoringSSL-GRPC
     - Firebase
     - FirebaseAuth
@@ -275,6 +278,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   abseil: 18063d773f5366ff8736a050fe035a28f635fd27
+  BCryptSwift: f69992ea5685f6714260842c2770688043b89ab2
   BoringSSL-GRPC: db8764df3204ccea016e1c8dd15d9a9ad63ff318
   Firebase: 458d109512200d1aca2e1b9b6cf7d68a869a4a46
   FirebaseAuth: 7d0f84873926f6648bbd1391a318dfb1a26b5e4f
@@ -293,6 +297,6 @@ SPEC CHECKSUMS:
   leveldb-library: 55d93ee664b4007aac644a782d11da33fba316f7
   nanopb: 18003b5e52dab79db540fe93fe9579f399bd1ccd
 
-PODFILE CHECKSUM: ab64582b5dd09053c0fccc9f8b931e678be06a62
+PODFILE CHECKSUM: 37fa2bf3b14268b6c5f5115730665e332392e115
 
 COCOAPODS: 1.11.2

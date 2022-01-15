@@ -1,5 +1,6 @@
 import UIKit
 import Firebase
+import BCryptSwift
 
 class LoginViewController: UIViewController {
     
@@ -22,6 +23,9 @@ class LoginViewController: UIViewController {
               }
         // log in attempts exceeded
         logs.loginAttempt()
+        
+        // compare hashed value
+        BCryptSwift.verifyPassword(password, matchesHash: password)
         // firebase log in
        Auth.auth().signIn(withEmail: email, password: password) {  authResult, error in
            if let e = error  {

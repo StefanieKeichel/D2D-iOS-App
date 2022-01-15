@@ -1,5 +1,6 @@
 import UIKit
 import FirebaseAuth
+import BCryptSwift
 
 class SignupViewController: UIViewController {
 
@@ -34,6 +35,16 @@ class SignupViewController: UIViewController {
             return
             
         }
+        // Hashing the password with Swift
+        
+        do {
+            let salt = try BCryptSwift.generateSalt()
+            let hashed = try BCryptSwift.hashPassword(password, withSalt: salt)
+            print("Hashed result is: \(hashed)")
+        }
+        catch {
+            print("An error occured: \(error)")
+        }
         
         // Firebse Sign up
         Auth.auth().createUser(withEmail: email, password: password) {
@@ -47,6 +58,15 @@ class SignupViewController: UIViewController {
             
         }
         
+        var bytes = [Int8](repeating: 0, count: 10)
+        let status = SecRandomCopyBytes(kSecRandomDefault, bytes.count, &bytes)
+
+        if status == errSecSuccess { // Always test the status.
+            print(bytes)
+            // Prints something different every time you run.
+        }
+        
+        // alert sign up error
         func alertUserSignUpError(message: String = "Please enter your information to create a new account") {
             let alert = UIAlertController(title: "Woops", message: message, preferredStyle: .alert)
             

@@ -12,7 +12,8 @@ target 'D2D' do
   # Pods for D2D
   pod 'Firebase/Auth'
   pod 'Firebase/Firestore'
-  pod 'IQKeyboardManagerSwift' 
+  pod 'IQKeyboardManagerSwift'
+  pod 'BCryptSwift'
 
   target 'D2DTests' do
     inherit! :search_paths
