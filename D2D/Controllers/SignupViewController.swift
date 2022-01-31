@@ -35,8 +35,13 @@ class SignupViewController: UIViewController {
             return
             
         }
-        // Hashing the password with Swift
+        // if passwords match
+        if password != SignUp_Password_again_TextField.text {
+            alertUserSignUpError(message: "Passwords don't match.")
+            return
+        }
         
+        // Hashing the password with BCryptSwift
         do {
             let salt = try BCryptSwift.generateSalt()
             let hashed = try BCryptSwift.hashPassword(password, withSalt: salt)

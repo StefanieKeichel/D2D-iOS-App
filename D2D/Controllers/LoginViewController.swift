@@ -35,8 +35,8 @@ class LoginViewController: UIViewController {
                self.performSegue(withIdentifier: "LoginToChat", sender: self)
            }
         }
-        if Int(logs.loginAttempt()) > 1{
-            alertUserLoginError(message: "You're fucked up.")
+        if Int(logs.loginAttempt()) > 3{
+            alertUserLoginError(message: "You have exceeded the number of trials allowed to log in.")
             return
         }
         
