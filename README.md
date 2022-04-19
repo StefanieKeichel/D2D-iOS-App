@@ -29,35 +29,45 @@ All user interfaces are build in the storyboard files. Like building blocks, eve
 
 - Welcome page and the option to Login or Sign Up:
 
-<img width="461" alt="Bildschirmfoto 2021-11-22 um 13 22 34" src="https://user-images.githubusercontent.com/58078457/142861156-a6467e88-30dd-42f1-92fa-7e0f1e046153.png">
+<img width="454" alt="Bildschirmfoto 2022-04-19 um 12 20 51" src="https://user-images.githubusercontent.com/58078457/163983863-abc2eee0-caec-4d08-b0a9-83a4f54f1c28.png">
 
 - Login:
 
-<img width="463" alt="Bildschirmfoto 2021-11-22 um 13 22 22" src="https://user-images.githubusercontent.com/58078457/142861171-8c79acbd-e5a5-42de-bdbd-3509cf4794f9.png">
+<img width="454" alt="Bildschirmfoto 2022-04-19 um 12 21 00" src="https://user-images.githubusercontent.com/58078457/163983977-2e2a2c0f-dd7c-4366-b126-dbb9f1ea4d62.png">
+
 
 - Sign Up:
 
-<img width="461" alt="Bildschirmfoto 2021-11-22 um 13 22 44" src="https://user-images.githubusercontent.com/58078457/142861186-bded8a7e-28d2-4e6c-8987-7de4fb441a8c.png">
+<img width="454" alt="Bildschirmfoto 2022-04-19 um 12 21 05" src="https://user-images.githubusercontent.com/58078457/163984005-63d2b1c4-5521-4ade-8c3d-84ae507c803b.png">
 
-- Visual feedback if the password meets the requirements:
 
-<img width="480" alt="Bildschirmfoto 2021-11-22 um 13 24 27" src="https://user-images.githubusercontent.com/58078457/142861413-25fa4d3d-2a4e-48ad-a72b-b82efb8dc4cb.png">
+- Visual feedback in the sign up process if both passwords match: 
+- 
+<img width="454" alt="Bildschirmfoto 2022-04-19 um 12 22 11" src="https://user-images.githubusercontent.com/58078457/163984083-d57aa327-c26b-4851-8907-6fe2184ed4cc.png">
 
-- Visual feedback if one passwords matches:
 
-<img width="480" alt="Bildschirmfoto 2021-11-22 um 13 24 44" src="https://user-images.githubusercontent.com/58078457/142861416-d71ff322-9453-4650-9345-750a55b97f6e.png">
+- Visual feedback in the sign up process if only one passwords matches:
 
-- Visual feedback if both passwords match:
+<img width="454" alt="Bildschirmfoto 2022-04-19 um 12 22 06" src="https://user-images.githubusercontent.com/58078457/163984129-e850dfa0-bf35-4b23-9167-5b6a7f1d98a0.png">
 
-<img width="480" alt="Bildschirmfoto 2021-11-22 um 13 24 49" src="https://user-images.githubusercontent.com/58078457/142861420-d459a1c1-3fc6-44a0-82e4-1a9ab713a3e6.png">
 
 - Implementation of Google Maps and location tracking:
 
-<img width="480" alt="Bildschirmfoto 2021-11-22 um 13 49 39" src="https://user-images.githubusercontent.com/58078457/142864698-665e2a5a-def5-4c6b-a9d8-571967eeb3e5.png">
+<img width="454" alt="Bildschirmfoto 2022-04-19 um 12 22 44" src="https://user-images.githubusercontent.com/58078457/163984464-54974609-6cd1-4cc5-b829-c9434fc970d1.png">
+
+<img width="454" alt="Bildschirmfoto 2022-04-19 um 12 28 04" src="https://user-images.githubusercontent.com/58078457/163984644-a7608054-2c82-4ccb-8908-44435700986d.png">
+
+
+- Voice Assistance:
+
+<img width="454" alt="Bildschirmfoto 2022-04-19 um 12 23 06" src="https://user-images.githubusercontent.com/58078457/163984784-baf01a98-95f5-4841-9306-dfd2d496e4c7.png">
+
+<img width="454" alt="Bildschirmfoto 2022-04-19 um 12 23 18" src="https://user-images.githubusercontent.com/58078457/163985243-cecbadf5-6da3-478e-89dd-a28aa40c6fab.png">
+
 
 - Chat messaging:
 
-<img width="480" alt="Bildschirmfoto 2021-11-22 um 13 30 04" src="https://user-images.githubusercontent.com/58078457/142864804-dd23135a-14ff-4828-8694-7031a7796e68.png">
+<img width="454" alt="Bildschirmfoto 2022-04-19 um 12 23 34" src="https://user-images.githubusercontent.com/58078457/163985369-ba8336a8-adf2-4093-915c-018200759d71.png">
 
 
 ### **Code Examples**
@@ -84,14 +94,14 @@ All user interfaces are build in the storyboard files. Like building blocks, eve
 ### **Setting up the development environment**
 
 - Install Xcode
-- execute *pod install*
+- Execute *pod install*
 
 ### **A list of cyber security measures implemented by Ahmed Eldably**
 - Authorization and authentication
 - Two-Facator Authentication (SMS)
 - Cryptographically secure pseudorandom number generator.
-- Hashing passwords.
-- Firebase Secuirty
+- Hashing passwords
+- Firebase Security
 
 ### **Threat Model** 
 
