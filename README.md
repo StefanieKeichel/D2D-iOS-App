@@ -51,12 +51,15 @@ All user interfaces are build in the storyboard files. Like building blocks, eve
 <img width="454" alt="Bildschirmfoto 2022-04-19 um 12 22 06" src="https://user-images.githubusercontent.com/58078457/163984129-e850dfa0-bf35-4b23-9167-5b6a7f1d98a0.png">
 
 
-- Implementation of Google Maps and location tracking:
+- Implementation of Google Maps, location tracking and receiving warning messages:
 
 <img width="454" alt="Bildschirmfoto 2022-04-19 um 12 22 44" src="https://user-images.githubusercontent.com/58078457/163984464-54974609-6cd1-4cc5-b829-c9434fc970d1.png">
 
 <img width="454" alt="Bildschirmfoto 2022-04-19 um 12 28 04" src="https://user-images.githubusercontent.com/58078457/163984644-a7608054-2c82-4ccb-8908-44435700986d.png">
 
+<img width="454" alt="Bildschirmfoto 2022-04-19 um 13 00 06" src="https://user-images.githubusercontent.com/58078457/163990086-56103c04-a011-44b2-bfd2-b95ca873f736.png">
+
+<img width="454" alt="Bildschirmfoto 2022-04-19 um 13 00 23" src="https://user-images.githubusercontent.com/58078457/163990109-422c854f-b975-42c9-a1ac-b11268f12c05.png">
 
 - Voice Assistance:
 
@@ -96,13 +99,6 @@ All user interfaces are build in the storyboard files. Like building blocks, eve
 - Install Xcode
 - Execute *pod install*
 
-### **A list of cyber security measures implemented by Ahmed Eldably**
-- Authorization and authentication
-- Two-Facator Authentication (SMS)
-- Cryptographically secure pseudorandom number generator.
-- Hashing passwords
-- Firebase Security
-
 ### **Threat Model** 
 
 #### **Potential threats:**
@@ -141,9 +137,14 @@ Fraud
 Ahmed Eldably
 
 - Implementation of the chat messaging
-- Implementation of dynamic welcome screen
 - Connecting to Firebase
 - Writing testing routines
+- Authorization and authentication
+- Two-Facator Authentication (SMS)
+- Cryptographically secure pseudorandom number generator.
+- Hashing passwords
+- Firebase Security
+
 
 David Korn
 
@@ -154,4 +155,6 @@ Stefanie Keichel
 
 - Implementation of SignUp-Security (checking password strength, visual feedback, passing variables between view controllers)
 - Implementation of Google Maps and ensuring maximum tracking accuracy
+- Implementation of sound feedback to the driver in case of upcoming traffic warnings
 - Implementation of all storyboards and setting up the infrastructure of those
+- Implementation of getting microphone access and the functionality of the voice assistance that transfers spoken text into the chat 
