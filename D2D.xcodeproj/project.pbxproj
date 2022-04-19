@@ -25,12 +25,14 @@
 		C4FCA2B031F8608BA32A3F3C /* Pods_D2DTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07A724EE72EBDD98681ACC06 /* Pods_D2DTests.framework */; };
 		CB4FFB732761323A00CB7552 /* VoiceAssistantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4FFB722761323A00CB7552 /* VoiceAssistantViewController.swift */; };
 		CB4FFB75276149EF00CB7552 /* VoiceAssistant.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB4FFB74276149EE00CB7552 /* VoiceAssistant.storyboard */; };
+		CB5CBFC227D5E7E0005F6EB2 /* Map.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB5CBFC127D5E7E0005F6EB2 /* Map.storyboard */; };
 		CB7E464C273B25AA005CD92E /* MapViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB7E464B273B25AA005CD92E /* MapViewController.storyboard */; };
 		CB7E464E273B369A005CD92E /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB7E464D273B369A005CD92E /* Login.storyboard */; };
 		CB7E4650273B370A005CD92E /* SignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB7E464F273B370A005CD92E /* SignUp.storyboard */; };
 		CB7E4652273C0559005CD92E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB7E4651273C0559005CD92E /* Main.storyboard */; };
 		CBA52A0A27298FB600E72140 /* Chat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBA52A0927298FB600E72140 /* Chat.storyboard */; };
 		CBA52A0C272993FE00E72140 /* PostLogin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBA52A0B272993FE00E72140 /* PostLogin.storyboard */; };
+		CBA5655527D6016200EF913F /* MapScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA5655427D6016100EF913F /* MapScreen.swift */; };
 		CBC10E1527301F7300144557 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC10E1427301F7300144557 /* LoginViewController.swift */; };
 		CBC10E172730215700144557 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC10E162730215700144557 /* SignupViewController.swift */; };
 		CBC10E192730217C00144557 /* LoginSignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC10E182730217C00144557 /* LoginSignupViewController.swift */; };
@@ -85,12 +87,14 @@
 		C9CB58F93B7202F2C4566045 /* Pods-D2D.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-D2D.debug.xcconfig"; path = "Target Support Files/Pods-D2D/Pods-D2D.debug.xcconfig"; sourceTree = "<group>"; };
 		CB4FFB722761323A00CB7552 /* VoiceAssistantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceAssistantViewController.swift; sourceTree = "<group>"; };
 		CB4FFB74276149EE00CB7552 /* VoiceAssistant.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = VoiceAssistant.storyboard; sourceTree = "<group>"; };
+		CB5CBFC127D5E7E0005F6EB2 /* Map.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Map.storyboard; sourceTree = "<group>"; };
 		CB7E464B273B25AA005CD92E /* MapViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MapViewController.storyboard; sourceTree = "<group>"; };
 		CB7E464D273B369A005CD92E /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		CB7E464F273B370A005CD92E /* SignUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignUp.storyboard; sourceTree = "<group>"; };
 		CB7E4651273C0559005CD92E /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		CBA52A0927298FB600E72140 /* Chat.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Chat.storyboard; sourceTree = "<group>"; };
 		CBA52A0B272993FE00E72140 /* PostLogin.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PostLogin.storyboard; sourceTree = "<group>"; };
+		CBA5655427D6016100EF913F /* MapScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapScreen.swift; sourceTree = "<group>"; };
 		CBC10E1427301F7300144557 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		CBC10E162730215700144557 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		CBC10E182730217C00144557 /* LoginSignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSignupViewController.swift; sourceTree = "<group>"; };
@@ -213,6 +217,7 @@
 			isa = PBXGroup;
 			children = (
 				CB7E4651273C0559005CD92E /* Main.storyboard */,
+				CB5CBFC127D5E7E0005F6EB2 /* Map.storyboard */,
 				CB7E464F273B370A005CD92E /* SignUp.storyboard */,
 				CB7E464D273B369A005CD92E /* Login.storyboard */,
 				CB4FFB74276149EE00CB7552 /* VoiceAssistant.storyboard */,
@@ -231,6 +236,7 @@
 			isa = PBXGroup;
 			children = (
 				CBC10E222730752100144557 /* MapView.swift */,
+				CBA5655427D6016100EF913F /* MapScreen.swift */,
 				CBC10E242730855000144557 /* MapViewModel.swift */,
 				306AD23826FF3374000A58B9 /* WelcomeViewController.swift */,
 				CBC10E1427301F7300144557 /* LoginViewController.swift */,
@@ -376,6 +382,7 @@
 				30DA0410273C1FE200B06912 /* MessageCell.xib in Resources */,
 				CBA52A0A27298FB600E72140 /* Chat.storyboard in Resources */,
 				CBA52A0C272993FE00E72140 /* PostLogin.storyboard in Resources */,
+				CB5CBFC227D5E7E0005F6EB2 /* Map.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -511,6 +518,7 @@
 				CBC10E192730217C00144557 /* LoginSignupViewController.swift in Sources */,
 				306AD23926FF3374000A58B9 /* WelcomeViewController.swift in Sources */,
 				CBC10E252730855000144557 /* MapViewModel.swift in Sources */,
+				CBA5655527D6016200EF913F /* MapScreen.swift in Sources */,
 				30DA040E273C1C3800B06912 /* Constants.swift in Sources */,
 				306AD23526FF3374000A58B9 /* AppDelegate.swift in Sources */,
 				CBC10E1B273021A400144557 /* PostLoginViewController.swift in Sources */,
@@ -689,7 +697,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = L6MXN4YXFZ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = D2D/Info.plist;
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This app needs your location to display your position on the map.";
@@ -719,7 +727,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = L6MXN4YXFZ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = D2D/Info.plist;
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This app needs your location to display your position on the map.";

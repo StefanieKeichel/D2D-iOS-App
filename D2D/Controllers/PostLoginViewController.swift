@@ -21,7 +21,7 @@ class PostLoginViewController: UIViewController {
         
         // Initalize empty text
         welcome_text.text = ""
-        let welcome_text = "welcome to comobi, \(Display_Login_Name)\(Display_SignUp_Name)!"
+        let welcome_text = "welcome to comobi \(Display_Login_Name)\(Display_SignUp_Name)!"
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) { [self] in
             let utterance = AVSpeechUtterance(string: "Welcome to comobi, \(self.Display_Login_Name)\(self.Display_SignUp_Name).")
@@ -54,7 +54,7 @@ class PostLoginViewController: UIViewController {
     @IBAction func GoTo_Chat(_ sender: UIButton) {
         
     }
-    @IBSegueAction func swiftUIAction(_ coder: NSCoder) -> UIViewController? {
-        return UIHostingController(coder: coder, rootView: MapView())
-    }
+//    @IBSegueAction func swiftUIAction(_ coder: NSCoder) -> UIViewController? {
+//        return UIHostingController(coder: coder, rootView: MapView())
+//    }
 }
