@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+<<<<<<< HEAD:D2D.xcodeproj/xcuserdata/stefaniekeichel.xcuserdatad/xcschemes/xcschememanagement.plist
+	<key>SchemeUserState</key>
+	<dict>
+		<key>D2D.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>25</integer>
+		</dict>
+	</dict>
+=======
+	<key>PreviewsEnabled</key>
+	<false/>
+>>>>>>> 5ad4520bf15cbc3da17139bf333f7780b65aabea:D2D.xcworkspace/xcshareddata/WorkspaceSettings.xcsettings
+</dict>
+</plist>

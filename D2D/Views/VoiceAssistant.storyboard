@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Voice Assistant-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" customClass="VoiceAssistant" customModule="D2D" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" restorationIdentifier="ID_VoiceAssistance" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="bottom" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VF2-QJ-rzT">
+                                <rect key="frame" x="57" y="298" width="300" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="E37-Zh-pGB" userLabel="width = 200"/>
+                                    <constraint firstAttribute="height" constant="300" id="x12-ZY-pia"/>
+                                </constraints>
+                                <color key="tintColor" red="0.4445248544" green="0.1549414694" blue="0.87848204370000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" imagePadding="0.0" buttonSize="large">
+                                    <imageReference key="image" image="microphone" symbolScale="large"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="recording_button:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="V2o-he-rLp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uc4-HJ-PGL">
+                                <rect key="frame" x="194.5" y="707" width="25" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="0Hx-4G-rjs"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <color key="tintColor" red="0.4445248544" green="0.1549414694" blue="0.87848204370000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal">
+                                    <color key="titleColor" red="0.4445248544" green="0.1549414694" blue="0.87848204370000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <imageReference key="image" image="chevron.forward.circle.fill" catalog="system" symbolScale="large"/>
+                                </state>
+                                <connections>
+                                    <action selector="GoTo_Chat:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="BaH-fj-nkx"/>
+                                    <segue destination="zse-5w-JCA" kind="show" identifier="showchatstoryboard" id="fXl-rZ-Una"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="please record your message!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T3L-KG-8ug">
+                                <rect key="frame" x="57" y="279" width="300" height="19"/>
+                                <color key="tintColor" red="0.95697695019999995" green="0.94456714389999996" blue="0.9725525975" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="MNX-IH-jDV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="14"/>
+                                <color key="textColor" red="0.95697695019999995" green="0.94456714389999996" blue="0.9725525975" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" red="0.4445248544" green="0.1549414694" blue="0.87848204370000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="tintColor" red="0.95697695019999995" green="0.94456714389999996" blue="0.9725525975" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="Uc4-HJ-PGL" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="4Ap-Qj-5Z8"/>
+                            <constraint firstItem="VF2-QJ-rzT" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="8KI-hf-jXi"/>
+                            <constraint firstItem="T3L-KG-8ug" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="Brx-1L-C4g"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="Uc4-HJ-PGL" secondAttribute="bottom" constant="95" id="MxX-9h-jze"/>
+                            <constraint firstItem="VF2-QJ-rzT" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="XdK-9Q-cwg"/>
+                            <constraint firstItem="VF2-QJ-rzT" firstAttribute="top" secondItem="T3L-KG-8ug" secondAttribute="bottom" id="qo4-Ed-Jgh"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="recording_button" destination="VF2-QJ-rzT" id="SR1-wQ-xbL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="271" y="60"/>
+        </scene>
+        <!--Chat-->
+        <scene sceneID="3FC-tT-nwW">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Chat" id="zse-5w-JCA" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="dIz-xf-odW"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gSk-jI-pPS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="807" y="60"/>
+        </scene>
+    </scenes>
+    <color key="tintColor" red="0.95697695019999995" green="0.94456714389999996" blue="0.9725525975" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+    <resources>
+        <image name="chevron.forward.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="microphone" width="100" height="100"/>
+    </resources>
+</document>

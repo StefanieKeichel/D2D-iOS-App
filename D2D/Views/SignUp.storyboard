@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vMI-Dv-Jnz">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Signup View Controller-->
+        <scene sceneID="GKW-UW-spd">
+            <objects>
+                <viewController id="vMI-Dv-Jnz" customClass="SignupViewController" customModule="D2D" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Uab-UB-x2U">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="htq-lg-DRa">
+                                <rect key="frame" x="102" y="180.5" width="210" height="535"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="welcome!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ac-cg-9IQ">
+                                        <rect key="frame" x="0.0" y="0.0" width="210" height="60"/>
+                                        <color key="backgroundColor" red="0.4445248544" green="0.1549414694" blue="0.87848204370000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="tintColor" red="0.95697695019999995" green="0.94456714389999996" blue="0.9725525975" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="blR-Cb-H3o"/>
+                                            <constraint firstAttribute="width" constant="210" id="gf6-8S-HmU"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="14"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="cartype" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="stx-Ta-iMb">
+                                        <rect key="frame" x="0.0" y="95" width="210" height="60"/>
+                                        <color key="backgroundColor" red="0.45229834320000001" green="0.93410122390000005" blue="0.88235217330000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="tintColor" red="0.95697695019999995" green="0.94456714389999996" blue="0.9725525975" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="210" id="dls-QW-s15"/>
+                                            <constraint firstAttribute="height" constant="60" id="flQ-M1-LnU"/>
+                                        </constraints>
+                                        <color key="textColor" red="0.95697695019999995" green="0.94456714389999996" blue="0.9725525975" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" spellCheckingType="yes"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
+                                                <color key="value" red="0.95697695019999995" green="0.94456714389999996" blue="0.9725525975" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="13"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="focus_name_textfield:" destination="vMI-Dv-Jnz" eventType="primaryActionTriggered" id="JZ3-K3-aO6"/>
+                                            <outlet property="delegate" destination="vMI-Dv-Jnz" id="f9z-ZO-5wL"/>
+                                        </connections>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NyZ-8q-Ypm">
+                                        <rect key="frame" x="0.0" y="190" width="210" height="60"/>
+                                        <color key="backgroundColor" red="0.45229834320000001" green="0.93410122390000005" blue="0.88235217330000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="tintColor" red="0.95697695019999995" green="0.94456714389999996" blue="0.9725525975" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="Edr-or-hQF"/>
+                                            <constraint firstAttribute="width" constant="210" id="vXl-bd-aPI"/>
+                                        </constraints>
+                                        <color key="textColor" red="0.95697695019999995" green="0.94456714389999996" blue="0.9725525975" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" textContentType="name"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
+                                                <color key="value" red="0.95697695019999995" green="0.94456714389999996" blue="0.9725525975" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="13"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="focus_email_textfield:" destination="vMI-Dv-Jnz" eventType="primaryActionTriggered" id="s3Z-wZ-17Q"/>
+                                            <outlet property="delegate" destination="vMI-Dv-Jnz" id="wTt-3z-dsK"/>
+                                        </connections>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="g50-8L-Vgq">
+                                        <rect key="frame" x="0.0" y="285" width="210" height="60"/>
+                                        <color key="backgroundColor" red="0.45229834320000001" green="0.93410122390000005" blue="0.88235217330000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="tintColor" red="0.95697695019999995" green="0.94456714389999996" blue="0.9725525975" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="IgX-VN-zCJ"/>
+                                            <constraint firstAttribute="width" constant="210" id="gBr-Qr-wi6"/>
+                                        </constraints>
+                                        <color key="textColor" red="0.95697695019999995" green="0.94456714389999996" blue="0.9725525975" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" textContentType="email"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
+                                                <color key="value" red="0.95697695019999995" green="0.94456714389999996" blue="0.9725525975" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="13"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="focus_password_textfield:" destination="vMI-Dv-Jnz" eventType="primaryActionTriggered" id="jUL-Sc-CN8"/>
+                                            <outlet property="delegate" destination="vMI-Dv-Jnz" id="kaU-vn-8Jt"/>
+                                        </connections>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sZL-39-NR1">
+                                        <rect key="frame" x="0.0" y="380" width="210" height="60"/>
+                                        <color key="backgroundColor" red="0.45229834320000001" green="0.93410122390000005" blue="0.88235217330000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="tintColor" red="0.95697695019999995" green="0.94456714389999996" blue="0.9725525975" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="210" id="0vV-yN-clO"/>
+                                            <constraint firstAttribute="height" constant="60" id="uwj-D9-uPh"/>
+                                        </constraints>
+                                        <color key="textColor" red="0.95697695019999995" green="0.94456714389999996" blue="0.9725525975" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
+                                                <color key="value" red="0.95697695019999995" green="0.94456714389999996" blue="0.9725525975" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="13"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="focus_passwordagain_textfield:" destination="vMI-Dv-Jnz" eventType="primaryActionTriggered" id="1y7-1S-0aq"/>
+                                            <action selector="password_check:" destination="vMI-Dv-Jnz" eventType="touchUpOutside" id="6bn-Dk-Ijp"/>
+                                            <action selector="password_check:" destination="vMI-Dv-Jnz" eventType="editingDidEnd" id="dQU-rF-2Fv"/>
+                                            <outlet property="delegate" destination="vMI-Dv-Jnz" id="rE0-Sb-hFM"/>
+                                        </connections>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="enter password again " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5GH-vI-1Ym">
+                                        <rect key="frame" x="0.0" y="475" width="210" height="60"/>
+                                        <color key="backgroundColor" red="0.45229834320000001" green="0.93410122390000005" blue="0.88235217330000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="tintColor" red="0.95697695019999995" green="0.94456714389999996" blue="0.9725525975" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="210" id="QE4-Cx-X1n"/>
+                                            <constraint firstAttribute="height" constant="60" id="ROg-LC-Dda"/>
+                                        </constraints>
+                                        <color key="textColor" red="0.95697695019999995" green="0.94456714389999996" blue="0.9725525975" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
+                                                <color key="value" red="0.95697695019999995" green="0.94456714389999996" blue="0.9725525975" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="13"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="dismiss_lasttextfield:" destination="vMI-Dv-Jnz" eventType="primaryActionTriggered" id="cIR-Rc-8Vm"/>
+                                            <action selector="password_repetition_check:" destination="vMI-Dv-Jnz" eventType="editingDidEnd" id="6Ar-IO-U3I"/>
+                                            <action selector="password_repetition_check:" destination="vMI-Dv-Jnz" eventType="touchUpOutside" id="OeC-3c-CDU"/>
+                                            <outlet property="delegate" destination="vMI-Dv-Jnz" id="xbs-gH-gAp"/>
+                                        </connections>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bHW-RW-nE9">
+                                <rect key="frame" x="194.5" y="775.5" width="25" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="n8h-xI-KoF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <color key="tintColor" red="0.45229834320000001" green="0.93410122390000005" blue="0.88235217330000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal">
+                                    <imageReference key="image" image="chevron.forward.circle.fill" catalog="system" symbolScale="large"/>
+                                </state>
+                                <connections>
+                                    <action selector="GoTo_PostLogin:" destination="vMI-Dv-Jnz" eventType="touchUpInside" id="yfC-ye-2VV"/>
+                                    <segue destination="Zpt-1S-18i" kind="show" identifier="RegisterToChat" id="TxO-RH-u5l"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="7Sy-hn-Iv0"/>
+                        <color key="backgroundColor" red="0.4445248544" green="0.1549414694" blue="0.87848204370000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="bHW-RW-nE9" firstAttribute="top" secondItem="5GH-vI-1Ym" secondAttribute="bottom" constant="60" id="Ql8-or-RhR"/>
+                            <constraint firstItem="htq-lg-DRa" firstAttribute="centerX" secondItem="Uab-UB-x2U" secondAttribute="centerX" id="lDW-O0-zAB"/>
+                            <constraint firstItem="bHW-RW-nE9" firstAttribute="centerX" secondItem="Uab-UB-x2U" secondAttribute="centerX" id="mMO-NP-9QX"/>
+                            <constraint firstItem="htq-lg-DRa" firstAttribute="centerY" secondItem="Uab-UB-x2U" secondAttribute="centerY" id="oIy-OE-LA7"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="LCJ-2w-KdX"/>
+                    <connections>
+                        <outlet property="SignUp_Cartype_TextField" destination="stx-Ta-iMb" id="alD-PM-J6h"/>
+                        <outlet property="SignUp_Email_TextField" destination="g50-8L-Vgq" id="Tv1-Sh-C5S"/>
+                        <outlet property="SignUp_Name_TextField" destination="NyZ-8q-Ypm" id="pHs-xf-pY9"/>
+                        <outlet property="SignUp_Password_TextField" destination="sZL-39-NR1" id="2kp-gT-oKU"/>
+                        <outlet property="SignUp_Password_repetition_TextField" destination="5GH-vI-1Ym" id="CGi-JM-Qdk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NCz-g7-1j8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1514" y="29"/>
+        </scene>
+        <!--PostLogin-->
+        <scene sceneID="Cls-Ka-Mc6">
+            <objects>
+                <viewControllerPlaceholder storyboardName="PostLogin" id="Zpt-1S-18i" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="wdd-w8-sVY"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RJK-1k-IGM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2392.0289855072465" y="28.794642857142854"/>
+        </scene>
+    </scenes>
+    <color key="tintColor" red="0.45229834320000001" green="0.93410122390000005" blue="0.88235217330000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+    <resources>
+        <image name="chevron.forward.circle.fill" catalog="system" width="128" height="121"/>
+    </resources>
+</document>
