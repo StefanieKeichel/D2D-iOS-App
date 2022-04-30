@@ -99,39 +99,6 @@ All user interfaces are build in the storyboard files. Like building blocks, eve
 - Install Xcode
 - Execute *pod install*
 
-### **Threat Model** 
-
-#### **Potential threats:**
-An adversary might do the following :
-1. Stealing drivers' personal data / spoofing location data. 
-2. Spying on the conversation.
-3. Do fraud (spam the system).
-4. inter-app communication.
-
-#### **Actions to be taken to mitigate each threat:**
-
-Steal drivers' personal data/location data.
-1. Data masking: hiding or removing portions of the data. (e.g: credit card).
-2. Strong passwords must be enforced / proper account maintenance.
-3. Disable Public Network Access.
-4. Encrypt all files and Backups.
-5. Keeping location data separate from the personalized data in the database.
-
-Spying on the conversation
-1. End to end encryption.
-2. Hashing passwords.
-3. Not saving passwords in a string format.
-4. Use TCP handshake protocol / Use security certificates (certificate pinning)
-
-Fraud
-1. Fraud detection.
-2. Ensure that the sender’ location is close to the receivers’ location.
-
-### **Model validation** 
-1. Trying to hack our own system
-2. If we can build trust and a reputation
-
-
 ### **Credits**
 
 Ahmed Eldably
@@ -140,8 +107,7 @@ Ahmed Eldably
 - Connecting to Firebase
 - Writing testing routines
 - Authorization and authentication
-- Two-Facator Authentication (SMS)
-- Cryptographically secure pseudorandom number generator.
+- Cryptographically secure pseudorandom number generator
 - Hashing passwords
 - Firebase Security
 
