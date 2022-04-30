@@ -42,7 +42,7 @@ All user interfaces are build in the storyboard files. Like building blocks, eve
 
 
 - Visual feedback in the sign up process if both passwords match: 
-- 
+
 <img width="454" alt="Bildschirmfoto 2022-04-19 um 12 22 11" src="https://user-images.githubusercontent.com/58078457/163984083-d57aa327-c26b-4851-8907-6fe2184ed4cc.png">
 
 
@@ -51,7 +51,7 @@ All user interfaces are build in the storyboard files. Like building blocks, eve
 <img width="454" alt="Bildschirmfoto 2022-04-19 um 12 22 06" src="https://user-images.githubusercontent.com/58078457/163984129-e850dfa0-bf35-4b23-9167-5b6a7f1d98a0.png">
 
 
-- Implementation of Google Maps, location tracking and receiving warning messages:
+- Implementation of Google Maps, location tracking, geofencing and receiving warning messages:
 
 <img width="454" alt="Bildschirmfoto 2022-04-19 um 12 22 44" src="https://user-images.githubusercontent.com/58078457/163984464-54974609-6cd1-4cc5-b829-c9434fc970d1.png">
 
