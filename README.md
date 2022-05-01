@@ -108,7 +108,6 @@ Ahmed Eldably
 - Writing testing routines
 - Authorization and authentication
 - Cryptographically secure pseudorandom number generator
-- Hashing passwords
 - Firebase Security
 
 
@@ -119,7 +118,7 @@ David Korn
 
 Stefanie Keichel
 
-- Implementation of SignUp-Security (checking password strength, visual feedback, passing variables between view controllers)
+- Implementation of SignUp-Security (checking password strength, hashing password, visual feedback, passing variables between view controllers)
 - Implementation of Google Maps and ensuring maximum tracking accuracy
 - Implementation of sound feedback to the driver in case of upcoming traffic warnings
 - Implementation of all storyboards and setting up the infrastructure of those
