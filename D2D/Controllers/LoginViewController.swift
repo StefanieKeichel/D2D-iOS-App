@@ -9,7 +9,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     var Login_Email = ""
     var Login_Password = ""
-    var login_option = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,13 +47,13 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         present(alert, animated: true)
     }
 
+    
+    
 //    pass data between view controllers with passSegue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let destVC = segue.destination as! PostLoginViewController
         destVC.Display_Login_Name = self.Login_Email
-        destVC.login_option = self.login_option
     }
-    
     
     @IBAction func focus_password_textfield(_ sender: UITextField) {
         Login_Email_TextField.resignFirstResponder()

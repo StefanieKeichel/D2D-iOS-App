@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="CIR-IH-511">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="CIR-IH-511">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -15,85 +16,106 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fjR-Bq-8dO" userLabel="Table Chat">
-                                <rect key="frame" x="0.0" y="104" width="414" height="718"/>
-                                <color key="backgroundColor" red="0.4445248544" green="0.1549414694" blue="0.87848204370000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <color key="tintColor" red="0.95697695019999995" green="0.94456714389999996" blue="0.9725525975" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <color key="sectionIndexBackgroundColor" red="0.95697695019999995" green="0.94456714389999996" blue="0.9725525975" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                            </tableView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EG7-gD-4Ms">
-                                <rect key="frame" x="0.0" y="820" width="414" height="43"/>
-                                <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dce-rm-D4R" userLabel="Text Message">
-                                        <rect key="frame" x="2" y="1" width="342" height="40"/>
-                                        <color key="backgroundColor" red="0.4445248544" green="0.1549414694" blue="0.87848204370000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <color key="textColor" red="0.95697695019999995" green="0.94456714389999996" blue="0.9725525975" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eAE-pY-NJC" userLabel="Send">
-                                        <rect key="frame" x="335" y="1" width="79" height="40"/>
-                                        <color key="backgroundColor" red="0.95697695019999995" green="0.94456714389999996" blue="0.9725525975" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="70" id="hcb-0r-NjY"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="14"/>
-                                        <state key="normal" title="Send">
-                                            <color key="titleColor" red="0.4445248544" green="0.1549414694" blue="0.87848204370000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="sendPressed:" destination="CIR-IH-511" eventType="touchUpInside" id="Enq-tr-mvd"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" red="0.95697695019999995" green="0.94456714389999996" blue="0.9725525975" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <constraints>
-                                    <constraint firstItem="eAE-pY-NJC" firstAttribute="leading" secondItem="Dce-rm-D4R" secondAttribute="trailing" id="89l-8F-t1w"/>
-                                    <constraint firstItem="Dce-rm-D4R" firstAttribute="top" secondItem="EG7-gD-4Ms" secondAttribute="top" constant="1" id="KBV-3S-kp6"/>
-                                    <constraint firstAttribute="bottom" secondItem="eAE-pY-NJC" secondAttribute="bottom" constant="2" id="S9T-L5-gu5"/>
-                                    <constraint firstAttribute="height" constant="43" id="T3f-vQ-ARq"/>
-                                    <constraint firstItem="Dce-rm-D4R" firstAttribute="leading" secondItem="EG7-gD-4Ms" secondAttribute="leading" constant="2" id="Tbe-zL-jen"/>
-                                    <constraint firstAttribute="bottom" secondItem="Dce-rm-D4R" secondAttribute="bottom" constant="2" id="Te0-Wv-BWS"/>
-                                    <constraint firstItem="eAE-pY-NJC" firstAttribute="top" secondItem="EG7-gD-4Ms" secondAttribute="top" constant="1" id="fT3-z8-GH7"/>
-                                    <constraint firstAttribute="trailing" secondItem="eAE-pY-NJC" secondAttribute="trailing" id="jqe-bT-FRy"/>
-                                </constraints>
-                            </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo-dark" translatesAutoresizingMaskIntoConstraints="NO" id="8kH-By-XQt">
-                                <rect key="frame" x="50" y="20" width="314" height="50"/>
+                                <rect key="frame" x="50" y="30" width="314" height="50"/>
                                 <color key="backgroundColor" red="0.95697695019999995" green="0.94456714389999996" blue="0.9725525975" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="4mW-XJ-Uc9"/>
                                 </constraints>
                             </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dce-rm-D4R" userLabel="Text Message">
+                                <rect key="frame" x="5" y="742" width="339" height="70"/>
+                                <color key="backgroundColor" red="0.4445248544" green="0.1549414694" blue="0.87848204370000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="Ziu-ZY-07G"/>
+                                </constraints>
+                                <color key="textColor" red="0.95697695019999995" green="0.94456714389999996" blue="0.9725525975" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="100"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="clipstoBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="dismiss_keyboard:" destination="CIR-IH-511" eventType="touchUpOutside" id="eac-k5-vXo"/>
+                                </connections>
+                            </textField>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1ad-sy-dRU">
+                                <rect key="frame" x="0.0" y="812" width="414" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="lGg-0W-VzJ"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem systemItem="action" id="EBj-5c-m7U">
+                                        <connections>
+                                            <action selector="connectionButtonTapped:" destination="CIR-IH-511" id="m0B-gv-NbV"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ycO-MR-WUb">
+                                <rect key="frame" x="0.0" y="122" width="414" height="620"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" red="0.4445248544" green="0.1549414694" blue="0.87848204370000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eAE-pY-NJC" userLabel="Send">
+                                <rect key="frame" x="344" y="742" width="70" height="70"/>
+                                <color key="backgroundColor" red="0.95697695019999995" green="0.94456714389999996" blue="0.9725525975" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="838-5Z-QxK"/>
+                                    <constraint firstAttribute="height" constant="70" id="Ntm-wc-w5t"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="14"/>
+                                <state key="normal" title="Send">
+                                    <color key="titleColor" red="0.4445248544" green="0.1549414694" blue="0.87848204370000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="sendPressed:" destination="CIR-IH-511" eventType="touchUpInside" id="Enq-tr-mvd"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="utq-1X-K1f"/>
                         <color key="backgroundColor" red="0.95697695019999995" green="0.94456714389999996" blue="0.9725525975" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="fjR-Bq-8dO" firstAttribute="leading" secondItem="utq-1X-K1f" secondAttribute="leading" id="D7c-Mj-wJv"/>
-                            <constraint firstItem="fjR-Bq-8dO" firstAttribute="trailing" secondItem="utq-1X-K1f" secondAttribute="trailing" id="KDe-Ph-r8l"/>
+                            <constraint firstItem="1ad-sy-dRU" firstAttribute="trailing" secondItem="utq-1X-K1f" secondAttribute="trailing" id="0GE-ff-Zl2"/>
+                            <constraint firstItem="ycO-MR-WUb" firstAttribute="leading" secondItem="utq-1X-K1f" secondAttribute="leading" id="48s-cd-8AR"/>
+                            <constraint firstItem="1ad-sy-dRU" firstAttribute="top" secondItem="Dce-rm-D4R" secondAttribute="bottom" id="AAn-Pg-ZUC"/>
+                            <constraint firstItem="utq-1X-K1f" firstAttribute="trailing" secondItem="ycO-MR-WUb" secondAttribute="trailing" id="MJN-Hn-BDr"/>
+                            <constraint firstItem="eAE-pY-NJC" firstAttribute="top" secondItem="ycO-MR-WUb" secondAttribute="bottom" id="TH6-La-lJt"/>
                             <constraint firstItem="8kH-By-XQt" firstAttribute="trailing" secondItem="utq-1X-K1f" secondAttribute="trailing" constant="-50" id="Tb3-UN-YhP"/>
                             <constraint firstItem="8kH-By-XQt" firstAttribute="leading" secondItem="utq-1X-K1f" secondAttribute="leading" constant="50" id="Xh2-Bm-N35"/>
-                            <constraint firstItem="EG7-gD-4Ms" firstAttribute="bottom" secondItem="utq-1X-K1f" secondAttribute="bottom" constant="1" id="aAe-l1-eW7"/>
-                            <constraint firstItem="8kH-By-XQt" firstAttribute="top" secondItem="44l-rp-Sot" secondAttribute="top" constant="20" id="dl0-Wz-aUx"/>
-                            <constraint firstItem="fjR-Bq-8dO" firstAttribute="top" secondItem="utq-1X-K1f" secondAttribute="top" constant="20" id="fNn-dp-Wb9"/>
-                            <constraint firstItem="EG7-gD-4Ms" firstAttribute="top" secondItem="fjR-Bq-8dO" secondAttribute="bottom" constant="-2" id="iBk-O7-39U"/>
-                            <constraint firstItem="EG7-gD-4Ms" firstAttribute="leading" secondItem="utq-1X-K1f" secondAttribute="leading" id="nq8-UF-z8O"/>
-                            <constraint firstItem="EG7-gD-4Ms" firstAttribute="trailing" secondItem="utq-1X-K1f" secondAttribute="trailing" id="pPn-Yo-0KS"/>
+                            <constraint firstItem="1ad-sy-dRU" firstAttribute="bottom" secondItem="utq-1X-K1f" secondAttribute="bottom" id="b4C-3s-ZBN"/>
+                            <constraint firstItem="8kH-By-XQt" firstAttribute="top" secondItem="44l-rp-Sot" secondAttribute="top" constant="30" id="dl0-Wz-aUx"/>
+                            <constraint firstItem="Dce-rm-D4R" firstAttribute="leading" secondItem="utq-1X-K1f" secondAttribute="leading" constant="5" id="t3D-pQ-R8X"/>
+                            <constraint firstItem="utq-1X-K1f" firstAttribute="trailing" secondItem="Dce-rm-D4R" secondAttribute="trailing" constant="70" id="teK-6o-4xT"/>
+                            <constraint firstItem="eAE-pY-NJC" firstAttribute="trailing" secondItem="utq-1X-K1f" secondAttribute="trailing" id="vcB-Gs-SF1"/>
+                            <constraint firstItem="Dce-rm-D4R" firstAttribute="top" secondItem="ycO-MR-WUb" secondAttribute="bottom" id="vuq-kc-LGh"/>
+                            <constraint firstItem="ycO-MR-WUb" firstAttribute="top" secondItem="8kH-By-XQt" secondAttribute="bottom" constant="42" id="waf-B1-giq"/>
+                            <constraint firstItem="1ad-sy-dRU" firstAttribute="top" secondItem="eAE-pY-NJC" secondAttribute="bottom" id="xWN-oV-H2v"/>
+                            <constraint firstItem="1ad-sy-dRU" firstAttribute="leading" secondItem="utq-1X-K1f" secondAttribute="leading" id="xuq-vU-mIe"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="chatTextView" destination="ycO-MR-WUb" id="Ehc-aw-Obn"/>
+                        <outlet property="connectionButton" destination="EBj-5c-m7U" id="llC-zT-u9J"/>
                         <outlet property="messageTextField" destination="Dce-rm-D4R" id="XlE-lB-S8G"/>
                         <outlet property="send_button" destination="eAE-pY-NJC" id="EPL-GX-JvK"/>
-                        <outlet property="tableView" destination="fjR-Bq-8dO" id="1MC-Pz-ZEh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="43b-UV-9DO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1365.217391304348" y="45.535714285714285"/>
+            <point key="canvasLocation" x="-1897.1014492753625" y="-46.205357142857139"/>
         </scene>
     </scenes>
     <color key="tintColor" red="0.4445248544" green="0.1549414694" blue="0.87848204370000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
     <resources>
         <image name="logo-dark" width="709" height="169"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

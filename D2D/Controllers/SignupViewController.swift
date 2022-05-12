@@ -39,7 +39,6 @@ class SignupViewController: UIViewController, UITextFieldDelegate {
     var SignUp_Password = ""
     var SignUp_Password_repetition = ""
     var loginAttempted = false
-    var login_option = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -69,7 +68,6 @@ class SignupViewController: UIViewController, UITextFieldDelegate {
             }else if SignUp_Password != SignUp_Password_repetition {
                 alertUserSignUpError(a: 3)
             }
-            login_option = "SignUp"
             return
         }
     
@@ -107,7 +105,6 @@ class SignupViewController: UIViewController, UITextFieldDelegate {
         destVC.Display_Login_Name = self.SignUp_Name
         destVC.Display_SignUp_EMail = self.SignUp_Email
         destVC.Display_SignUp_Password = self.SignUp_Password
-        destVC.login_option = self.login_option
     }
     
     func checkStrength(_ password: String) ->Bool {

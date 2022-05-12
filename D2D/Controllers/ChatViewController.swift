@@ -1,111 +1,219 @@
-//
-//  ChatViewController.swift
-//  D2D
-//
-//  Created by Ahmed Eldably on 18.10.21.
-//
 import UIKit
 import Firebase
+import MultipeerConnectivity
+import AVFoundation
 
-class ChatViewController: UIViewController {
-
-    @IBOutlet weak var tableView: UITableView!
+class ChatViewController: UIViewController, MCSessionDelegate, MCBrowserViewControllerDelegate, MCNearbyServiceAdvertiserDelegate{
     
-    
+    @IBOutlet weak var chatTextView: UITextView!
     @IBOutlet weak var messageTextField: UITextField!
     @IBOutlet weak var send_button: UIButton!
+    @IBOutlet weak var connectionButton: UIBarButtonItem!
     
-    let db = Firestore.firestore()
+//    let db = Firestore.firestore()
+    let systemSoundID: SystemSoundID = 1322
     
-    var messages: [Message] = []
+    var User_Name = ""
     var voicemessage = ""
+    var sendmessage = ""
+    var receivedMessage = ""
+    
+    var hosting: Bool!
+    var peerID: MCPeerID!
+    var mcSession: MCSession!
+    var mcAdvertiserAssistant: MCNearbyServiceAdvertiser!
     
     override func viewDidLoad() {
-        messageTextField.text = "\(voicemessage)"
-        tableView.dataSource = self
-//        title = "comobi chat"
-//        title.color = UIColor(red: 251/255, green: 247/255, blue: 255/255, alpha: 1.0)
+
         super.viewDidLoad()
-        self.navigationController?.navigationBar.tintColor = UIColor(red: 123/255, green: 32/255, blue: 233/255, alpha: 1.0)
-        tableView.register(UINib(nibName: Constants.cellNibName, bundle: nil), forCellReuseIdentifier: Constants.cellIdentifier)
-        loadMessages()
-        if messageTextField.text != "" {
-            delayWithSeconds(3) {
-            }
+        AudioServicesPlaySystemSound(systemSoundID)
+        
+        peerID = MCPeerID(displayName: User_Name)
+        mcSession = MCSession(peer: peerID, securityIdentity: nil, encryptionPreference: .required)
+        mcSession.delegate = self
+            
+//        at initalization
+        if voicemessage != "" {
+            delayWithSeconds(10) {}
             send_button.sendActions(for: .touchUpInside)
-            messageTextField.text = ""
+        }
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
+        view.addGestureRecognizer(tap)
+        hosting = false
+        mcSession.disconnect()
+        chatTextView.isEditable = false
+        
+        self.navigationController?.navigationBar.topItem?.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        self.navigationController?.navigationBar.tintColor = UIColor(red: 123/255, green: 32/255, blue: 233/255, alpha: 1.0)
+        
+    }
+    
+    @objc func hideKeyboard() {
+            view.endEditing(true)
+        DispatchQueue.main.async {
+            
         }
     }
+    
     
     func delayWithSeconds(_ seconds: Double, completion: @escaping () -> ()) {
         DispatchQueue.main.asyncAfter(deadline: .now() + seconds) {
             completion()
         }
     }
-    
-    func loadMessages() {
-    
-        db.collection(Constants.FStore.collectionName)
-            .order(by: Constants.FStore.dateField)
-            .addSnapshotListener { (QuerySnapshot, error) in
+
+
+    @IBAction func dismiss_keyboard(_ sender: UITextField) {
+        sender.resignFirstResponder()
+    }
+    @IBAction func connectionButtonTapped(_ sender: Any) {
+        if mcSession.connectedPeers.count == 0 && !hosting
+        {
+            let connectActionSheet = UIAlertController(title: "Our chat", message: "Do you want to host or join a chat?", preferredStyle: .actionSheet)
+            connectActionSheet.addAction(UIAlertAction(title: "Host chat", style: .default, handler: { [self](action:UIAlertAction) in
                 
-            self.messages = []
+                self.mcAdvertiserAssistant = MCNearbyServiceAdvertiser(peer: peerID, discoveryInfo: nil, serviceType: "mp-chat")
+                self.mcAdvertiserAssistant.delegate = self
+                self.mcAdvertiserAssistant.startAdvertisingPeer()
+                self.hosting = true
+            }))
             
-            if let e = error {
-                print("There's an issue retrieving data from firestore. \(e)")
-            } else {
-                if let snapshopDocuments =  QuerySnapshot?.documents {
-                    for doc in snapshopDocuments {
-                        let data = doc.data()
-                        if let messageSender = data[Constants.FStore.senderField] as? String,
-                           let messageBody = data[Constants.FStore.bodyField] as? String{
-                            let newMessage = Message(sender: messageSender, body: messageBody)
-                            self.messages.append(newMessage)
-                            
-                            DispatchQueue.main.async {
-                                self.tableView.reloadData()
-                            }
-                        }
-                        
-                    }
-                }
-            }
+            connectActionSheet.addAction(UIAlertAction(title: "Join chat", style: .default, handler: {(action:UIAlertAction) in
+                let mcBrowser = MCBrowserViewController(serviceType: "doesnt", session: self.mcSession)
+                mcBrowser.delegate = self
+                self.present(mcBrowser, animated: true, completion: nil)
+            }))
+            
+            connectActionSheet.addAction(UIAlertAction(title: "cancel", style: .cancel, handler: nil))
+            self.present(connectActionSheet, animated: true, completion: nil)
+        }
+        else if mcSession.connectedPeers.count == 0 && hosting
+        {
+            let waitActionSheet = UIAlertController(title: "Waiting ...", message: "Waiting for others to join the chat", preferredStyle: .actionSheet)
+            
+            waitActionSheet.addAction(UIAlertAction(title: "Disconnect", style: .destructive, handler: {
+                (action) in
+                self.mcSession.disconnect()
+                self.hosting = false
+            }))
+            
+            waitActionSheet.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+            self.present(waitActionSheet, animated: true, completion: nil)
+        }
+        else
+        {
+            let disconnectActionSheet = UIAlertController(title: "Are you sure you want to disconnect?", message: nil, preferredStyle: .actionSheet)
+            disconnectActionSheet.addAction(UIAlertAction(title: "Disconnect", style: .destructive, handler: { (action:UIAlertAction) in
+                self.mcSession.disconnect()
+            }))
+            disconnectActionSheet.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+            self.present(disconnectActionSheet, animated: true, completion: nil)
         }
     }
+    
     
     @IBAction func sendPressed(_ sender: UIButton) {
-        if let messageBody = messageTextField.text{
-            db.collection(Constants.FStore.collectionName).addDocument(data: [Constants.FStore.senderField:"x",
-                                                                              Constants.FStore.bodyField:messageBody,
-                                                                              Constants.FStore.dateField: Date().timeIntervalSince1970]) { (error) in
-                if let e = error{
-                    print("Something wrong happened, \(e)")
-                } else{
-                    print("Data was saved successfully.")
+        
+//  Define the message that is going to be send and save it in the variable "sendmessage"
+        hideKeyboard()
+        if messageTextField.text != "" {
+            sendmessage = messageTextField.text!
+        }
+        else if voicemessage != "" {
+            sendmessage = voicemessage
+        }else{
+            sendmessage = ""
+        }
+        
+        
+        if sendmessage != "" {
+            
+
+//            Messgages are not stored
+//                db.collection(Constants.FStore.collectionName).addDocument(data: [Constants.FStore.senderField:"x",
+//                                                                                  Constants.FStore.bodyField: sendmessage,
+//                                                                                  Constants.FStore.dateField: Date().timeIntervalSince1970]) { (error) in
+//                    if let e = error{
+//                        print("Something wrong happened, \(e)")
+//                    } else{
+//                        print("Data was saved successfully.")
+//                    }
+//                }
+
+//                NETWORKING
+                let message = sendmessage.data(using: String.Encoding.utf8, allowLossyConversion: false)
+                do
+                {
+                    try self.mcSession.send(message!, toPeers: self.mcSession.connectedPeers, with: .reliable)
                 }
+                catch
+                {
+                    print(error.localizedDescription)
+                    print("Error sending message")
+                }
+                
+                chatTextView.text = chatTextView.text + "\n\(peerID.displayName): \(sendmessage)\n"
+                messageTextField.text = ""
             }
+            else
+            {
+                let emptyAlert = UIAlertController(title: "You have not entered any text", message: nil, preferredStyle: .alert)
+                
+                emptyAlert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
+                self.present(emptyAlert, animated: true, completion: nil)
+                
+            }
+    }
+    
+    // Multipeer Skeleton
+    
+    func session(_ session: MCSession, peer peerID: MCPeerID, didChange state: MCSessionState) {
+        switch state {
+        case MCSessionState.connected:
+            print("connected")
+            
+        case MCSessionState.connecting:
+            print("connecting")
+            
+        case MCSessionState.notConnected:
+            print("not connected")
+            
+        @unknown default:
+            fatalError()
         }
     }
     
-}
+    func session(_ session: MCSession, didReceive data: Data, fromPeer peerID: MCPeerID) {
+        DispatchQueue.main.async {
+            self.receivedMessage = NSString(data: data as Data, encoding: String.Encoding.utf8.rawValue)! as String
+            self.chatTextView.text = self.chatTextView.text + self.receivedMessage
+        }
+    }
+        
+    func session(_ session: MCSession, didReceive stream: InputStream, withName streamName: String, fromPeer peerID: MCPeerID) {
+    }
+    
+    func session(_ session: MCSession, didStartReceivingResourceWithName resourceName: String, fromPeer peerID: MCPeerID, with progress: Progress) {
+    }
+    
+    func session(_ session: MCSession, didFinishReceivingResourceWithName resourceName: String, fromPeer peerID: MCPeerID, at localURL: URL?, withError error: Error?) {
+    }
+    
+    // Browser Methods
+    
+    func browserViewControllerDidFinish(_ browserViewController: MCBrowserViewController) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    func browserViewControllerWasCancelled(_ browserViewController: MCBrowserViewController) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    // Advertiser Methods
+    func advertiser(_ advertiser: MCNearbyServiceAdvertiser, didReceiveInvitationFromPeer peerID: MCPeerID, withContext context: Data?, invitationHandler: @escaping (Bool, MCSession?) -> Void) {
+        //accept the invitation
+        invitationHandler(true, mcSession)
+    }
 
-// Adding a data source protocol that is responsible for populating the tableView
-extension ChatViewController: UITableViewDataSource {
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return messages.count
-    }
-    
-//    Asking for UI table view cell that it should display in every raw.
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-//        returns a resuable table-view cell for the specified reuse identifier and adds it to the table.
-        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.cellIdentifier, for: indexPath) as! MessageCell
-        
-        // The text of the messaged is assigned for every value in the in the messages text in order.
-        cell.messageLabel.text = messages[indexPath.row].body
-        
-        return cell
-    }
-    
 }
