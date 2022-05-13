@@ -199,6 +199,11 @@ class ChatViewController: UIViewController, MCSessionDelegate,  MCNearbyServiceA
     
     func session(_ session: MCSession, didFinishReceivingResourceWithName resourceName: String, fromPeer peerID: MCPeerID, at localURL: URL?, withError error: Error?) {
     }
+
+//    Called to validate the client certificate provided by a peer when the connection is first established.
+    func session(_ session: MCSession, didReceiveCertificate: [Any]?, fromPeer: MCPeerID, certificateHandler: (Bool) -> Void) {
+    }
+    
     
     // Browser Methods
     func browserViewControllerDidFinish(_ browserViewController: MCBrowserViewController) {
