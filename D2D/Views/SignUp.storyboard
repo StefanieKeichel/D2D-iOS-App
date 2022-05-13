@@ -51,6 +51,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
+                                            <action selector="cartype_change:" destination="vMI-Dv-Jnz" eventType="editingDidEnd" id="eGF-Lo-ETY"/>
                                             <action selector="focus_name_textfield:" destination="vMI-Dv-Jnz" eventType="primaryActionTriggered" id="JZ3-K3-aO6"/>
                                             <outlet property="delegate" destination="vMI-Dv-Jnz" id="f9z-ZO-5wL"/>
                                         </connections>
@@ -76,6 +77,7 @@
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="focus_email_textfield:" destination="vMI-Dv-Jnz" eventType="primaryActionTriggered" id="s3Z-wZ-17Q"/>
+                                            <action selector="name_finished_editing:" destination="vMI-Dv-Jnz" eventType="editingDidEnd" id="00P-R0-bGe"/>
                                             <outlet property="delegate" destination="vMI-Dv-Jnz" id="wTt-3z-dsK"/>
                                         </connections>
                                     </textField>
@@ -99,6 +101,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
+                                            <action selector="email_finished_editing:" destination="vMI-Dv-Jnz" eventType="editingDidEnd" id="iI6-j2-f4e"/>
                                             <action selector="focus_password_textfield:" destination="vMI-Dv-Jnz" eventType="primaryActionTriggered" id="jUL-Sc-CN8"/>
                                             <outlet property="delegate" destination="vMI-Dv-Jnz" id="kaU-vn-8Jt"/>
                                         </connections>
@@ -126,6 +129,7 @@
                                             <action selector="focus_passwordagain_textfield:" destination="vMI-Dv-Jnz" eventType="primaryActionTriggered" id="1y7-1S-0aq"/>
                                             <action selector="password_check:" destination="vMI-Dv-Jnz" eventType="touchUpOutside" id="6bn-Dk-Ijp"/>
                                             <action selector="password_check:" destination="vMI-Dv-Jnz" eventType="editingDidEnd" id="dQU-rF-2Fv"/>
+                                            <action selector="password_finished_editing:" destination="vMI-Dv-Jnz" eventType="editingDidEnd" id="gV0-xi-0xv"/>
                                             <outlet property="delegate" destination="vMI-Dv-Jnz" id="rE0-Sb-hFM"/>
                                         </connections>
                                     </textField>
@@ -150,6 +154,7 @@
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="dismiss_lasttextfield:" destination="vMI-Dv-Jnz" eventType="primaryActionTriggered" id="cIR-Rc-8Vm"/>
+                                            <action selector="password_again_finished_editing:" destination="vMI-Dv-Jnz" eventType="editingDidEnd" id="R4D-of-8QD"/>
                                             <action selector="password_repetition_check:" destination="vMI-Dv-Jnz" eventType="editingDidEnd" id="6Ar-IO-U3I"/>
                                             <action selector="password_repetition_check:" destination="vMI-Dv-Jnz" eventType="touchUpOutside" id="OeC-3c-CDU"/>
                                             <outlet property="delegate" destination="vMI-Dv-Jnz" id="xbs-gH-gAp"/>
@@ -185,6 +190,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="LCJ-2w-KdX"/>
                     <connections>
+                        <outlet property="GoTo_PostLogin_Button" destination="bHW-RW-nE9" id="Ldi-HE-CYN"/>
                         <outlet property="SignUp_Cartype_TextField" destination="stx-Ta-iMb" id="alD-PM-J6h"/>
                         <outlet property="SignUp_Email_TextField" destination="g50-8L-Vgq" id="Tv1-Sh-C5S"/>
                         <outlet property="SignUp_Name_TextField" destination="NyZ-8q-Ypm" id="pHs-xf-pY9"/>

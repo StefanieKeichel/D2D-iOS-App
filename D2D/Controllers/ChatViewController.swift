@@ -3,7 +3,7 @@ import Firebase
 import MultipeerConnectivity
 import AVFoundation
 
-class ChatViewController: UIViewController, MCSessionDelegate, MCBrowserViewControllerDelegate, MCNearbyServiceAdvertiserDelegate{
+class ChatViewController: UIViewController, MCSessionDelegate,  MCNearbyServiceAdvertiserDelegate, MCBrowserViewControllerDelegate{
     
     @IBOutlet weak var chatTextView: UITextView!
     @IBOutlet weak var messageTextField: UITextField!
@@ -21,20 +21,22 @@ class ChatViewController: UIViewController, MCSessionDelegate, MCBrowserViewCont
     var hosting: Bool!
     var peerID: MCPeerID!
     var mcSession: MCSession!
-    var mcAdvertiserAssistant: MCNearbyServiceAdvertiser!
+
+    var MCNearbyServiceAdvertiser: MCNearbyServiceAdvertiser!
+    
     
     override func viewDidLoad() {
 
         super.viewDidLoad()
         AudioServicesPlaySystemSound(systemSoundID)
         
-        peerID = MCPeerID(displayName: User_Name)
+        peerID = MCPeerID(displayName: UIDevice.current.name)
         mcSession = MCSession(peer: peerID, securityIdentity: nil, encryptionPreference: .required)
         mcSession.delegate = self
-            
+        
 //        at initalization
         if voicemessage != "" {
-            delayWithSeconds(10) {}
+            delayWithSeconds(5) {}
             send_button.sendActions(for: .touchUpInside)
         }
         
@@ -52,17 +54,14 @@ class ChatViewController: UIViewController, MCSessionDelegate, MCBrowserViewCont
     @objc func hideKeyboard() {
             view.endEditing(true)
         DispatchQueue.main.async {
-            
         }
     }
-    
     
     func delayWithSeconds(_ seconds: Double, completion: @escaping () -> ()) {
         DispatchQueue.main.asyncAfter(deadline: .now() + seconds) {
             completion()
         }
     }
-
 
     @IBAction func dismiss_keyboard(_ sender: UITextField) {
         sender.resignFirstResponder()
@@ -73,14 +72,14 @@ class ChatViewController: UIViewController, MCSessionDelegate, MCBrowserViewCont
             let connectActionSheet = UIAlertController(title: "Our chat", message: "Do you want to host or join a chat?", preferredStyle: .actionSheet)
             connectActionSheet.addAction(UIAlertAction(title: "Host chat", style: .default, handler: { [self](action:UIAlertAction) in
                 
-                self.mcAdvertiserAssistant = MCNearbyServiceAdvertiser(peer: peerID, discoveryInfo: nil, serviceType: "mp-chat")
-                self.mcAdvertiserAssistant.delegate = self
-                self.mcAdvertiserAssistant.startAdvertisingPeer()
+                self.MCNearbyServiceAdvertiser = MultipeerConnectivity.MCNearbyServiceAdvertiser(peer: peerID, discoveryInfo: nil, serviceType: "chat")
+                self.MCNearbyServiceAdvertiser.delegate = self
+                self.MCNearbyServiceAdvertiser.startAdvertisingPeer()
                 self.hosting = true
             }))
             
             connectActionSheet.addAction(UIAlertAction(title: "Join chat", style: .default, handler: {(action:UIAlertAction) in
-                let mcBrowser = MCBrowserViewController(serviceType: "doesnt", session: self.mcSession)
+                let mcBrowser = MCBrowserViewController(serviceType: "chat", session: self.mcSession)
                 mcBrowser.delegate = self
                 self.present(mcBrowser, animated: true, completion: nil)
             }))
@@ -128,6 +127,7 @@ class ChatViewController: UIViewController, MCSessionDelegate, MCBrowserViewCont
         
         
         if sendmessage != "" {
+//            && mcSession.connectedPeers.count > 0 {
             
 
 //            Messgages are not stored
@@ -201,19 +201,35 @@ class ChatViewController: UIViewController, MCSessionDelegate, MCBrowserViewCont
     }
     
     // Browser Methods
-    
     func browserViewControllerDidFinish(_ browserViewController: MCBrowserViewController) {
         dismiss(animated: true, completion: nil)
     }
-    
+
     func browserViewControllerWasCancelled(_ browserViewController: MCBrowserViewController) {
         dismiss(animated: true, completion: nil)
     }
     
+    func browser(_ browser: MCBrowserViewController, foundPeer peerID: MCPeerID, withDiscoveryInfo info: [String : String]?) {
+    }
+    
+    func browser(_ browser: MCBrowserViewController, lostPeer peerID: MCPeerID) {
+    }
+    
+
     // Advertiser Methods
     func advertiser(_ advertiser: MCNearbyServiceAdvertiser, didReceiveInvitationFromPeer peerID: MCPeerID, withContext context: Data?, invitationHandler: @escaping (Bool, MCSession?) -> Void) {
+        
+        
+        let ac = UIAlertController(title: "chat", message: "'\(peerID.displayName)' wants to connect", preferredStyle: .alert)
+                ac.addAction(UIAlertAction(title: "Accept", style: .default, handler: { [weak self] _ in
+                    invitationHandler(true, self?.mcSession)
+                }))
+                ac.addAction(UIAlertAction(title: "Decline", style: .cancel, handler: { _ in
+                    invitationHandler(false, nil)
+                }))
+                present(ac, animated: true)
         //accept the invitation
-        invitationHandler(true, mcSession)
+//        invitationHandler(true, mcSession)
     }
 
 }

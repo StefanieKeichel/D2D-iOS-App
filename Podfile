@@ -7,14 +7,15 @@ target 'D2D' do
 
 #Pods for Firebase -Stephs Changes on the 07.11
 #pod 'Firebase/Core'
-#pod 'Firebase/Auth' 
+#pod 'Firebase/Auth'
 
   # Pods for D2D
   pod 'Firebase/Auth'
   pod 'Firebase/Firestore'
-  pod 'IQKeyboardManagerSwift' 
+  pod 'IQKeyboardManagerSwift'
   pod 'InstantSearchVoiceOverlay'
-
+  pod 'MultiPeer'
+  
   target 'D2DTests' do
     inherit! :search_paths
     # Pods for testing
