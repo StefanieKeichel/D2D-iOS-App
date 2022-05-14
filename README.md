@@ -68,10 +68,15 @@ All user interfaces are build in the storyboard files. Like building blocks, eve
 <img width="454" alt="Bildschirmfoto 2022-04-19 um 12 23 18" src="https://user-images.githubusercontent.com/58078457/163985243-cecbadf5-6da3-478e-89dd-a28aa40c6fab.png">
 
 
-- Chat messaging:
+- Chat messaging and multipeer connectivity:
 
 <img width="454" alt="Bildschirmfoto 2022-04-19 um 12 23 34" src="https://user-images.githubusercontent.com/58078457/163985369-ba8336a8-adf2-4093-915c-018200759d71.png">
 
+<img width="503" alt="Bildschirmfoto 2022-05-14 um 22 21 29" src="https://user-images.githubusercontent.com/58078457/168447174-4b3c7fdd-e4f2-4ae5-83e9-afb167cbc144.png">
+
+
+
+<img width="503" alt="Bildschirmfoto 2022-05-14 um 22 21 55" src="https://user-images.githubusercontent.com/58078457/168447186-47c6bb74-d74b-4a8b-9ce7-16b2c703db0d.png">
 
 ### **Code Examples**
 
@@ -103,7 +108,6 @@ All user interfaces are build in the storyboard files. Like building blocks, eve
 
 Ahmed Eldably
 
-- Implementation of the chat messaging
 - Connecting to Firebase
 - Writing testing routines
 - Authorization and authentication
@@ -118,8 +122,9 @@ David Korn
 
 Stefanie Keichel
 
-- Implementation of SignUp-Security (checking password strength, hashing password, visual feedback, passing variables between view controllers)
+- Implementation of SignUp-Security (checking password strength, visual feedback, hashing password, encrypting messages, security certificate)
 - Implementation of Google Maps and ensuring maximum tracking accuracy
 - Implementation of sound feedback to the driver in case of upcoming traffic warnings
 - Implementation of all storyboards and setting up the infrastructure of those
 - Implementation of getting microphone access and the functionality of the voice assistance that transfers spoken text into the chat 
+- Implementation of multipeer connectivity
