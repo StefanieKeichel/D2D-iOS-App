@@ -70,8 +70,6 @@ All user interfaces are build in the storyboard files. Like building blocks, eve
 
 - Chat messaging and multipeer connectivity:
 
-<img width="454" alt="Bildschirmfoto 2022-04-19 um 12 23 34" src="https://user-images.githubusercontent.com/58078457/163985369-ba8336a8-adf2-4093-915c-018200759d71.png">
-
 <img width="503" alt="Bildschirmfoto 2022-05-14 um 22 21 29" src="https://user-images.githubusercontent.com/58078457/168447174-4b3c7fdd-e4f2-4ae5-83e9-afb167cbc144.png">
 
 
