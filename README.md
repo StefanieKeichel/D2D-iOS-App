@@ -72,7 +72,9 @@ All user interfaces are build in the storyboard files. Like building blocks, eve
 
 <img width="503" alt="Bildschirmfoto 2022-05-14 um 22 21 29" src="https://user-images.githubusercontent.com/58078457/168447174-4b3c7fdd-e4f2-4ae5-83e9-afb167cbc144.png">
 
+<img width="503" alt="Bildschirmfoto 2022-05-14 um 22 21 37" src="https://user-images.githubusercontent.com/58078457/168447304-b439dabe-8e8b-412a-a238-a679b27d03a0.png">
 
+<img width="503" alt="Bildschirmfoto 2022-05-14 um 22 21 48" src="https://user-images.githubusercontent.com/58078457/168447308-fe91f3cc-0476-45d3-8c65-1b4be4d8a4e9.png">
 
 <img width="503" alt="Bildschirmfoto 2022-05-14 um 22 21 55" src="https://user-images.githubusercontent.com/58078457/168447186-47c6bb74-d74b-4a8b-9ce7-16b2c703db0d.png">
 
