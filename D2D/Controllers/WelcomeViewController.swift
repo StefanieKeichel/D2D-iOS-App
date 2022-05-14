@@ -1,9 +1,3 @@
-//
-//  WelcomeViewController.swift
-//  D2D
-//
-//  Created by Ahmed Eldably on 18.10.21.
-//
 import UIKit
 
 class WelcomeViewController: UIViewController {

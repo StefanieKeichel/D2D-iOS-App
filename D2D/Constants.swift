@@ -13,10 +13,16 @@ struct Constants {
     static let cellIdentifier = "ReusableCell"
     
     
+//    struct FStore {
+//        static let collectionName = "messages"
+//        static let senderField = "sender"
+//        static let bodyField = "body"
+//        static let dateField = "date"
+//    }
     struct FStore {
-        static let collectionName = "messages"
-        static let senderField = "sender"
-        static let bodyField = "body"
-        static let dateField = "date"
+        static let collectionName = "messages_android"
+        static let senderField = "sent_by"
+        static let bodyField = "message"
+        static let dateField = "sent_on"
     }
 }

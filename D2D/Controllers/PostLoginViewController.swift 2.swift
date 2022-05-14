@@ -2,7 +2,6 @@ import UIKit
 import SwiftUI
 
 class ViewController_PostLogin: UIViewController {
-<<<<<<< HEAD
 
     @IBOutlet weak var Display_Name: UILabel!
     
@@ -24,9 +23,7 @@ class ViewController_PostLogin: UIViewController {
         }else if login_option == "SignUp" {
             print("SignUp \nEMAIL = \(Display_SignUp_Name); Password = \(Display_SignUp_Password)")
         }
-        
     }
-=======
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,5 +34,4 @@ class ViewController_PostLogin: UIViewController {
     @IBSegueAction func swiftUIAction(_ coder: NSCoder) -> UIViewController? {
         return UIHostingController(coder: coder, rootView: MapView())
     }
->>>>>>> 801f1bc88f7f1906b487e59819ad4a358b8fadb7
 }

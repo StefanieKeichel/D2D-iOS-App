@@ -54,7 +54,6 @@ class VoiceAssistant: UIViewController {
         override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
             let destVC = segue.destination as! ChatViewController
             destVC.voicemessage = self.user_message
-            destVC.User_Name = self.user_name   
+            destVC.User_Name = self.user_name
         }
 }
-

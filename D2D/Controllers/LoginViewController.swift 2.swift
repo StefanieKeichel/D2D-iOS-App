@@ -2,7 +2,6 @@ import UIKit
 
 class ViewController_Login: UIViewController {
     
-<<<<<<< HEAD
     @IBOutlet weak var Login_Email_TextField: UITextField!
     @IBOutlet weak var Login_Password_TextField: UITextField!
     
@@ -19,10 +18,8 @@ class ViewController_Login: UIViewController {
         self.Login_Password = Login_Password_TextField.text!
         
         login_option = "Login"
-=======
     override func viewDidLoad() {
         super.viewDidLoad()
->>>>>>> 801f1bc88f7f1906b487e59819ad4a358b8fadb7
     }
 
 //    pass data between view controllers with passSegue

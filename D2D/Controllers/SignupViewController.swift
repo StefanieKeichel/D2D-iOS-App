@@ -141,7 +141,6 @@ class SignupViewController: UIViewController, UITextFieldDelegate, UIPickerViewD
 //                }else{
 //                }
 //            })
-
        //////////////////
         guard
             !SignUp_Cartype.isEmpty,
@@ -309,5 +308,3 @@ class SignupViewController: UIViewController, UITextFieldDelegate, UIPickerViewD
     
     
 }
-
-

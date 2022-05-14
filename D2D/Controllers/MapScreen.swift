@@ -30,7 +30,6 @@ class MapScreen: UIViewController {
         locationManager.startMonitoring(for: geoFenceRegion)
 //        vizualize position on the map
 //        let placeRegion = placemark?.region
-
     }
 
 
@@ -211,5 +210,4 @@ extension UIAlertController {
         self.view.tintColor = color
     }
 }
-
 

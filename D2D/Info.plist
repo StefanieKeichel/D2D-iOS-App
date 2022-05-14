@@ -4,10 +4,12 @@
 <dict>
 	<key>NSLocalNetworkUsageDescription</key>
 	<string>&quot;please connect&quot;</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>comobi would like to access your location</string>
 	<key>NSSpeechRecognitionUsageDescription</key>
-	<string>&quot;Comobi&quot; Would Like to Access the Microphone</string>
+	<string>comobi would like to access the microphone</string>
 	<key>NSMicrophoneUsageDescription</key>
-	<string>&quot;Comobi&quot; Would Like to Access the Microphone</string>
+	<string>comobi would like to access the microphone</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>

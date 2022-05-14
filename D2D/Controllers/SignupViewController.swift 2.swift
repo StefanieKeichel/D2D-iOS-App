@@ -2,18 +2,15 @@ import UIKit
 
 class ViewController_SignUp: UIViewController {
 
-<<<<<<< HEAD
     @IBOutlet weak var SignUp_Cartype_TextField: UITextField!
     @IBOutlet weak var SignUp_Name_TextField: UITextField!
     @IBOutlet weak var SignUp_Email_TextField: UITextField!
     @IBOutlet weak var SignUp_Password_TextField: UITextField!
     @IBOutlet weak var SignUp_Password_again_TextField: UITextField!
-=======
     override func viewDidLoad() {
         super.viewDidLoad()
 
     }
->>>>>>> 801f1bc88f7f1906b487e59819ad4a358b8fadb7
     
     var SignUp_Cartype = ""
     var SignUp_Name = ""

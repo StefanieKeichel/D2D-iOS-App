@@ -24,8 +24,8 @@
 		B84F41FCA9EFC3993846F656 /* Pods_D2D.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FA00FF3EA3EB879E928889A /* Pods_D2D.framework */; };
 		CAD471BA77B2CF65FB010859 /* Pods_D2DTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D0A43300056E3938A4DF81E /* Pods_D2DTests.framework */; };
 		CB0EF810282F9FEB002D97B9 /* hackedpasswords.txt in Resources */ = {isa = PBXBuildFile; fileRef = CB0EF80F282F9FEA002D97B9 /* hackedpasswords.txt */; };
-		CB0EF812282FF7FE002D97B9 /* MapScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB0EF811282FF7FE002D97B9 /* MapScreen.swift */; };
-		CB0EF814282FF837002D97B9 /* Map.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB0EF813282FF837002D97B9 /* Map.storyboard */; };
+		CB0EF81628304199002D97B9 /* MapScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB0EF81528304199002D97B9 /* MapScreen.swift */; };
+		CB0EF81828304218002D97B9 /* Map.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB0EF81728304218002D97B9 /* Map.storyboard */; };
 		CB4FFB732761323A00CB7552 /* VoiceAssistantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4FFB722761323A00CB7552 /* VoiceAssistantViewController.swift */; };
 		CB4FFB75276149EF00CB7552 /* VoiceAssistant.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB4FFB74276149EE00CB7552 /* VoiceAssistant.storyboard */; };
 		CB7E464C273B25AA005CD92E /* MapViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB7E464B273B25AA005CD92E /* MapViewController.storyboard */; };
@@ -86,8 +86,8 @@
 		825C13EBF71BD58B73C311C6 /* Pods-D2D-D2DUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-D2D-D2DUITests.release.xcconfig"; path = "Target Support Files/Pods-D2D-D2DUITests/Pods-D2D-D2DUITests.release.xcconfig"; sourceTree = "<group>"; };
 		9D0A43300056E3938A4DF81E /* Pods_D2DTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_D2DTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB0EF80F282F9FEA002D97B9 /* hackedpasswords.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = hackedpasswords.txt; sourceTree = "<group>"; };
-		CB0EF811282FF7FE002D97B9 /* MapScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapScreen.swift; sourceTree = "<group>"; };
-		CB0EF813282FF837002D97B9 /* Map.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Map.storyboard; sourceTree = "<group>"; };
+		CB0EF81528304199002D97B9 /* MapScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapScreen.swift; sourceTree = "<group>"; };
+		CB0EF81728304218002D97B9 /* Map.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Map.storyboard; sourceTree = "<group>"; };
 		CB4FFB722761323A00CB7552 /* VoiceAssistantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceAssistantViewController.swift; sourceTree = "<group>"; };
 		CB4FFB74276149EE00CB7552 /* VoiceAssistant.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = VoiceAssistant.storyboard; sourceTree = "<group>"; };
 		CB7E464B273B25AA005CD92E /* MapViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MapViewController.storyboard; sourceTree = "<group>"; };
@@ -215,7 +215,7 @@
 			isa = PBXGroup;
 			children = (
 				CB7E4651273C0559005CD92E /* Main.storyboard */,
-				CB0EF813282FF837002D97B9 /* Map.storyboard */,
+				CB0EF81728304218002D97B9 /* Map.storyboard */,
 				CB7E464F273B370A005CD92E /* SignUp.storyboard */,
 				CB7E464D273B369A005CD92E /* Login.storyboard */,
 				CB4FFB74276149EE00CB7552 /* VoiceAssistant.storyboard */,
@@ -233,8 +233,8 @@
 		CB04BA9A2728036000FBD3BF /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				CB0EF811282FF7FE002D97B9 /* MapScreen.swift */,
 				306AD23826FF3374000A58B9 /* WelcomeViewController.swift */,
+				CB0EF81528304199002D97B9 /* MapScreen.swift */,
 				CBC10E1427301F7300144557 /* LoginViewController.swift */,
 				CB4FFB722761323A00CB7552 /* VoiceAssistantViewController.swift */,
 				CBC10E162730215700144557 /* SignupViewController.swift */,
@@ -380,7 +380,7 @@
 				30DA0410273C1FE200B06912 /* MessageCell.xib in Resources */,
 				CBA52A0A27298FB600E72140 /* Chat.storyboard in Resources */,
 				CBA52A0C272993FE00E72140 /* PostLogin.storyboard in Resources */,
-				CB0EF814282FF837002D97B9 /* Map.storyboard in Resources */,
+				CB0EF81828304218002D97B9 /* Map.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -515,10 +515,10 @@
 				30DA040C273C196900B06912 /* Messaage.swift in Sources */,
 				CBC10E192730217C00144557 /* LoginSignupViewController.swift in Sources */,
 				306AD23926FF3374000A58B9 /* WelcomeViewController.swift in Sources */,
-				CB0EF812282FF7FE002D97B9 /* MapScreen.swift in Sources */,
 				30DA040E273C1C3800B06912 /* Constants.swift in Sources */,
 				306AD23526FF3374000A58B9 /* AppDelegate.swift in Sources */,
 				CBC10E1B273021A400144557 /* PostLoginViewController.swift in Sources */,
+				CB0EF81628304199002D97B9 /* MapScreen.swift in Sources */,
 				CBC10E172730215700144557 /* SignupViewController.swift in Sources */,
 				306AD23726FF3374000A58B9 /* SceneDelegate.swift in Sources */,
 				30DA0412273C20CB00B06912 /* MessageCell.swift in Sources */,

@@ -140,7 +140,6 @@ class ChatViewController: UIViewController, MCSessionDelegate,  MCNearbyServiceA
 //                        print("Data was saved successfully.")
 //                    }
 //                }
-
 //                NETWORKING
                 let message = sendmessage.data(using: String.Encoding.utf8, allowLossyConversion: false)
                 do
@@ -201,9 +200,9 @@ class ChatViewController: UIViewController, MCSessionDelegate,  MCNearbyServiceA
     }
 
 //    Called to validate the client certificate provided by a peer when the connection is first established.
-    func session(_ session: MCSession, didReceiveCertificate certificate: [Any]?, fromPeer peerID: MCPeerID, certificateHandler: @escaping (Bool) -> Void) {
-        certificateHandler(true)
+    func session(_ session: MCSession, didReceiveCertificate: [Any]?, fromPeer: MCPeerID, certificateHandler: (Bool) -> Void) {
     }
+    
     
     // Browser Methods
     func browserViewControllerDidFinish(_ browserViewController: MCBrowserViewController) {
