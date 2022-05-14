@@ -1,5 +1,6 @@
 import UIKit
 import Firebase
+import BCrypt
 
 class LoginViewController: UIViewController, UITextFieldDelegate {
     
@@ -26,16 +27,27 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                   return
               }
         if
-            let Login_Email = Login_Email_TextField.text,
-            let Login_Password = Login_Password_TextField.text {
-               // firebase log in
-               Auth.auth().signIn(withEmail: Login_Email, password: Login_Password) {  authResult, error in
-                   if let e = error  {
-                       print("Failed to log in user with email: \(Login_Email)")
-                       print(e)
-                   } else {
-                       self.performSegue(withIdentifier: "LoginToChat", sender: self)
-                   }
+            let Login_Email = Login_Email_TextField.text {
+            var hashed = ""
+            do {
+//                Salt must be retrieved from the database !!
+//                not implemented yet
+                let salt = try BCrypt.Salt()
+                hashed = try BCrypt.Hash(Login_Password_TextField.text ?? "", salt: salt)
+                print("Hashed result is: \(hashed)")
+            }
+            catch {
+                print("An error occured: \(error)")
+            }
+            
+            Auth.auth().signIn(withEmail: Login_Email, password: hashed) {  authResult, error in
+            if let e = error  {
+                print("Failed to log in user with email: \(Login_Email)")
+                print(e)
+            } else {
+                self.performSegue(withIdentifier: "LoginToChat", sender: self)
+           }
+                
             }
         }
     }

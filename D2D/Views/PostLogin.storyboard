@@ -34,6 +34,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
+                                    <action selector="GoTo_Map:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Wzp-Y8-wLz"/>
                                     <segue destination="fkp-S5-QbB" kind="show" destinationCreationSelector="swiftUIAction:" id="nW3-Pu-suM"/>
                                 </connections>
                             </button>
@@ -100,10 +101,10 @@
             </objects>
             <point key="canvasLocation" x="105.79710144927537" y="48.883928571428569"/>
         </scene>
-        <!--MapViewController-->
+        <!--Map-->
         <scene sceneID="4pf-dP-obo">
             <objects>
-                <viewControllerPlaceholder storyboardName="MapViewController" id="fkp-S5-QbB" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="Map" id="fkp-S5-QbB" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="AU6-QN-qnO"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i3Y-h5-7ud" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -30,7 +30,7 @@ class ChatViewController: UIViewController, MCSessionDelegate,  MCNearbyServiceA
         super.viewDidLoad()
         AudioServicesPlaySystemSound(systemSoundID)
         
-        peerID = MCPeerID(displayName: UIDevice.current.name)
+        peerID = MCPeerID(displayName: User_Name)
         mcSession = MCSession(peer: peerID, securityIdentity: nil, encryptionPreference: .required)
         mcSession.delegate = self
         
@@ -233,8 +233,6 @@ class ChatViewController: UIViewController, MCSessionDelegate,  MCNearbyServiceA
                     invitationHandler(false, nil)
                 }))
                 present(ac, animated: true)
-        //accept the invitation
-//        invitationHandler(true, mcSession)
     }
 
 }

@@ -596,6 +596,7 @@ PODS:
     - abseil/base/base_internal
     - abseil/base/config
     - abseil/meta/type_traits
+  - BCrypt (1.0.0)
   - BoringSSL-GRPC (0.0.24):
     - BoringSSL-GRPC/Implementation (= 0.0.24)
     - BoringSSL-GRPC/Interface (= 0.0.24)
@@ -726,6 +727,7 @@ PODS:
   - PromisesObjC (2.1.0)
 
 DEPENDENCIES:
+  - BCrypt
   - Firebase/Auth
   - Firebase/Firestore
   - InstantSearchVoiceOverlay
@@ -735,6 +737,7 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - abseil
+    - BCrypt
     - BoringSSL-GRPC
     - Firebase
     - FirebaseAuth
@@ -756,6 +759,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   abseil: ebe5b5529fb05d93a8bdb7951607be08b7fa71bc
+  BCrypt: 712b656110e5020d319c547e4d8f3053ded82b2a
   BoringSSL-GRPC: 3175b25143e648463a56daeaaa499c6cb86dad33
   Firebase: 5f8193dff4b5b7c5d5ef72ae54bb76c08e2b841d
   FirebaseAuth: 3e73bf8abf4fbb40f8b421f361f4cc48ee57388c
@@ -775,6 +779,6 @@ SPEC CHECKSUMS:
   nanopb: a0ba3315591a9ae0a16a309ee504766e90db0c96
   PromisesObjC: 99b6f43f9e1044bd87a95a60beff28c2c44ddb72
 
-PODFILE CHECKSUM: 6c08d2f39da18d6a01c11961092b128c94c9a94f
+PODFILE CHECKSUM: 96c2c24d44f35fe324b59841d3e671cc360f5cbe
 
 COCOAPODS: 1.11.2

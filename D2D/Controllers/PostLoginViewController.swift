@@ -13,6 +13,7 @@ class PostLoginViewController: UIViewController {
     var Display_SignUp_Name = ""
     var Display_SignUp_EMail = ""
     var Display_SignUp_Password = ""
+    var vc_clicked = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,37 +25,43 @@ class PostLoginViewController: UIViewController {
         var charIndex = 0.0
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) { [self] in
-                    let utterance = AVSpeechUtterance(string: welcome_text)
-                    utterance.voice = AVSpeechSynthesisVoice(language: "en-USA")
-                    utterance.rate = 0.43
-                    let synthesizer = AVSpeechSynthesizer()
-                    synthesizer.speak(utterance)
-                }
+            let utterance = AVSpeechUtterance(string: welcome_text)
+            utterance.voice = AVSpeechSynthesisVoice(language: "en-USA")
+            utterance.rate = 0.43
+            let synthesizer = AVSpeechSynthesizer()
+            synthesizer.speak(utterance)
+        }
         
         // loop on every letter in the text and show every letter every 0.1 seconds
         for letter in welcome_text {
             Timer.scheduledTimer(withTimeInterval: 0.17 * charIndex, repeats: false) {(timer) in self.welcome_text.text?.append(letter)
-
             }
             charIndex += 1
         }
     }
-    
-    @IBSegueAction func swiftUIAction(_ coder: NSCoder) -> UIViewController? {
-        return UIHostingController(coder: coder, rootView: MapView())
-    }
+//    swiftUIAction(_ coder: NSCoder) -> UIViewController? {
+//    @IBSegueAction func swiftUIAction(_ coder: NSCoder) -> UIViewController? {
+//        vc_clicked = ""
+//        return UIHostingController(coder: coder, rootView: MapScreen())
+//    }
     
     @IBAction func GoTo_VoiceAssistant(_ sender: UIButton) {
-//        self.performSegue(withIdentifier: "GoTo_VoiceAssistant", sender: self)
+        vc_clicked = "VoiceAssistant"
+    }
+    
+    @IBAction func GoTo_Map(_ sender: UIButton) {
+        vc_clicked = ""
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any? ) {
+        if vc_clicked == "VoiceAssistant" {
+            var destVC = segue.destination as! VoiceAssistant
+            if Display_Login_Name == ""{
+                destVC.user_name = self.Display_SignUp_Name}
+            else if Display_SignUp_Name == ""{
+                destVC.user_name = self.Display_Login_Name}
+        }
     }
     
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let destVC = segue.destination as! VoiceAssistant
-        if Display_Login_Name == ""{
-            destVC.user_name = self.Display_SignUp_Name}
-        else if Display_SignUp_Name == ""{
-            destVC.user_name = self.Display_Login_Name}
-    }
-        
 }
