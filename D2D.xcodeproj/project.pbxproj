@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		306AD23526FF3374000A58B9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306AD23426FF3374000A58B9 /* AppDelegate.swift */; };
-		306AD23726FF3374000A58B9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306AD23626FF3374000A58B9 /* SceneDelegate.swift */; };
 		306AD23926FF3374000A58B9 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306AD23826FF3374000A58B9 /* WelcomeViewController.swift */; };
 		306AD24126FF3378000A58B9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 306AD23F26FF3378000A58B9 /* LaunchScreen.storyboard */; };
 		306AD24C26FF3379000A58B9 /* D2DTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306AD24B26FF3379000A58B9 /* D2DTests.swift */; };
@@ -61,7 +60,6 @@
 /* Begin PBXFileReference section */
 		306AD23126FF3374000A58B9 /* D2D.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = D2D.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		306AD23426FF3374000A58B9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		306AD23626FF3374000A58B9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		306AD23826FF3374000A58B9 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		306AD24026FF3378000A58B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		306AD24226FF3378000A58B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -188,7 +186,6 @@
 			isa = PBXGroup;
 			children = (
 				306AD23426FF3374000A58B9 /* AppDelegate.swift */,
-				306AD23626FF3374000A58B9 /* SceneDelegate.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -520,7 +517,6 @@
 				306AD23526FF3374000A58B9 /* AppDelegate.swift in Sources */,
 				CBC10E1B273021A400144557 /* PostLoginViewController.swift in Sources */,
 				CBC10E172730215700144557 /* SignupViewController.swift in Sources */,
-				306AD23726FF3374000A58B9 /* SceneDelegate.swift in Sources */,
 				30DA0412273C20CB00B06912 /* MessageCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

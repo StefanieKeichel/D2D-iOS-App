@@ -19,22 +19,22 @@ class ChatViewController: UIViewController, MCSessionDelegate,  MCNearbyServiceA
     var receivedMessage = ""
     
     var hosting: Bool!
+//    lets you identify individual peer devices within a session.
     var peerID: MCPeerID!
+//    session manages all communications between peers
     var mcSession: MCSession!
+//    allows you to broadcast your service name to nearby devices
+    var mcAdvertiserAssistant: MCNearbyServiceAdvertiser!
 
-    var MCNearbyServiceAdvertiser: MCNearbyServiceAdvertiser!
-    
-    
     override func viewDidLoad() {
 
         super.viewDidLoad()
         AudioServicesPlaySystemSound(systemSoundID)
         
         peerID = MCPeerID(displayName: User_Name)
-        mcSession = MCSession(peer: peerID, securityIdentity: nil, encryptionPreference: .required)
+        mcSession = MCSession(peer: peerID, securityIdentity: nil, encryptionPreference: MCEncryptionPreference.none)
         mcSession.delegate = self
         
-//        at initalization
         if voicemessage != "" {
             delayWithSeconds(5) {}
             send_button.sendActions(for: .touchUpInside)
@@ -48,7 +48,6 @@ class ChatViewController: UIViewController, MCSessionDelegate,  MCNearbyServiceA
         
         self.navigationController?.navigationBar.topItem?.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         self.navigationController?.navigationBar.tintColor = UIColor(red: 123/255, green: 32/255, blue: 233/255, alpha: 1.0)
-        
     }
     
     @objc func hideKeyboard() {
@@ -63,25 +62,31 @@ class ChatViewController: UIViewController, MCSessionDelegate,  MCNearbyServiceA
         }
     }
 
+    
+//    IBAction func
     @IBAction func dismiss_keyboard(_ sender: UITextField) {
         sender.resignFirstResponder()
     }
+    
+
     @IBAction func connectionButtonTapped(_ sender: Any) {
         if mcSession.connectedPeers.count == 0 && !hosting
         {
             let connectActionSheet = UIAlertController(title: "Our chat", message: "Do you want to host or join a chat?", preferredStyle: .actionSheet)
             connectActionSheet.addAction(UIAlertAction(title: "Host chat", style: .default, handler: { [self](action:UIAlertAction) in
                 
-                self.MCNearbyServiceAdvertiser = MultipeerConnectivity.MCNearbyServiceAdvertiser(peer: peerID, discoveryInfo: nil, serviceType: "chat")
-                self.MCNearbyServiceAdvertiser.delegate = self
-                self.MCNearbyServiceAdvertiser.startAdvertisingPeer()
+//                gets send first ?!
+                self.mcAdvertiserAssistant = MultipeerConnectivity.MCNearbyServiceAdvertiser(peer: peerID, discoveryInfo: nil, serviceType: "chat")
+                self.mcAdvertiserAssistant.delegate = self
+                self.mcAdvertiserAssistant.startAdvertisingPeer()
                 self.hosting = true
             }))
             
             connectActionSheet.addAction(UIAlertAction(title: "Join chat", style: .default, handler: {(action:UIAlertAction) in
+//                BrowserViewController provides a very basic UI for bowsing nearby device services
                 let mcBrowser = MCBrowserViewController(serviceType: "chat", session: self.mcSession)
                 mcBrowser.delegate = self
-                self.present(mcBrowser, animated: true, completion: nil)
+                self.present(mcBrowser, animated: true)
             }))
             
             connectActionSheet.addAction(UIAlertAction(title: "cancel", style: .cancel, handler: nil))
@@ -127,47 +132,35 @@ class ChatViewController: UIViewController, MCSessionDelegate,  MCNearbyServiceA
         
         
         if sendmessage != "" {
-//            && mcSession.connectedPeers.count > 0 {
-            
-
-//            Messgages are not stored
-//                db.collection(Constants.FStore.collectionName).addDocument(data: [Constants.FStore.senderField:"x",
-//                                                                                  Constants.FStore.bodyField: sendmessage,
-//                                                                                  Constants.FStore.dateField: Date().timeIntervalSince1970]) { (error) in
-//                    if let e = error{
-//                        print("Something wrong happened, \(e)")
-//                    } else{
-//                        print("Data was saved successfully.")
-//                    }
-//                }
-
-//                NETWORKING
-                let message = sendmessage.data(using: String.Encoding.utf8, allowLossyConversion: false)
-                do
-                {
-                    try self.mcSession.send(message!, toPeers: self.mcSession.connectedPeers, with: .reliable)
-                }
-                catch
-                {
-                    print(error.localizedDescription)
-                    print("Error sending message")
-                }
-                
-                chatTextView.text = chatTextView.text + "\n\(peerID.displayName): \(sendmessage)\n"
-                messageTextField.text = ""
-            }
-            else
+            sendmessage = "\n\(peerID.displayName): \(sendmessage)\n"
+            let message = sendmessage.data(using: String.Encoding.utf8, allowLossyConversion: false)
+            do
             {
-                let emptyAlert = UIAlertController(title: "You have not entered any text", message: nil, preferredStyle: .alert)
-                
-                emptyAlert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
-                self.present(emptyAlert, animated: true, completion: nil)
-                
+//                here the message is send
+                try self.mcSession.send(message!, toPeers: self.mcSession.connectedPeers, with: .reliable)
             }
+            catch
+            {
+                print(error.localizedDescription)
+                print("Error sending message")
+            }
+            
+            chatTextView.text = chatTextView.text + "\n\(sendmessage)\n"
+            messageTextField.text = ""
+        }
+        else
+        {
+            let emptyAlert = UIAlertController(title: "You have not entered any text", message: nil, preferredStyle: .alert)
+            
+            emptyAlert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
+            self.present(emptyAlert, animated: true, completion: nil)
+            
+        }
     }
     
-    // Multipeer Skeleton
-    
+
+//    functions
+//    session methods
     func session(_ session: MCSession, peer peerID: MCPeerID, didChange state: MCSessionState) {
         switch state {
         case MCSessionState.connected:
@@ -201,11 +194,11 @@ class ChatViewController: UIViewController, MCSessionDelegate,  MCNearbyServiceA
     }
 
 //    Called to validate the client certificate provided by a peer when the connection is first established.
-    func session(_ session: MCSession, didReceiveCertificate: [Any]?, fromPeer: MCPeerID, certificateHandler: (Bool) -> Void) {
-    }
+//    func session(_ session: MCSession, didReceiveCertificate: [Any]?, fromPeer: MCPeerID, certificateHandler: (Bool) -> Void) {
+//    }
     
+// Browser Methods
     
-    // Browser Methods
     func browserViewControllerDidFinish(_ browserViewController: MCBrowserViewController) {
         dismiss(animated: true, completion: nil)
     }
@@ -213,26 +206,22 @@ class ChatViewController: UIViewController, MCSessionDelegate,  MCNearbyServiceA
     func browserViewControllerWasCancelled(_ browserViewController: MCBrowserViewController) {
         dismiss(animated: true, completion: nil)
     }
-    
-    func browser(_ browser: MCBrowserViewController, foundPeer peerID: MCPeerID, withDiscoveryInfo info: [String : String]?) {
-    }
-    
-    func browser(_ browser: MCBrowserViewController, lostPeer peerID: MCPeerID) {
-    }
-    
 
     // Advertiser Methods
     func advertiser(_ advertiser: MCNearbyServiceAdvertiser, didReceiveInvitationFromPeer peerID: MCPeerID, withContext context: Data?, invitationHandler: @escaping (Bool, MCSession?) -> Void) {
         
+//        let ac = UIAlertController(title: "chat", message: "'\(peerID.displayName)' wants to connect", preferredStyle: .alert)
+//        // accept the connection/invitation
+//        ac.addAction(UIAlertAction(title: "Accept", style: .default, handler: { [weak self] _ in
+//            invitationHandler(true, self?.mcSession)
+//        }))
+//        ac.addAction(UIAlertAction(title: "Decline", style: .cancel, handler: { _ in
+//            invitationHandler(false, nil)
+//        }))
+//        present(ac, animated: true)
+        invitationHandler(true, mcSession)
         
-        let ac = UIAlertController(title: "chat", message: "'\(peerID.displayName)' wants to connect", preferredStyle: .alert)
-                ac.addAction(UIAlertAction(title: "Accept", style: .default, handler: { [weak self] _ in
-                    invitationHandler(true, self?.mcSession)
-                }))
-                ac.addAction(UIAlertAction(title: "Decline", style: .cancel, handler: { _ in
-                    invitationHandler(false, nil)
-                }))
-                present(ac, animated: true)
     }
-
 }
+
+
