@@ -128,3 +128,7 @@ Stefanie Keichel
 - Implementation of all storyboards and setting up the infrastructure of those
 - Implementation of getting microphone access and the functionality of the voice assistance that transfers spoken text into the chat 
 - Implementation of multipeer connectivity
+
+### **BADGE**
+
+https://img.shields.io/badge/left-right-f39f37
