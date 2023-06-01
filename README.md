@@ -130,4 +130,4 @@ Stefanie Keichel
 - Implementation of multipeer connectivity
 
 ### **BADGE**
-![Vulnerabilities]([http://yourserver.com/badge/wo1f1ow/gpt-vuln-app/high](https://img.shields.io/badge/left-right-f39f37))
+* <img src="https://img.shields.io/badge/left-right-f39f37" alt="no vulnerabilities"/>
