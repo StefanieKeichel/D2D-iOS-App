@@ -131,3 +131,4 @@ Stefanie Keichel
 
 ### **BADGE**
 * <img src="https://img.shields.io/badge/left-right-f39f37" alt="no vulnerabilities"/>
+* <img src="https://img.shields.io/badge/vulnerabilities-10-red" alt="10 vulnerabilities"/>
