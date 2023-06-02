@@ -1,4 +1,4 @@
-* <img src="https://img.shields.io/badge/vulnerabilities-10-red" alt= "10 vulnerabilities"/>
+<img src="https://img.shields.io/badge/vulnerabilities-10-red" alt= "10 vulnerabilities"/>
 
 # D2D-iOS-App
 
