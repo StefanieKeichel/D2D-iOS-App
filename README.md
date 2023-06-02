@@ -1,3 +1,5 @@
+* <img src="https://img.shields.io/badge/vulnerabilities-10-red" alt= "10 vulnerabilities"/>
+
 # D2D-iOS-App
 
 ### **Short Descritption**
@@ -129,6 +131,3 @@ Stefanie Keichel
 - Implementation of getting microphone access and the functionality of the voice assistance that transfers spoken text into the chat 
 - Implementation of multipeer connectivity
 
-### **BADGE**
-
-* <img src="https://img.shields.io/badge/vulnerabilities-10-red" alt= "10 vulnerabilities"/>
