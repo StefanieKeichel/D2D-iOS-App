@@ -9,6 +9,8 @@
         alt="service-test status"></a>
 </p>
 
+<img src="https://img.shields.io/circleci/project/github/badges/daily-tests?label=service%20tests" alt="service-test status">
+<img src="https://img.shields.io/badge/vulnerabilities-10-red" alt="11 vulnerabilities"/>
 
 # D2D-iOS-App
 
