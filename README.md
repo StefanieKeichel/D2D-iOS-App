@@ -4,6 +4,19 @@
     <img src="https://img.shields.io/github/contributors/badges/shields" /></a>
 </p>
 
+
+<script>
+    // Get the number of vulnerabilities from a variable
+    var numVulnerabilities = 10;
+
+    // Update the URL and text of the badge
+    var vulnerabilitiesBadge = document.getElementById("vulnerabilities-badge");
+    vulnerabilitiesBadge.href = "https://img.shields.io/badge/vulnerabilities-" + numVulnerabilities + "-red";
+    vulnerabilitiesBadge.innerHTML = '<img src="https://img.shields.io/badge/vulnerabilities-' + numVulnerabilities + '-red" />';
+
+</script>
+
+
 # D2D-iOS-App
 
 ### **Short Descritption**
