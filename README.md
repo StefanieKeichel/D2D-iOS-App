@@ -12,6 +12,17 @@
 <img src="https://img.shields.io/circleci/project/github/badges/daily-tests?label=service%20tests" alt="service-test status">
 <img src="https://img.shields.io/badge/vulnerabilities-10-red" alt="11 vulnerabilities"/>
 
+
+<script>
+  const vulnerabilityCount = 10;
+  const shieldImage = document.getElementById('vulnerability-shield');
+  shieldImage.src = `https://img.shields.io/badge/vulnerabilities-${vulnerabilityCount}-red`;
+</script>
+
+[![Vulnerabilities](https://img.shields.io/badge/vulnerabilities-__VULNERABILITY_COUNT__-red)](#)
+<img id="vulnerability-shield" src="https://img.shields.io/badge/vulnerabilities-__VULNERABILITY_COUNT__-red">
+
+
 # D2D-iOS-App
 
 ### **Short Descritption**
