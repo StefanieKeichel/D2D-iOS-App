@@ -13,11 +13,6 @@
 <a href="https://github.com/badges/shields/graphs/contributors" alt="Contributors">
     <img src="https://img.shields.io/github/contributors/badges/shields" /></a>
 
-<script>
-  const vulnerabilityCount = 10;
-  const shieldImage = document.getElementById('vulnerability-shield');
-  shieldImage.src = `https://img.shields.io/badge/vulnerabilities-${vulnerabilityCount}-red`;
-</script>
 
 [![Vulnerabilities](https://img.shields.io/badge/vulnerabilities-__VULNERABILITY_COUNT__-red)](#)
 <img id="vulnerability-shield" src="https://img.shields.io/badge/vulnerabilities-__VULNERABILITY_COUNT__-red">
